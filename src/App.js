@@ -1,12 +1,12 @@
 import "./App.css";
-import Navbar from "./mainPages/homePage/Navbar";
+import RootLayout from "./mainPages/homePage/RootLayout";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Navbar />,
+    element: <RootLayout />,
   },
 ]);
 

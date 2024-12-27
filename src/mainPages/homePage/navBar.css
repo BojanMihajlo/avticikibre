@@ -1,0 +1,51 @@
+
+.navHero {
+    background-image: url("/src/images/heroback.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+
+}
+
+.subtitleButtons {
+
+    padding: 10px;
+  
+    
+}
+.subtitleButtons button {
+    color:yellow;
+    border:4px solid white;
+    padding:8px;
+    margin:3px;
+    background-color: black;
+    border-radius: 10px;
+    
+}
+.subtitleButtons button:hover {
+   cursor:pointer;
+   background-color: white;
+   color:black;
+   
+}
+
+.navBar {
+    margin-top: 13.5%;
+}
+
+.navBar ul {
+    display:flex;
+    text-decoration: none; 
+    list-style: none;
+    justify-content: center;
+    
+}
+.navBar ul  li{
+     padding: 15px;
+}
+
+.navBar ul li a {
+    text-decoration: none;
+    color: white;
+}
