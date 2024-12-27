@@ -1,4 +1,5 @@
 import "./navBar.css";
+import { NavLink } from "react-router-dom";
 const Navbar = (props) => {
   const { subtitle, setSubtitleState } = props;
   return (
@@ -10,22 +11,39 @@ const Navbar = (props) => {
       <div className="navBar">
         <ul>
           <li>
-            <a href="">{subtitle ? "Почетна" : "Home"}</a>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
+            >
+              {subtitle ? "Почетна" : "Home"}
+            </NavLink>
           </li>
           <li>
-            <a href="">{subtitle ? "За нас" : "About"}</a>
+            <NavLink to="" className="nav-link active">
+              {subtitle ? "За нас" : "About"}
+            </NavLink>
           </li>
           <li>
-            <a href="">{subtitle ? "АвтичикиБре" : "AvticikiBre"} </a>
+            <NavLink className="nav-link" activeClassName="active">
+              {subtitle ? "АвтичикиБре" : "AvticikiBre"}{" "}
+            </NavLink>
           </li>
           <li>
-            <a href="">{subtitle ? "Автомобилизам" : "Automobiles"} </a>
+            <NavLink className="nav-link" activeClassName="active">
+              {subtitle ? "Автомобилизам" : "Automobiles"}{" "}
+            </NavLink>
           </li>
           <li>
-            <a href="">RogueBrush </a>
+            <NavLink className="nav-link" activeClassName="active">
+              RogueBrush{" "}
+            </NavLink>
           </li>
           <li>
-            <a href="">{subtitle ? "Локално" : "Local"}</a>
+            <NavLink className="nav-link" activeClassName="active">
+              {subtitle ? "Локално" : "Local"}
+            </NavLink>
           </li>
         </ul>
       </div>

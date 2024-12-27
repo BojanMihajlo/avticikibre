@@ -1,51 +1,46 @@
-
 .navHero {
-    background-image: url("/src/images/heroback.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 350px;
-
+  background-image: url("/src/images/heroback.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 350px;
 }
 
 .subtitleButtons {
-
-    padding: 10px;
-  
-    
+  padding: 10px;
 }
 .subtitleButtons button {
-    color:yellow;
-    border:4px solid white;
-    padding:8px;
-    margin:3px;
-    background-color: black;
-    border-radius: 10px;
-    
+  color: #ffc935;
+  border: 3px solid white;
+  padding: 8px;
+  margin: 3px;
+  background-color: black;
+  border-radius: 10px;
 }
 .subtitleButtons button:hover {
-   cursor:pointer;
-   background-color: white;
-   color:black;
-   
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 3px solid #ffc935;
 }
 
 .navBar {
-    margin-top: 13.5%;
+  margin-top: 13.5%;
 }
 
 .navBar ul {
-    display:flex;
-    text-decoration: none; 
-    list-style: none;
-    justify-content: center;
-    
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  justify-content: center;
 }
-.navBar ul  li{
-     padding: 15px;
+.navBar ul li {
+  padding: 15px;
 }
-
-.navBar ul li a {
-    text-decoration: none;
-    color: white;
+.nav-link {
+  text-decoration: none;
+  color: white;
+}
+.nav-link:hover {
+  text-decoration: 2px #ffc935 underline;
 }
