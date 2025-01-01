@@ -1,0 +1,38 @@
+.first-info {
+  background-color: #f7eadf;
+  padding: 4%;
+}
+
+.first-info-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.left-text {
+  width: 34%;
+}
+.right-text {
+  width: 48%;
+}
+
+.left-text h1 {
+  text-transform: uppercase;
+  color: #5d422b;
+}
+.right-text h3 {
+  text-transform: uppercase;
+  color: #5d422b;
+  font-size: 25px;
+}
+.right-text span {
+  color: grey;
+}
+.right-text p {
+  font-size: 19px;
+  color: #5d422b;
+}
+
+.about-hobby {
+  border-left: 4px solid grey;
+  padding-left: 2%;
+}

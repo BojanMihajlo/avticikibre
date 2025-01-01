@@ -7,7 +7,7 @@ const RootLayout = () => {
   return (
     <>
       <Navbar subtitle={subtitle} setSubtitleState={setSubtitle} />
-      <Outlet />
+      <Outlet context={[subtitle]} />
     </>
   );
 };

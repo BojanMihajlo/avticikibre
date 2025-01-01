@@ -11,7 +11,7 @@
 }
 .subtitleButtons button {
   color: #ffc935;
-  border: 3px solid white;
+  border: 3px solid #f7eadf;
   padding: 8px;
   margin: 3px;
   background-color: black;
@@ -19,7 +19,7 @@
 }
 .subtitleButtons button:hover {
   cursor: pointer;
-  background-color: white;
+  background-color: #f7eadf;
   color: black;
   border: 3px solid #ffc935;
 }
@@ -39,7 +39,7 @@
 }
 .nav-link {
   text-decoration: none;
-  color: white;
+  color: #f7eadf;
 }
 .nav-link:hover {
   text-decoration: 2px #ffc935 underline;
