@@ -37,10 +37,16 @@
 .navBar ul li {
   padding: 15px;
 }
-.nav-link {
+li a {
   text-decoration: none;
   color: #f7eadf;
 }
-.nav-link:hover {
+li a.active {
+  text-decoration: none;
+  color: #ffc935;
+}
+li a:hover {
   text-decoration: 2px #ffc935 underline;
 }
+
+

@@ -2,6 +2,7 @@ import "./navBar.css";
 import { NavLink } from "react-router-dom";
 const Navbar = (props) => {
   const { subtitle, setSubtitleState } = props;
+
   return (
     <div className="navHero">
       <div className="subtitleButtons">
@@ -13,35 +14,48 @@ const Navbar = (props) => {
           <li>
             <NavLink
               to="/"
-              className={({ isActive }) =>
-                isActive ? "nav-link active" : "nav-link"
-              }
+              className={({ isActive }) => (isActive ? "active" : "")}
             >
               {subtitle ? "Почетна" : "Home"}
             </NavLink>
           </li>
           <li>
-            <NavLink to="" className="nav-link active">
+            <NavLink
+              to="about"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
               {subtitle ? "За нас" : "About"}
             </NavLink>
           </li>
           <li>
-            <NavLink className="nav-link" activeClassName="active">
+            <NavLink
+              to="avticikiBre"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
               {subtitle ? "АвтичикиБре" : "AvticikiBre"}{" "}
             </NavLink>
           </li>
           <li>
-            <NavLink className="nav-link" activeClassName="active">
+            <NavLink
+              to="automobiles"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
               {subtitle ? "Автомобилизам" : "Automobiles"}{" "}
             </NavLink>
           </li>
           <li>
-            <NavLink className="nav-link" activeClassName="active">
+            <NavLink
+              to="roguebrush"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
               RogueBrush{" "}
             </NavLink>
           </li>
           <li>
-            <NavLink className="nav-link" activeClassName="active">
+            <NavLink
+              to="local"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
               {subtitle ? "Локално" : "Local"}
             </NavLink>
           </li>
