@@ -21,7 +21,6 @@ const router = createBrowserRouter([
       {
         path:"moderatorPage",
         element:<ModeratorPage/>
-     
 
       },
       {

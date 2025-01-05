@@ -26,3 +26,13 @@
   color: beige;
   border-radius: 10px;
 }
+.firstWindow button:hover {
+  background-color: beige;
+  color: black;
+  cursor: pointer;
+}
+.postBackground {
+    
+
+  padding: 10px;
+}
