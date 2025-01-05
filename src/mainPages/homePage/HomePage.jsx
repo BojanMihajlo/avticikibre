@@ -56,15 +56,14 @@ const HomePage = () => {
           //  style={{ backgroundImage: `url(${imageUrl})` }}
         >
           <div className="inner-box state-right">
-            <h2>Interdum ament non magna agusnam</h2>
-            <p className="subtitle">
-              Nun comodo ament visi comand magna ipsum dolor sit amet
-            </p>
+            <h2>Datsun KAIDO 510 Wagon Hanami V2 EDIT</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ut,
-              doloremque sit molestiae id doloribus. Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Ab, explicabo molestiae ipsum dolore
-              itaque praesentium facilis quia deleniti dolorem suscipit.
+              Објавено во јуни 2022 година (19,99 долари). Зелена боја, златни
+              тркала со сребрени фелни (тип 3). Чејс верзијата е необоена, има
+              целосно зелена внатрешност и обични златни тркала со сребрени
+              фелни (тип 3). Хаубата може да се отвори за да се откријат
+              деталите на моторот. Приближна скала 1/55. Модел базиран на Datsun
+              510 (RHD) од 1971 година.
             </p>
             <button className="icons-button">Learn more</button>
           </div>
@@ -75,15 +74,17 @@ const HomePage = () => {
           //  style={{ backgroundImage: `url(${imageUrl})` }}
         >
           <div className="inner-box state-left">
-            <h2>Interdum felis blandid praesent sed augue</h2>
-            <p className="subtitle">
-              Nun comodo ament visi comand magna amet consectetur adipisicing
-            </p>
+            <h2>
+              LB-Super Silhouette Nissan S15 SILVIA #23 2021 Formula Drift Japan
+            </h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ut,
-              doloremque sit molestiae id doloribus. Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Ab, explicabo molestiae ipsum dolore
-              itaque praesentium facilis quia deleniti dolorem suscipit.
+              Liberty Walk S15 Silvia ќе се појави во MINI GT. „Оваа машина,
+              која е дизајнирана да потсетува на тркачки автомобил од ерата на
+              супер силуети, е опремена со турбо мотор со 4 ротори, давајќи и
+              уникатен изглед и содржина. „Овој пат, спецификациите на болидот
+              бр. 23, кој беше активен во Формула дрифт Јапонија во 2021 година,
+              се репродуцирани со изненадувачки фини детали, како што е логото
+              на спонзорот.
             </p>
             <button className="icons-button">Learn more</button>
           </div>
@@ -93,15 +94,14 @@ const HomePage = () => {
           // style={{ backgroundImage: `url(${imageUrl})` }}
         >
           <div className="inner-box state-right">
-            <h2>Interdum ament non magna agusnam</h2>
-            <p className="subtitle">
-              Nun comodo ament visi comand magna ipsum dolor sit amet
-            </p>
+            <h2>Datsun KAIDO Fairlady Z Blue</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ut,
-              doloremque sit molestiae id doloribus. Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Ab, explicabo molestiae ipsum dolore
-              itaque praesentium facilis quia deleniti dolorem suscipit.
+              Објавено во ноември 2022 година (19,99 долари). Темно сина боја,
+              сребрени тркала со сребрени фелни (тип 3). Верзијата Chase има
+              сиво-кафеава боја, темно сина внатрешност и темно сини тркала со
+              сребрени фелни (тип 3). Хаубата може да се отвори за да се
+              откријат деталите на моторот. Приближна скала 1/59. Модел базиран
+              на Nissan Fairlady (RHD) од 1971 година.
             </p>
             <button className="icons-button">Learn more</button>
           </div>
