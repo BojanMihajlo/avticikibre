@@ -1,3 +1,10 @@
+.montserrat {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
 .navHero {
   background-image: url("/src/images/heroback.jpg");
   background-repeat: no-repeat;
@@ -48,5 +55,3 @@ li a.active {
 li a:hover {
   text-decoration: 2px #ffc935 underline;
 }
-
-

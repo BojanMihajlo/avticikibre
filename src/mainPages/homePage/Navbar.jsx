@@ -6,11 +6,15 @@ const Navbar = (props) => {
   return (
     <div className="navHero">
       <div className="subtitleButtons">
-        <button onClick={() => setSubtitleState(false)}>EN</button>
-        <button onClick={() => setSubtitleState(true)}>MK</button>
+        <button className="montserrat" onClick={() => setSubtitleState(false)}>
+          EN
+        </button>
+        <button className="montserrat" onClick={() => setSubtitleState(true)}>
+          MK
+        </button>
       </div>
       <div className="navBar">
-        <ul>
+        <ul className="montserrat">
           <li>
             <NavLink
               to="/"
