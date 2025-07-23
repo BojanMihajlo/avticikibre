@@ -26,7 +26,7 @@ const HomePage = () => {
       <div className="first-info">
         <div className="first-info-wrap">
           <div className="left-text">
-            <h1>
+            <h1 className="montserrat">
               {subtitle
                 ? "Запознај се со нашиот колекционерски свет"
                 : "Get to know our collection world"}
@@ -34,14 +34,14 @@ const HomePage = () => {
           </div>
 
           <div className="right-text">
-            <h3>
+            <h3 className="montserrat">
               <span>+700</span>{" "}
               {subtitle
                 ? "колекционери на едно место "
                 : "collectors in one place"}
             </h3>
             <div className="about-hobby">
-              <p>
+              <p className="montserrat">
                 {subtitle
                   ? "2-3 збора за нашето ХОБИ собирањето на DIE-CAST модели,е едукативна активност во која можат да уживаат и младите и старите генерации.Преку ова хоби можете да научите многу за реалните автомобили.Да си создадете еден Ваш свет на минијатури кои ќе ви биднат прибежиштево одредени моменти кои ќе придонесат до подобро расположение.Уживајте во вашето хоби."
                   : "2-3 words about our HOBBY collecting DIE-CAST models an educational activity that can be enjoyed by young people and the old generations. Through this hobby you can learn a lot about real cars. To create your own world of miniatures which will be your refuge certain moments that will contribute to a better mood. Enjoy your hobby."}
@@ -56,8 +56,10 @@ const HomePage = () => {
           //  style={{ backgroundImage: `url(${imageUrl})` }}
         >
           <div className="inner-box state-right">
-            <h2>Datsun KAIDO 510 Wagon Hanami V2 EDIT</h2>
-            <p>
+            <h2 className="montserrat">
+              Datsun KAIDO 510 Wagon Hanami V2 EDIT
+            </h2>
+            <p className="montserrat">
               Објавено во јуни 2022 година (19,99 долари). Зелена боја, златни
               тркала со сребрени фелни (тип 3). Чејс верзијата е необоена, има
               целосно зелена внатрешност и обични златни тркала со сребрени
@@ -74,10 +76,10 @@ const HomePage = () => {
           //  style={{ backgroundImage: `url(${imageUrl})` }}
         >
           <div className="inner-box state-left">
-            <h2>
+            <h2 className="montserrat">
               LB-Super Silhouette Nissan S15 SILVIA #23 2021 Formula Drift Japan
             </h2>
-            <p>
+            <p className="montserrat">
               Liberty Walk S15 Silvia ќе се појави во MINI GT. „Оваа машина,
               која е дизајнирана да потсетува на тркачки автомобил од ерата на
               супер силуети, е опремена со турбо мотор со 4 ротори, давајќи и
@@ -94,8 +96,8 @@ const HomePage = () => {
           // style={{ backgroundImage: `url(${imageUrl})` }}
         >
           <div className="inner-box state-right">
-            <h2>Datsun KAIDO Fairlady Z Blue</h2>
-            <p>
+            <h2 className="montserrat">Datsun KAIDO Fairlady Z Blue</h2>
+            <p className="montserrat">
               Објавено во ноември 2022 година (19,99 долари). Темно сина боја,
               сребрени тркала со сребрени фелни (тип 3). Верзијата Chase има
               сиво-кафеава боја, темно сина внатрешност и темно сини тркала со
