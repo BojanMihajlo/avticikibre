@@ -6,22 +6,34 @@
 }
 
 .navHero {
-  background-image: url("/src/images/heroback.jpg");
+  /* background-image: url("/src/images/heroback.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-  height: 350px;
+  background-size: cover; */
+  height: 750px;
+  background-color: #423e37;
 }
 
 .subtitleButtons {
-  padding: 10px;
+  padding: 1.5%;
 }
-.subtitleButtons button {
-  color: #ffc935;
+
+.logodiv {
+  display: flex;
+  justify-content: center;
+  padding-top: 10%;
+}
+.logodiv img {
+  width: 65%;
+  height: auto;
+  filter: drop-shadow(5px 5px 15px #edebd7);
+}
+/* .subtitleButtons button {
+  color: #e3b23c;
   border: 3px solid #f7eadf;
   padding: 8px;
   margin: 3px;
-  background-color: black;
+  background-color: #423e37;
   border-radius: 10px;
 }
 .subtitleButtons button:hover {
@@ -29,10 +41,9 @@
   background-color: #f7eadf;
   color: black;
   border: 3px solid #ffc935;
-}
-
+} */
 .navBar {
-  margin-top: 13.5%;
+  padding-top: 5%;
 }
 
 .navBar ul {
@@ -41,17 +52,103 @@
   list-style: none;
   justify-content: center;
 }
+
 .navBar ul li {
   padding: 15px;
 }
+
 li a {
   text-decoration: none;
-  color: #f7eadf;
+  color: #edebd7;
+  font-weight: bold;
 }
+
 li a.active {
-  text-decoration: none;
-  color: #ffc935;
+  color: #e3b23c;
 }
+
 li a:hover {
-  text-decoration: 2px #ffc935 underline;
+  text-decoration: 2px #e3b23c underline;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 11;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #edebd7;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* Mobile menu overlay */
+.mobileMenu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 70%;
+  background-color: rgba(0, 0, 0, 0.95);
+  padding-top: 60px;
+  text-align: center;
+  z-index: 10;
+  transition: transform 0.3s ease;
+  transform: translateX(100%);
+}
+
+.mobileMenu.show {
+  display: block;
+  transform: translateX(0);
+}
+
+.mobileMenu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mobileMenu ul li {
+  margin: 20px 0;
+}
+
+.mobileMenu ul li a {
+  color: #edebd7;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.mobileMenu ul li a:hover {
+  color: #e3b23c;
+}
+
+@media (max-width: 1024px) {
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hide desktop navbar only when hamburger is visible */
+  .navBar {
+    display: none;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hide desktop navbar only on mobile */
+  .navBar {
+    display: none;
+  }
 }
