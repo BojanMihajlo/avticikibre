@@ -3,28 +3,32 @@ import "./homePage.css";
 // import React, { useEffect, useState } from "react";
 import { useOutletContext } from "react-router-dom";
 import CollectorCars from "./CollectorCars";
+import { motion } from "framer-motion";
+import Logo from "../../images/logo1.png";
+import MotionBackground from "./MotionBackground";
 
 const HomePage = () => {
   const [subtitle] = useOutletContext();
-  // const [images, setImages] = useState([]);
-
-  //   useEffect(() => {
-  //     // Ovoj e povik do backend
-  //     setLoading(true);
-  //     fetch(`https://example.com/api/images/${imageId}`)
-  //         .then(response => response.json())
-  //         .then(data => {
-  //             setImageUrl(data.imageUrl);
-  //             setLoading(false);
-  //         })
-  //         .catch(error => {
-  //             console.error("Error fetching image:", error);
-  //             setLoading(false);
-  //         });
-  // }, [imageId]);
 
   return (
     <>
+      <div id="sectionOne">
+        <motion.div
+          className="logodiv"
+          initial={{ y: -600, scale: 1.5, opacity: 0, rotate: -20 }}
+          animate={{ y: 0, scale: 1, opacity: 1, rotate: 0 }}
+          transition={{
+            type: "spring",
+            stiffness: 180,
+            damping: 15,
+            mass: 1,
+            duration: 3.8,
+            bounce: 0.5,
+          }}
+        >
+          <img src={Logo} alt="Logo" />
+        </motion.div>
+      </div>
       <CollectorCars />
       <div id="sectionTwo">
         <div
@@ -122,6 +126,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+      <MotionBackground />
 
       <div className="advert"></div>
     </>
