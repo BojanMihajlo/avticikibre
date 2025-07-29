@@ -1,7 +1,7 @@
 import "./navBar.css";
 import { NavLink } from "react-router-dom";
 import CarButton from "../carButton/CarButton";
-import Logo from "../../images/logo1.png";
+// import Logo from "../../images/logo1.png";
 import React, { useState } from "react";
 import { motion } from "motion/react";
 
@@ -14,22 +14,6 @@ const Navbar = ({ subtitle, setSubtitleState }) => {
         <CarButton text="EN" onClick={() => setSubtitleState(false)} />
         <CarButton text="MK" onClick={() => setSubtitleState(true)} />
       </div>
-
-      <motion.div
-        className="logodiv"
-        initial={{ y: -600, scale: 1.5, opacity: 0, rotate: -20 }}
-        animate={{ y: 0, scale: 1, opacity: 1, rotate: 0 }}
-        transition={{
-          type: "spring",
-          stiffness: 180,
-          damping: 15,
-          mass: 1,
-          duration: 3.8,
-          bounce: 0.5,
-        }}
-      >
-        <img src={Logo} alt="Logo" />
-      </motion.div>
 
       {/* Desktop Navigation */}
       <motion.div

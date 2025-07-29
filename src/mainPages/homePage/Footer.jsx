@@ -69,7 +69,7 @@ const Footer = ({ subtitle }) => {
               onChange={(e) => setEmail(e.target.value)}
               required
             />
-            <CarButton text="Subscribe" />
+            <CarButton text="Subscribe" width="130" />
           </form>
         </div>
       </div>

@@ -1,3 +1,21 @@
+#sectionOne {
+  height: 400px;
+
+  /* padding-top: 10%; */
+  background-color: #423e37;
+}
+
+.logodiv {
+  display: flex;
+  justify-content: center;
+}
+
+.logodiv img {
+  width: 65%;
+  height: auto;
+  filter: drop-shadow(5px 5px 15px #edebd7);
+}
+
 .bg-cars {
   height: 100vh;
   width: 100%;
