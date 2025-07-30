@@ -1,11 +1,17 @@
 import "../about/about.css";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import mainPoster from "../../images/about-images/IMG_6659.JPG";
+import sakuraFestival from "../../images/about-images/sakura-festival.jpg";
+import skopjeKup from "../../images/about-images/skopje-kup.JPG";
+import oldtimerVitezi from "../../images/about-images/oldtimer-vitezi.jpg";
+import sumaSumarum from "../../images/about-images/suma-sumarum.JPG";
+
 function About() {
   return (
     <main className="container">
       <section className="main-section">
         <img src={mainPoster} alt="poster" className="poster" />
-        <div className="meet-us-text">
+        <div className="text-for-poster">
           <h2>збор,два за нас</h2>
           <p>Колекциите што ја движат страста за прецизност!</p>
           <p>
@@ -35,11 +41,88 @@ function About() {
             модели и колекционерски предмети. Придружете се на Клубот:
           </p>
           <p>
-            Без разлика дали сте искусен колекционер или само започнувате вашето
-            патување, Die-Cast Club Куманово ве поканува да бидете дел од нашата
-            жива заедница. Заедно ќе го истражуваме безграничниот свет на
+            Без разлика дали сте искусен колекционер или само го започнувате
+            вашето патување, Die-Cast Club Куманово ве поканува да бидете дел од
+            нашата жива заедница. Заедно ќе го истражуваме безграничниот свет на
             дијагоналните модели и ќе ја славиме страста што нè движи сите.
           </p>
+        </div>
+      </section>
+      <section className="our-visits">
+        <div className="section-title">
+          <h1>наши гостувања</h1>
+        </div>
+        <div className="guest-visits">
+          <div className="guest-appearance sakura-festival">
+            <img
+              src={sakuraFestival}
+              alt="poster-sakura-festival"
+              className="appearance-poster"
+            />
+            <p>сакура фестивал</p>
+            <p>Фестивал на јапонска култура</p>
+            <div className="social-media-icons">
+              <a href="#">
+                <FaFacebookF />
+              </a>
+              <a href="#">
+                <FaInstagram />
+              </a>
+            </div>
+          </div>
+          <div className="guest-appearance">
+            <img
+              src={skopjeKup}
+              alt="poster-skopje-kup"
+              className="appearance-poster"
+            />
+            <p>Скопје куп 2024</p>
+            <p>7ма годишна изложба на макети, минијатури и диорами</p>
+            <div className="social-media-icons">
+              <a href="#">
+                <FaFacebookF />
+              </a>
+              <a href="#">
+                <FaInstagram />
+              </a>
+            </div>
+          </div>
+          <div className="guest-appearance">
+            <img
+              src={oldtimerVitezi}
+              alt="poster-oldtimer-vitezi"
+              className="appearance-poster"
+            />
+            <p>олдтајмер витези</p>
+            <p>
+              изложба на олдтајмери возила и колекционерски минијатурни модели
+            </p>
+            <div className="social-media-icons">
+              <a href="#">
+                <FaFacebookF />
+              </a>
+              <a href="#">
+                <FaInstagram />
+              </a>
+            </div>
+          </div>
+          <div className="guest-appearance">
+            <img
+              src={sumaSumarum}
+              alt="poster-suma-sumarum"
+              className="appearance-poster"
+            />
+            <p>сумасумарум вол.2</p>
+            <p>дружба од едукативен настан</p>
+            <div className="social-media-icons">
+              <a href="#">
+                <FaFacebookF />
+              </a>
+              <a href="#">
+                <FaInstagram />
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </main>

@@ -4,16 +4,62 @@
   box-sizing: border-box;
 }
 .container {
-  margin-top: 40px;
+  background-color: #edebd7;
   margin-bottom: 700px;
 }
 
 .main-section {
   display: flex;
-  gap: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  gap: 40px;
+  justify-content: center;
 }
 
 .poster {
   margin-left: 10px;
   height: 90vh;
+  border-radius: 40px;
+}
+.text-for-poster {
+  width: 500px;
+}
+
+.text-for-poster h2 {
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  color: #423e37;
+}
+
+.text-for-poster p {
+  padding-bottom: 10px;
+  color: #6e675f;
+}
+
+.our-visits {
+  margin-top: 40px;
+}
+
+.section-title {
+}
+
+.section-title h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 42px;
+}
+
+.guest-visits {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.guest-appearance {
+  width: 20%;
+}
+
+.appearance-poster {
+  width: 200px;
+  height: 200px;
 }
