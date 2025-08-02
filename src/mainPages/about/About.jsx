@@ -1,12 +1,13 @@
 import CarButton from "../carButton/CarButton";
 import { useOutletContext } from "react-router-dom";
 
+//import dieCastCars1 from "../../images/about-images/cars-die-cast1.JPG";
+//import secondEventPoster from "../../images/about-images/die-cast-second-event.JPG";
 import "../about/about.css";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import dieCastCars from "../../images/about-images/cars-die-cast.jpg";
-import dieCastCars1 from "../../images/about-images/cars-die-cast1.JPG";
 import firstEventPoster from "../../images/about-images/die-cast-first-event.jpg";
-import secondEventPoster from "../../images/about-images/die-cast-second-event.JPG";
+import secontEventFlaer from "../../images/about-images/avticiki-bre-second-event.jpg";
 import sakuraFestival from "../../images/about-images/sakura-festival.jpg";
 import skopjeKup from "../../images/about-images/skopje-kup.JPG";
 import oldtimerVitezi from "../../images/about-images/oldtimer-vitezi.jpg";
@@ -83,6 +84,36 @@ function About() {
           <div className="event-poster-wrapper">
             <img
               src={firstEventPoster}
+              alt="event-poster"
+              className="event-poster"
+            />
+          </div>
+          <div className="button-wrapper">
+            <CarButton
+              text={subtitle ? "Повеќе" : "Learn more"}
+              textColor="#6e675f"
+              width="160"
+            />
+          </div>
+        </div>
+        {/* Second Event */}
+        <div className="event-container">
+          <div className="event-title-and-description-wrapper">
+            <div className="event-title-wrapper">
+              <h1>Второ Die-Cast шоу во Куманово 2023</h1>
+            </div>
+            <div className="event-description-wrapper">
+              <p>"Враќањето на колекционерите во Куманово"</p>
+              <p>
+                Заљубениците и колекционерите на модели на автомобили конечно ја
+                добија долго очекуваната изложба во организација на DIE-CAST
+                CLUB KUMANOVO
+              </p>
+            </div>
+          </div>
+          <div className="event-poster-wrapper">
+            <img
+              src={secontEventFlaer}
               alt="event-poster"
               className="event-poster"
             />
