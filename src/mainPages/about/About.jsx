@@ -1,18 +1,31 @@
+import CarButton from "../carButton/CarButton";
+import { useOutletContext } from "react-router-dom";
+
 import "../about/about.css";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
-import mainPoster from "../../images/about-images/IMG_6659.JPG";
+import dieCastCars from "../../images/about-images/cars-die-cast.jpg";
+import dieCastCars1 from "../../images/about-images/cars-die-cast1.JPG";
+import firstEventPoster from "../../images/about-images/die-cast-first-event.jpg";
+import secondEventPoster from "../../images/about-images/die-cast-second-event.JPG";
 import sakuraFestival from "../../images/about-images/sakura-festival.jpg";
 import skopjeKup from "../../images/about-images/skopje-kup.JPG";
 import oldtimerVitezi from "../../images/about-images/oldtimer-vitezi.jpg";
 import sumaSumarum from "../../images/about-images/suma-sumarum.JPG";
 
 function About() {
+  const [subtitle] = useOutletContext();
   return (
     <main className="container">
-      <section className="main-section">
-        <img src={mainPoster} alt="poster" className="poster" />
-        <div className="text-for-poster">
-          <h2>збор,два за нас</h2>
+      <section className="introduction-section">
+        <div className="introduction-poster-wrapper">
+          <img
+            src={dieCastCars}
+            alt="small-cars"
+            className="introduction-poster"
+          />
+        </div>
+        <div className="introduction-text-wrapper">
+          <h2>збор два за нас</h2>
           <p>Колекциите што ја движат страста за прецизност!</p>
           <p>
             Die-Cast Club Куманово е повеќе од само клуб, тоа е заедница на
@@ -48,6 +61,42 @@ function About() {
           </p>
         </div>
       </section>
+
+      <section className="events-section">
+        <div className="events-section-title-wrapper">
+          <h1>Организирани Настани (Дружби)</h1>
+        </div>
+        <div className="event-container">
+          <div className="event-title-and-description-wrapper">
+            <div className="event-title-wrapper">
+              <h1>Прво Die-cast Шоу Куманово 2022</h1>
+            </div>
+            <div className="event-description-wrapper">
+              <p>Смотра на "Чуварите на времето"</p>
+              <p>
+                Заљубениците и колекционерите на модели на автомобили конечно ја
+                добија долго очекуваната изложба во организација на DIE-CAST
+                CLUB KUMANOVO
+              </p>
+            </div>
+          </div>
+          <div className="event-poster-wrapper">
+            <img
+              src={firstEventPoster}
+              alt="event-poster"
+              className="event-poster"
+            />
+          </div>
+          <div className="button-wrapper">
+            <CarButton
+              text={subtitle ? "Повеќе" : "Learn more"}
+              textColor="#6e675f"
+              width="160"
+            />
+          </div>
+        </div>
+      </section>
+
       <section className="our-visits">
         <div className="section-title">
           <h1>наши гостувања</h1>
@@ -59,7 +108,7 @@ function About() {
               alt="poster-sakura-festival"
               className="appearance-poster"
             />
-            <p>сакура фестивал</p>
+            <p className="guest-event-title">сакура фестивал</p>
             <p>Фестивал на јапонска култура</p>
             <div className="social-media-icons">
               <a href="#">
@@ -76,7 +125,7 @@ function About() {
               alt="poster-skopje-kup"
               className="appearance-poster"
             />
-            <p>Скопје куп 2024</p>
+            <p className="guest-event-title">Скопје куп 2024</p>
             <p>7ма годишна изложба на макети, минијатури и диорами</p>
             <div className="social-media-icons">
               <a href="#">
@@ -93,7 +142,7 @@ function About() {
               alt="poster-oldtimer-vitezi"
               className="appearance-poster"
             />
-            <p>олдтајмер витези</p>
+            <p className="guest-event-title">олдтајмер витези</p>
             <p>
               изложба на олдтајмери возила и колекционерски минијатурни модели
             </p>
@@ -112,7 +161,7 @@ function About() {
               alt="poster-suma-sumarum"
               className="appearance-poster"
             />
-            <p>сумасумарум вол.2</p>
+            <p className="guest-event-title">сумасумарум Vol.2</p>
             <p>дружба од едукативен настан</p>
             <div className="social-media-icons">
               <a href="#">
