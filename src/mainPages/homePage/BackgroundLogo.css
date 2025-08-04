@@ -1,0 +1,74 @@
+.backLogoMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6%;
+}
+.secondiv {
+  padding-right: 18%;
+  margin-top: 8%;
+}
+
+.motionH1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  position: relative;
+  color: #423e37;
+  font-family: "Montserrat";
+}
+
+.motionImg {
+  width: 135%;
+  cursor: pointer;
+}
+/* .firstDiv {
+  width: 40%;
+} */
+.textBre p {
+  cursor: pointer;
+  width: 65%;
+  text-align: justify;
+  font-size: 18px;
+}
+
+@media (max-width: 1024px) {
+  .backLogoMain {
+    display: block;
+  }
+  .motionH1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .motionImg {
+    width: 60%;
+  }
+  .textBre p {
+    font-size: 12px;
+    text-align: center;
+  }
+  .secondiv {
+    padding-right: 1%;
+  }
+}
+
+@media (max-width: 768px) {
+  .backLogoMain {
+    display: block;
+  }
+
+  .motionH1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .motionImg {
+    width: 50%;
+  }
+  .textBre p {
+    font-size: 12px;
+    text-align: center;
+  }
+  .secondiv {
+    padding-right: 1%;
+    text-align: center;
+  }
+}

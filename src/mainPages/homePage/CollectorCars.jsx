@@ -75,7 +75,7 @@ export default function CollectorCars() {
           </div>
         </div>
 
-        <div>
+        <div className="collectImages">
           <AnimatePresence>
             {show &&
               images.map((src, index) => (
@@ -105,7 +105,46 @@ export default function CollectorCars() {
                     })`,
                     opacity: show ? 1 : 0,
                     transition: "opacity 1s ease-out",
-                    width: "250px",
+                    width: "260px",
+                    height: "auto",
+                    borderRadius: "10px",
+                  }}
+                />
+              ))}
+          </AnimatePresence>
+        </div>
+
+        <div className="collectImagesMob">
+          <AnimatePresence>
+            {show &&
+              images.map((src, index) => (
+                <motion.img
+                  key={index}
+                  src={src}
+                  initial={{
+                    opacity: 0,
+                    x: Math.random() * 400 - 200,
+                    y: Math.random() * 400 - 200,
+                    rotate: Math.random() * 30 - 15,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    x: Math.random() * 100 - 50,
+                    y: Math.random() * 100 - 50,
+                    rotate: Math.random() * 45 - 22,
+                  }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 1.3 }}
+                  style={{
+                    position: "absolute",
+                    top: "80%",
+                    left: `${10 + Math.random() * 20}%`,
+                    transform: `rotate(${Math.random() * 60 - 30}deg) scale(${
+                      0.8 + Math.random() * 0.5
+                    })`,
+                    opacity: show ? 1 : 0,
+                    transition: "opacity 1s ease-out",
+                    width: "120px",
                     height: "auto",
                     borderRadius: "10px",
                   }}

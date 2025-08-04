@@ -1,0 +1,21 @@
+.motionBackMob {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .motionBackMob {
+    display: block;
+  }
+  .motionBack {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .motionBackMob {
+    display: block;
+  }
+  .motionBack {
+    display: none;
+  }
+}

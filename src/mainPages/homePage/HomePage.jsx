@@ -6,6 +6,7 @@ import CollectorCars from "./CollectorCars";
 import { motion } from "framer-motion";
 import Logo from "../../images/logo1.png";
 import MotionBackground from "./MotionBackground";
+import Navbar from "./Navbar";
 
 const HomePage = () => {
   const [subtitle] = useOutletContext();
@@ -13,6 +14,7 @@ const HomePage = () => {
   return (
     <>
       <div id="sectionOne">
+        <Navbar />
         <motion.div
           className="logodiv"
           initial={{ y: -600, scale: 1.5, opacity: 0, rotate: -20 }}
@@ -31,10 +33,7 @@ const HomePage = () => {
       </div>
       <CollectorCars />
       <div id="sectionTwo">
-        <div
-          className="bg-cars car1"
-          //  style={{ backgroundImage: `url(${imageUrl})` }}
-        >
+        <div className="bg-cars car1">
           <div className="inner-box state-right">
             <h2 className="montserrat">
               Datsun KAIDO 510 Wagon Hanami V2 EDIT
@@ -57,15 +56,24 @@ const HomePage = () => {
                 scale 1/55. Model based on 1971 Datsun 510 (RHD).
               </p>
             )}
-            {/* <button className="icons-button">Learn more</button> */}
-            <CarButton text={subtitle ? "Повеќе" : "Learn more"} width="160" />
+
+            <div className="carButton">
+              <CarButton
+                text={subtitle ? "Повеќе" : "Learn more"}
+                width="160"
+              />
+            </div>
+
+            <div className="carButtonMob">
+              <CarButton
+                text={subtitle ? "Повеќе" : "Learn more"}
+                width="110"
+              />
+            </div>
           </div>
         </div>
 
-        <div
-          className="bg-cars car2"
-          //  style={{ backgroundImage: `url(${imageUrl})` }}
-        >
+        <div className="bg-cars car2">
           <div className="inner-box state-left">
             <h2 className="montserrat">
               LB-Super Silhouette Nissan S15 SILVIA #23 2021 Formula Drift Japan
@@ -92,14 +100,22 @@ const HomePage = () => {
               </p>
             )}
 
-            {/* <button className="icons-button">Learn more</button> */}
-            <CarButton text={subtitle ? "Повеќе" : "Learn more"} width="160" />
+            <div className="carButton">
+              <CarButton
+                text={subtitle ? "Повеќе" : "Learn more"}
+                width="160"
+              />
+            </div>
+
+            <div className="carButtonMob">
+              <CarButton
+                text={subtitle ? "Повеќе" : "Learn more"}
+                width="110"
+              />
+            </div>
           </div>
         </div>
-        <div
-          className="bg-cars car3"
-          // style={{ backgroundImage: `url(${imageUrl})` }}
-        >
+        <div className="bg-cars car3">
           <div className="inner-box state-right">
             <h2 className="montserrat">Datsun KAIDO Fairlady Z Blue</h2>
             {subtitle ? (
@@ -121,8 +137,19 @@ const HomePage = () => {
               </p>
             )}
 
-            {/* <button className="icons-button">Learn more</button> */}
-            <CarButton text={subtitle ? "Повеќе" : "Learn more"} width="160" />
+            <div className="carButton">
+              <CarButton
+                text={subtitle ? "Повеќе" : "Learn more"}
+                width="160"
+              />
+            </div>
+
+            <div className="carButtonMob">
+              <CarButton
+                text={subtitle ? "Повеќе" : "Learn more"}
+                width="110"
+              />
+            </div>
           </div>
         </div>
       </div>

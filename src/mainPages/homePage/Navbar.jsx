@@ -4,15 +4,17 @@ import CarButton from "../carButton/CarButton";
 // import Logo from "../../images/logo1.png";
 import React, { useState } from "react";
 import { motion } from "motion/react";
+import { useOutletContext } from "react-router-dom";
 
-const Navbar = ({ subtitle, setSubtitleState }) => {
+const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [subtitle, setSubtitle] = useOutletContext();
 
   return (
     <div className="navHero">
       <div className="subtitleButtons">
-        <CarButton text="EN" onClick={() => setSubtitleState(false)} />
-        <CarButton text="MK" onClick={() => setSubtitleState(true)} />
+        <CarButton text="EN" onClick={() => setSubtitle(false)} />
+        <CarButton text="MK" onClick={() => setSubtitle(true)} />
       </div>
 
       {/* Desktop Navigation */}

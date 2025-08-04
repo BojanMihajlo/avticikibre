@@ -1,5 +1,5 @@
 import { useState } from "react";
-import CarSilhouette from "../../images/fffcar.png"; // path to your SVG
+// import CarSilhouette from "../../images/avtoce1.png"; // path to your SVG
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import Logo from "../../images/logo1.png";
 
@@ -16,10 +16,13 @@ const Footer = ({ subtitle }) => {
   };
   return (
     <footer className="footer">
-      <div className="footer-silhouette">
+      {/* <div className="footer-silhouette">
         <img src={CarSilhouette} alt="Car Silhouette" width="100%" />
-      </div>
+      </div> */}
       <div className="footer-content">
+        <div className="logofooter">
+          <img src={Logo} alt="Logo" />
+        </div>
         {/* Navbar links */}
         <ul className="footer-nav">
           <li>
@@ -72,14 +75,14 @@ const Footer = ({ subtitle }) => {
             <CarButton text="Subscribe" width="130" />
           </form>
         </div>
-      </div>
-      <div className="logofooter">
-        <img src={Logo} alt="Logo" />
+        <div className="footer-bottom">
+          <p>© 2025 All rights reserved.</p>
+        </div>
       </div>
 
-      <div className="footer-bottom">
+      {/* <div className="footer-bottom">
         <p>© 2025 All rights reserved.</p>
-      </div>
+      </div> */}
     </footer>
   );
 };

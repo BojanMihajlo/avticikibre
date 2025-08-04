@@ -6,8 +6,8 @@
 }
 
 .navHero {
-  height: 350px;
-  background-color: #423e37;
+  height: 250px;
+  /* background-color: #423e37; */
 }
 
 .subtitleButtons {
@@ -15,7 +15,7 @@
 }
 
 .navBar {
-  padding-top: 4%;
+  padding-top: 2%;
 }
 
 .navBar ul {
@@ -111,6 +111,14 @@ li a:hover {
   .navBar {
     display: none;
   }
+
+  .navHero {
+    height: 250px;
+  }
+
+  .subtitleButtons {
+    padding: 3%;
+  }
 }
 
 /* Responsive */
@@ -122,5 +130,8 @@ li a:hover {
   /* Hide desktop navbar only on mobile */
   .navBar {
     display: none;
+  }
+  .navHero {
+    height: 250px;
   }
 }

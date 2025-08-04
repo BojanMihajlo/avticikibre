@@ -1,7 +1,5 @@
 #sectionOne {
-  height: 400px;
-
-  /* padding-top: 10%; */
+  height: 750px;
   background-color: #423e37;
 }
 
@@ -14,6 +12,7 @@
   width: 65%;
   height: auto;
   filter: drop-shadow(5px 5px 15px #edebd7);
+  margin-top: 4%;
 }
 
 .bg-cars {
@@ -63,4 +62,49 @@
 .advert {
   height: 1200px;
   background-color: #edebd7;
+}
+.carButtonMob {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .inner-box {
+    width: 25%;
+    padding: 60px 20px 0px 40px;
+    height: 100vh;
+  }
+  .inner-box h2 {
+    font-size: 12px;
+  }
+  .inner-box p {
+    font-size: 10px;
+  }
+  .carButton {
+    display: none;
+  }
+  .carButtonMob {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .inner-box {
+    width: 30%;
+    padding: 60px 20px 0px 40px;
+    height: 100vh;
+  }
+  .inner-box h2 {
+    font-size: 12px;
+  }
+
+  .inner-box p {
+    font-size: 9px;
+  }
+
+  .carButton {
+    display: none;
+  }
+  .carButtonMob {
+    display: block;
+  }
 }
