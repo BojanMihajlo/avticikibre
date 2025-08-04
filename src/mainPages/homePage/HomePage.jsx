@@ -60,14 +60,14 @@ const HomePage = () => {
             <div className="carButton">
               <CarButton
                 text={subtitle ? "Повеќе" : "Learn more"}
-                width="160"
+                width="150"
               />
             </div>
 
             <div className="carButtonMob">
               <CarButton
                 text={subtitle ? "Повеќе" : "Learn more"}
-                width="110"
+                width="100"
               />
             </div>
           </div>
@@ -103,14 +103,14 @@ const HomePage = () => {
             <div className="carButton">
               <CarButton
                 text={subtitle ? "Повеќе" : "Learn more"}
-                width="160"
+                width="150"
               />
             </div>
 
             <div className="carButtonMob">
               <CarButton
                 text={subtitle ? "Повеќе" : "Learn more"}
-                width="110"
+                width="100"
               />
             </div>
           </div>
@@ -140,14 +140,14 @@ const HomePage = () => {
             <div className="carButton">
               <CarButton
                 text={subtitle ? "Повеќе" : "Learn more"}
-                width="160"
+                width="150"
               />
             </div>
 
             <div className="carButtonMob">
               <CarButton
                 text={subtitle ? "Повеќе" : "Learn more"}
-                width="110"
+                width="100"
               />
             </div>
           </div>

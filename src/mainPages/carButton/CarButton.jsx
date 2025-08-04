@@ -21,6 +21,7 @@ const CarButton = ({
         background: "transparent",
         border: "none",
         cursor: "pointer",
+        margin: "0.5%",
       }}
     >
       <img
