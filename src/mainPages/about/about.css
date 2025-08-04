@@ -153,7 +153,7 @@ color5: #a39594
 .guest-visits {
   margin-top: 48px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   gap: 5%;
   flex-wrap: wrap;
 }
