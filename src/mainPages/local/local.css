@@ -53,7 +53,15 @@ color5: #a39594
 }
 
 .item-title {
+  text-align: center;
   font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 500px) {
+  .card {
+    width: 40%;
+    gap: 0;
+  }
 }
