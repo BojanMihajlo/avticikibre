@@ -1,0 +1,42 @@
+.eventsMain {
+  height: 400vh;
+  background-color: #edebd7;
+  padding-top: 5%;
+}
+
+.scroll-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding: 200px 0;
+}
+
+.poster-wrapper {
+  perspective: 1000px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.poster {
+  overflow: hidden;
+  transform-style: preserve-3d;
+  width: 60%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  background: #000;
+}
+
+/* .poster.landscape img {
+  width: 80%;
+  height: 100%;
+  object-fit: cover;
+} */
+
+/* .poster.portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */

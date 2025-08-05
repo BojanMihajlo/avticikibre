@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import Logo from "../../images/logo1.png";
 import MotionBackground from "./MotionBackground";
 import Navbar from "./Navbar";
+import Events from "./Events";
 
 const HomePage = () => {
   const [subtitle] = useOutletContext();
@@ -153,6 +154,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+      <Events />
       <MotionBackground />
 
       <div className="advert"></div>
