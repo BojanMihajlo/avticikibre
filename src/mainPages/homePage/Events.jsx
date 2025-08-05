@@ -18,17 +18,7 @@ export default function Events() {
     <div>
       <div className="eventsMain">
         <div>
-          <h1
-            ref={ref}
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              fontSize: "4rem",
-              color: "#423e37",
-              overflow: "hidden",
-              justifyContent: "center",
-            }}
-          >
+          <h1 ref={ref}>
             {text.split("").map((char, index) => (
               <motion.span
                 key={index}
@@ -46,7 +36,7 @@ export default function Events() {
                         rotate: 0,
                         opacity: 1,
                         transition: {
-                          duration: 1.5,
+                          duration: 1.8,
                           delay: index * 0.1,
                           type: "spring",
                           stiffness: 50,

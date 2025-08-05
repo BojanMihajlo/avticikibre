@@ -8,6 +8,7 @@ import Logo from "../../images/logo1.png";
 import MotionBackground from "./MotionBackground";
 import Navbar from "./Navbar";
 import Events from "./Events";
+import Advert from "./Advert";
 
 const HomePage = () => {
   const [subtitle] = useOutletContext();
@@ -157,7 +158,7 @@ const HomePage = () => {
       <Events />
       <MotionBackground />
 
-      <div className="advert"></div>
+      <Advert />
     </>
   );
 };

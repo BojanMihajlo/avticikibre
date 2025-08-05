@@ -70,7 +70,7 @@ export default function BackgroundLogo() {
 
         <div className="textBre" onMouseEnter={() => setHovered(true)}>
           <p>
-            @diecastclubavticikibrekumanovo#avticikibre#
+            @diecastclubavticikibrekumanovo#avticikibre
             <span>
               <NavLink
                 style={{
@@ -82,10 +82,10 @@ export default function BackgroundLogo() {
                 AVTICIKIBRE
               </NavLink>
             </span>
-            Хаубата можеда се отвори за да се откријат деталите на моторот.
+            можеда се отвори за да се откријат деталите на моторот. Приближна
+            скала 1/55. Модел базиран на Datsun 510 (RHD) од 1971 година.
             Приближна скала 1/55. Модел базиран на Datsun 510 (RHD) од 1971
-            година. Приближна скала 1/55. Модел базиран на Datsun 510 (RHD) од
-            1971 година.
+            година.
             <span>
               <NavLink
                 style={{

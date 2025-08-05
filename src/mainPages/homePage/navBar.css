@@ -134,4 +134,8 @@ li a:hover {
   .navHero {
     height: 250px;
   }
+
+  .subtitleButtons {
+    padding: 3%;
+  }
 }

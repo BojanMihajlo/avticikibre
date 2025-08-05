@@ -18,4 +18,7 @@
   .motionBack {
     display: none;
   }
+  .backMotion {
+    height: 120vh;
+  }
 }

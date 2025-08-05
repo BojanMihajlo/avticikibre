@@ -21,9 +21,7 @@
   width: 135%;
   cursor: pointer;
 }
-/* .firstDiv {
-  width: 40%;
-} */
+
 .textBre p {
   cursor: pointer;
   width: 65%;
@@ -58,13 +56,14 @@
 
   .motionH1 {
     font-size: 20px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
   }
   .motionImg {
-    width: 50%;
+    width: 45%;
+    padding-top: 15%;
   }
   .textBre p {
-    font-size: 12px;
+    font-size: 11px;
     text-align: center;
   }
   .secondiv {

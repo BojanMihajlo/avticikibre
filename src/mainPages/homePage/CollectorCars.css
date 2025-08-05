@@ -91,7 +91,8 @@
 @media (max-width: 768px) {
   .first-info-wrap {
     display: block;
-    gap: 10px;
+    align-content: center;
+    gap: 15px;
   }
 
   .left-text {
@@ -99,19 +100,23 @@
     font-weight: bold;
   }
   .right-text {
-    width: 80%;
+    width: 8%0%;
   }
   .first-info {
     height: 750px;
   }
   .left-text h1 {
-    font-size: 22px;
+    font-size: 20px;
+    padding-bottom: 6%;
+    padding-top: 3%;
+    font-weight: bold;
   }
   .right-text h3 {
-    font-size: 19px;
+    font-size: 18x;
   }
   .right-text p {
-    font-size: 17px;
+    font-size: 16px;
+    padding-top: 4%;
   }
   .collectImages {
     display: none;
