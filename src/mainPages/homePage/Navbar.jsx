@@ -45,7 +45,7 @@ const Navbar = () => {
 
           <li>
             <NavLink
-              to="avticikiBre"
+              to="/avticikibre"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               {subtitle ? "АвтичикиБре" : "AvticikiBre"}
@@ -53,7 +53,7 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              to="automobiles"
+              to="/automobiles"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               {subtitle ? "Автомобилизам" : "Automobiles"}
@@ -61,7 +61,7 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              to="roguebrush"
+              to="/roguebrush"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               RogueBrush
@@ -69,7 +69,7 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              to="local"
+              to="/local"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               {subtitle ? "Локално" : "Local"}
@@ -77,7 +77,7 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              to="about"
+              to="/about"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               {subtitle ? "За нас" : "About"}
