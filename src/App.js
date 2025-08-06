@@ -20,27 +20,27 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "avticikiBre",
+        path: "/avticikiBre",
         element: <AvticikiBre />,
       },
 
       {
-        path: "automobiles",
+        path: "/automobiles",
         element: <Avtomobilizam />,
       },
 
       {
-        path: "roguebrush",
+        path: "/roguebrush",
         element: <RogueBrush />,
       },
 
       {
-        path: "local",
+        path: "/local",
         element: <Local />,
       },
 
       {
-        path: "about",
+        path: "/about",
         element: <About />,
       },
     ],

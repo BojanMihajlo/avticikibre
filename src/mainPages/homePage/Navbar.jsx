@@ -101,29 +101,30 @@ const Navbar = () => {
               {subtitle ? "Почетна" : "Home"}
             </NavLink>
           </li>
+
           <li>
-            <NavLink to="about" onClick={() => setMenuOpen(false)}>
-              {subtitle ? "За нас" : "About"}
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="avticikiBre" onClick={() => setMenuOpen(false)}>
+            <NavLink to="/avticikiBre" onClick={() => setMenuOpen(false)}>
               {subtitle ? "АвтичикиБре" : "AvticikiBre"}
             </NavLink>
           </li>
           <li>
-            <NavLink to="automobiles" onClick={() => setMenuOpen(false)}>
+            <NavLink to="/automobiles" onClick={() => setMenuOpen(false)}>
               {subtitle ? "Автомобилизам" : "Automobiles"}
             </NavLink>
           </li>
           <li>
-            <NavLink to="roguebrush" onClick={() => setMenuOpen(false)}>
+            <NavLink to="/roguebrush" onClick={() => setMenuOpen(false)}>
               RogueBrush
             </NavLink>
           </li>
           <li>
-            <NavLink to="local" onClick={() => setMenuOpen(false)}>
+            <NavLink to="/local" onClick={() => setMenuOpen(false)}>
               {subtitle ? "Локално" : "Local"}
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/about" onClick={() => setMenuOpen(false)}>
+              {subtitle ? "За нас" : "About"}
             </NavLink>
           </li>
         </ul>
