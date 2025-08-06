@@ -1,3 +1,4 @@
+import NavBar from "../homePage/Navbar";
 import "../local/local.css";
 
 import asdsSenegal from "../../images/local-images/asds-senegal.jpg";
@@ -11,6 +12,7 @@ import tuningSlavia from "../../images/local-images/tuning-slavia.jpg";
 function Local() {
   return (
     <>
+      <NavBar />
       <div className="main-container">
         <div className="cards-wrapper">
           <div className="card">

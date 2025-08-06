@@ -1,6 +1,9 @@
 import "./App.css";
 import RootLayout from "./mainPages/homePage/RootLayout";
 import HomePage from "./mainPages/homePage/HomePage";
+import AvticikiBre from "./mainPages/avticikiBre/AvticikiBre";
+import Avtomobilizam from "./mainPages/avtomobilizam/Avtomobilizam";
+import RogueBrush from "./mainPages/rogueBrush/RogueBrush";
 import About from "./mainPages/about/About";
 import Local from "./mainPages/local/Local";
 
@@ -17,12 +20,28 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "about",
-        element: <About />,
+        path: "/avticikiBre",
+        element: <AvticikiBre />,
       },
+
       {
-        path: "local",
+        path: "/automobiles",
+        element: <Avtomobilizam />,
+      },
+
+      {
+        path: "/roguebrush",
+        element: <RogueBrush />,
+      },
+
+      {
+        path: "/local",
         element: <Local />,
+      },
+
+      {
+        path: "/about",
+        element: <About />,
       },
     ],
   },
