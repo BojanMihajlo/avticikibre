@@ -13,6 +13,7 @@ import sakuraFestival from "../../images/about-images/sakura-festival.jpg";
 import skopjeKup from "../../images/about-images/skopje-kup.JPG";
 import oldtimerVitezi from "../../images/about-images/oldtimer-vitezi.jpg";
 import sumaSumarum from "../../images/about-images/suma-sumarum.JPG";
+import recordFair from "../../images/about-images/record-fair.jpg";
 
 function About() {
   const [subtitle] = useOutletContext();
@@ -199,6 +200,23 @@ function About() {
               />
               <p className="guest-event-title">сумасумарум Vol.2</p>
               <p>дружба од едукативен настан</p>
+              <div className="social-media-icons">
+                <a href="#">
+                  <FaFacebookF />
+                </a>
+                <a href="#">
+                  <FaInstagram />
+                </a>
+              </div>
+            </div>
+            <div className="guest-appearance record-fair">
+              <img
+                src={recordFair}
+                alt="poster-record-fair"
+                className="appearance-poster"
+              />
+              <p className="guest-event-title">record fair kumanovo</p>
+              <p>изложба на винил плочи</p>
               <div className="social-media-icons">
                 <a href="#">
                   <FaFacebookF />
