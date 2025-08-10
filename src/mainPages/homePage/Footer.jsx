@@ -1,5 +1,5 @@
 import { useState } from "react";
-// import CarSilhouette from "../../images/avtoce1.png"; // path to your SVG
+import CarSilhouette from "../../images/avtoce1.png"; // path to your SVG
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import Logo from "../../images/logo1.png";
 
@@ -16,9 +16,9 @@ const Footer = ({ subtitle }) => {
   };
   return (
     <footer className="footer">
-      {/* <div className="footer-silhouette">
+      <div className="footer-silhouette">
         <img src={CarSilhouette} alt="Car Silhouette" width="100%" />
-      </div> */}
+      </div>
       <div className="footer-content">
         <div className="logofooter">
           <img src={Logo} alt="Logo" />

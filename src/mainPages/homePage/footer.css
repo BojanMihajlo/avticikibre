@@ -5,12 +5,12 @@
 }
 
 .footer-content {
-  background-image: url("../../images/avtoce1.png");
+  /* background-image: url("../../images/avtoce1.png");
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
-  width: 98%;
-  height: 100vh;
+  background-repeat: no-repeat; */
+  /* width: 98%; */
+  height: 80vh;
   padding: 1%;
   text-align: center;
   display: flex;
@@ -18,10 +18,10 @@
   align-items: center;
   gap: 110px;
 }
-/* .footer-silhouette img {
-  margin-top: -65%;
-  margin-bottom: -20%;
-} */
+.footer-silhouette img {
+  margin-top: -40%;
+  margin-bottom: -39%;
+}
 /* .footer {
   background-color: #1d1d1d;
   color: #f0f0f0;

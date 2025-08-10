@@ -19,7 +19,7 @@ const HomePage = () => {
         <Navbar />
         <motion.div
           className="logodiv"
-          initial={{ y: -600, scale: 1.5, opacity: 0, rotate: -20 }}
+          initial={{ y: -600, scale: 1.8, opacity: 0, rotate: -30 }}
           animate={{ y: 0, scale: 1, opacity: 1, rotate: 0 }}
           transition={{
             type: "spring",
