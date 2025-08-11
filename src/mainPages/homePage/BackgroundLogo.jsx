@@ -12,7 +12,7 @@ export default function BackgroundLogo() {
   const [index, setIndex] = useState(0); // which text
   const [subIndex, setSubIndex] = useState(0); // letters in text
   const [deleting, setDeleting] = useState(false);
-  const [hovered, setHovered] = useState(false);
+  // const [hovered, setHovered] = useState(false);
 
   const controls = useAnimation();
   const { ref, inView } = useInView({ threshold: 0.3 });
@@ -57,9 +57,9 @@ export default function BackgroundLogo() {
     <div className="backLogoMain">
       <div className="firstdiv">
         <motion.h1
-          animate={{ y: hovered ? 400 : 0 }}
+          // animate={{ y: hovered ? 400 : 0 }}
           transition={{ type: "spring", stiffness: 50, damping: 12 }}
-          onMouseLeave={() => setHovered(false)}
+          // onMouseLeave={() => setHovered(false)}
           className="motionH1"
         >
           {texts[index].substring(0, subIndex)}
@@ -68,7 +68,7 @@ export default function BackgroundLogo() {
           />
         </motion.h1>
 
-        <div className="textBre" onMouseEnter={() => setHovered(true)}>
+        <div className="textBre">
           <p>
             @diecastclubavticikibrekumanovo#avticikibre
             <span>
