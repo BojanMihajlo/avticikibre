@@ -15,7 +15,7 @@
 }
 
 .navBar {
-  padding-top: 2%;
+  padding-top: 1%;
 }
 
 .navBar ul {
@@ -23,6 +23,7 @@
   text-decoration: none;
   list-style: none;
   justify-content: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
 .navBar ul li {
