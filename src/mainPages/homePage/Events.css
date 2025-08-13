@@ -11,6 +11,7 @@
   color: #423e37;
   overflow: hidden;
   justify-content: center;
+   filter: drop-shadow(5px 5px 15px #e3b23c);
 }
 
 @media (max-width: 1024px) {

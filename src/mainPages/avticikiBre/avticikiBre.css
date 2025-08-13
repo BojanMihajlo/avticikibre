@@ -1,15 +1,38 @@
 .divHero {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 .video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
+.heroAvticiki {
+  clip-path: polygon(
+    0% 0%,
+    /* top-left corner */ 100% 0%,
+    /* top-right corner */ 100% 90%,
+    /* right side down before step */ 95% 100%,
+    /* step up */ 85% 100%,
+    /* flat */ 80% 90%,
+    /* step down */ 70% 90%,
+    65% 100%,
+    /* step up */ 35% 100%,
+    30% 90%,
+    /* step down */ 20% 90%,
+    15% 100%,
+    /* step up */ 5% 100%,
+    /* flat */ 0% 90% /* step down before closing */
+  );
+}
+
+.fancy-div {
+  height: 1000px;
+  background-color: #6e675f;
+}

@@ -34,7 +34,7 @@ export default function CollectorCars() {
     const node = containerRef.current; // copy to local variable
     const observer = new IntersectionObserver(
       ([entry]) => setShow(entry.isIntersecting),
-      { threshold: 0.3 }
+      { threshold: 0.5 }
     );
     if (node) observer.observe(node);
     return () => {
@@ -95,7 +95,7 @@ export default function CollectorCars() {
                     rotate: Math.random() * 45 - 22,
                   }}
                   exit={{ opacity: 0 }}
-                  transition={{ duration: 1.3 }}
+                  transition={{ duration: 2.5 }}
                   style={{
                     position: "absolute",
                     top: "58%",
@@ -134,7 +134,7 @@ export default function CollectorCars() {
                     rotate: Math.random() * 45 - 22,
                   }}
                   exit={{ opacity: 0 }}
-                  transition={{ duration: 1.3 }}
+                  transition={{ duration: 2.5 }}
                   style={{
                     position: "absolute",
                     top: "80%",
