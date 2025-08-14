@@ -1,5 +1,5 @@
 .advert {
-  height: 1350px;
+  height: 750px;
   background-color: #edebd7;
 }
 
@@ -15,7 +15,10 @@
   display: inline-flex;
   animation: scrollLeft 25s linear infinite;
   animation-play-state: running;
-  margin-top: 15%;
+  margin-top: 10%;
+}
+.marquee-track h1 {
+  font-size: 55px;
 }
 
 .marquee-wrapper:hover .marquee-track {

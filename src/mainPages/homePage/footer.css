@@ -1,7 +1,26 @@
+.wrapFooter {
+  background-color: #edebd7;
+}
 .footer {
   background-color: #a39594;
   text-align: center;
-  position: relative;
+  /* position: relative; */
+  clip-path: polygon(
+    0% 10%,
+    /* step down before closing (was bottom, now top) */ 5% 0%,
+    /* step up */ 15% 0%,
+    /* flat */ 20% 10%,
+    /* step down */ 30% 10%,
+    /* step up */ 35% 0%,
+    /* step up */ 65% 0%,
+    /* step up */ 70% 10%,
+    /* step down */ 80% 10%,
+    /* flat */ 85% 0%,
+    /* step up */ 95% 0%,
+    /* step up */ 100% 10%,
+    /* right side down before step */ 100% 100%,
+    /* bottom-right corner */ 0% 100% /* bottom-left corner */
+  );
 }
 
 .footer-content {
@@ -10,7 +29,7 @@
   background-size: cover;
   background-repeat: no-repeat; */
   /* width: 98%; */
-  height: 80vh;
+  height: 90vh;
   padding: 1%;
   text-align: center;
   display: flex;
@@ -18,10 +37,10 @@
   align-items: center;
   gap: 110px;
 }
-.footer-silhouette img {
+/* .footer-silhouette img {
   margin-top: -40%;
   margin-bottom: -39%;
-}
+} */
 /* .footer {
   background-color: #1d1d1d;
   color: #f0f0f0;
@@ -58,9 +77,15 @@
 
 /* Social icons */
 .footer-social {
+  width: 300px;
+  height: 220px;
   display: flex;
   gap: 15px;
-  position: absolute;
+  /* position: absolute; */
+  background-image: url("../../images/avtoce1.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   /* top: -90%; */
 }
@@ -109,6 +134,6 @@
 .footer-bottom {
   /* margin-top: 10px; */
   font-size: 0.9rem;
-  opacity: 0.8;
+  /* opacity: 0.8; */
   color: #edebd7;
 }

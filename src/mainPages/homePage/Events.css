@@ -1,5 +1,5 @@
 .eventsMain {
-  height: 400vh;
+  height: 425vh;
   background-color: #edebd7;
   padding-top: 5%;
 }
@@ -11,7 +11,7 @@
   color: #423e37;
   overflow: hidden;
   justify-content: center;
-   filter: drop-shadow(5px 5px 15px #e3b23c);
+  filter: drop-shadow(5px 5px 15px #e3b23c);
 }
 
 @media (max-width: 1024px) {
@@ -19,7 +19,7 @@
 
 @media (max-width: 768px) {
   .eventsMain {
-    height: 250vh;
+    height: 160vh;
   }
 
   .eventsMain h1 {

@@ -2,10 +2,10 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import img1 from "../../images/poster2.jpg";
 import img2 from "../../images/poster1.JPG";
-import img3 from "../../images/poster3.jpg";
+// import img3 from "../../images/poster3.jpg";
 import "./UnrollPosters.css";
 
-const images = [img1, img2, img3];
+const images = [img1, img2];
 
 const Poster = ({ src }) => {
   const ref = useRef(null);

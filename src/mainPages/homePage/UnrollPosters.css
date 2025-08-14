@@ -2,13 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 600px;
+  gap: 300px;
   padding: 200px;
 }
 
 .poster-container {
   /* perspective: 500px; */
-  height: 400px;
+  height: 1100px;
   width: 80vw;
   overflow: visible;
   display: flex;
@@ -27,11 +27,14 @@
 
 @media (max-width: 768px) {
   .unroll-wrapper {
-    gap: 100px;
+    gap: 50px;
     padding: 50px;
   }
 
   .poster-image {
     width: 82%;
+  }
+  .poster-container {
+    height: 400px;
   }
 }
