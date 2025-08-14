@@ -30,7 +30,7 @@ export default function OurCollect() {
         </motion.div>
       </div>
 
-      <div>
+      <div className="cardsAr">
         <CarCards />
       </div>
 

@@ -3,14 +3,14 @@
   font-weight: bold;
   /* height: 150vh; */
   color: #e3b23c;
-    filter: drop-shadow(5px 5px 15px black);
+  filter: drop-shadow(5px 5px 15px black);
 }
 
 .bluecar {
-   text-align: center;
+  text-align: center;
 }
 .bluecar img {
-    width: 250px;
-    height: auto;
-     filter: drop-shadow(5px 5px 15px #e3b23c);
+  width: 250px;
+  height: auto;
+  filter: drop-shadow(5px 5px 15px #e3b23c);
 }

@@ -26,7 +26,6 @@ export default function PassingImageGrid({
     offset: ["start center", "end center"],
   });
 
-  // Use MotionValue for the center image vertical movement (keeps it silky)
   const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "700%"]);
 
   // Mirror progress into a plain number for per-card math (no extra hooks)
@@ -39,9 +38,9 @@ export default function PassingImageGrid({
   // Tunables
   const SECTION_HEIGHT = "280vh"; // scroll room
   const GRID_WIDTH = "80%";
-  const AMPLITUDE = 120; // px each card slides outward at peak
-  const ROW_WINDOW = 0.3; // how long each row is "active"
-  const ROW_STAGGER = 0.22; // delay between rows
+  const AMPLITUDE = 180; // px each card slides outward at peak
+  const ROW_WINDOW = 0.4; // how long each row is "active"
+  const ROW_STAGGER = 0.17; // delay between rows
 
   // Compute per-card horizontal shift from numeric progress
   const calcShift = (progress, rowIndex, isLeft) => {
@@ -96,7 +95,7 @@ export default function PassingImageGrid({
         style={{
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
-          gap: "1.2rem",
+          gap: "2rem",
           width: GRID_WIDTH,
           maxWidth: 1100,
           zIndex: 1,
@@ -115,7 +114,7 @@ export default function PassingImageGrid({
                 background: "#fff",
                 borderRadius: 14,
                 overflow: "hidden",
-                boxShadow: "0 10px 28px rgba(0,0,0,0.12)",
+                boxShadow: "0 18px 25px #e3b23c",
               }}
             >
               <img
