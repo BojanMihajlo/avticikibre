@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 // import Navbar from "./Navbar";
 import { useState } from "react";
-// import Footer from "./Footer";
+import Footer from "./Footer";
 
 const RootLayout = () => {
   const [subtitle, setSubtitle] = useState(true);
@@ -9,7 +9,7 @@ const RootLayout = () => {
     <>
       {/* <Navbar subtitle={subtitle} setSubtitle={setSubtitle} /> */}
       <Outlet context={[subtitle, setSubtitle]} />
-      {/* <Footer subtitle={subtitle} setSubtitle={setSubtitle} /> */}
+      <Footer subtitle={subtitle} setSubtitle={setSubtitle} />
     </>
   );
 };
