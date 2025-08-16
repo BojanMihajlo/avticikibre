@@ -72,6 +72,7 @@
   list-style: none;
   /* padding-bottom: 10%; */
   padding-right: 5%;
+  padding-top: 2%;
 }
 
 .footer-nav li a {
@@ -87,14 +88,14 @@
 
 /* Social icons */
 .footer-social {
-  width: 330px;
-  height: 220px;
+  width: 450px;
+  height: 320px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
   /* position: absolute; */
-  background-image: url("../../images/avtoce1.png");
+  background-image: url("../../images/avto1.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -113,9 +114,9 @@
   color: #e3b23c;
 }
 
-.logofooter {
-  padding-bottom: 4%;
-}
+/* .logofooter {
+  padding-bottom: 1%;
+} */
 
 .logofooter img {
   width: 480px;
@@ -152,5 +153,5 @@
   /* opacity: 0.8; */
   color: #edebd7;
   text-align: center;
-  padding-top: 5%;
+  padding-top: 3%;
 }

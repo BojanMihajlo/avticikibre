@@ -5,6 +5,7 @@ import { motion, useAnimation } from "framer-motion";
 import logo from "../../images/logo2.png";
 import { NavLink } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
+// import logoS from "../../images/logoStaro.png";
 
 const texts = ["#AvticikiBre#", "#Avtomobilizam#", "#RogueBrush#", "#Local#"];
 
