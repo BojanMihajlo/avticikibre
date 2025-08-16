@@ -7,6 +7,10 @@ import colcar3 from "../../images/colcar3.jpg";
 import colcar4 from "../../images/colcar4.jpg";
 import colcar5 from "../../images/colcar5.jpg";
 import colcar6 from "../../images/colcar6.jpg";
+import colcar7 from "../../images/colcar7.jpg";
+import colcar8 from "../../images/colcar8.jpg"
+import CarButton from "../carButton/CarButton";
+import "./CarCards.css"
 
 export default function PassingImageGrid({
   cards = [
@@ -16,6 +20,8 @@ export default function PassingImageGrid({
     { id: 4, img: colcar4, title: "Card 4" },
     { id: 5, img: colcar5, title: "Card 5" },
     { id: 6, img: colcar6, title: "Card 6" },
+     { id: 7, img: colcar7, title: "Card 7" },
+    { id: 8, img: colcar8, title: "Card 8" },
   ],
 }) {
   const ref = useRef(null);
@@ -26,7 +32,7 @@ export default function PassingImageGrid({
     offset: ["start center", "end center"],
   });
 
-  const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "700%"]);
+  const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "907%"]);
 
   // Mirror progress into a plain number for per-card math (no extra hooks)
   const [p, setP] = useState(0);
@@ -36,11 +42,11 @@ export default function PassingImageGrid({
   }, [scrollYProgress]);
 
   // Tunables
-  const SECTION_HEIGHT = "280vh"; // scroll room
+  const SECTION_HEIGHT = "340vh"; // scroll room
   const GRID_WIDTH = "80%";
-  const AMPLITUDE = 180; // px each card slides outward at peak
+  const AMPLITUDE = 182; // px each card slides outward at peak
   const ROW_WINDOW = 0.4; // how long each row is "active"
-  const ROW_STAGGER = 0.17; // delay between rows
+  const ROW_STAGGER = 0.11; // delay between rows
 
   // Compute per-card horizontal shift from numeric progress
   const calcShift = (progress, rowIndex, isLeft) => {
@@ -59,6 +65,7 @@ export default function PassingImageGrid({
   };
 
   return (
+    <>
     <section
       ref={ref}
       style={{
@@ -79,7 +86,7 @@ export default function PassingImageGrid({
         style={{
           position: "absolute",
           top: 0,
-          //   left: "50%",
+          left: "42.1%",
           transform: "translateX(-50%)",
           y: imageY,
           zIndex: 2,
@@ -143,6 +150,21 @@ export default function PassingImageGrid({
           );
         })}
       </div>
+      <motion.div className="buttonMore"
+        initial={{ x: -170, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 2,  }}
+        viewport={{ once: false }}
+      >
+        <CarButton width={200} text={"Види галерија"}/>
+      </motion.div>
+      
+     
     </section>
+
+      <div className="divStop">
+       
+      </div>
+    </>
   );
 }

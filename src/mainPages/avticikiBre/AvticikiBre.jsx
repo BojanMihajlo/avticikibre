@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import "./avticikiBre.css";
 import video from "../../images/video/video2.mp4";
 import OurCollect from "./OurCollect";
+import Advert from "../homePage/Advert"
 
 export default function AvticikiBre() {
   const [showSecond, setShowSecond] = useState(false);
@@ -79,6 +80,9 @@ export default function AvticikiBre() {
       </div>
       <div class="fancy-div">
         <OurCollect />
+      </div>
+      <div>
+        <Advert/>
       </div>
     </>
   );

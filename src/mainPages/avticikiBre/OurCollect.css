@@ -9,7 +9,11 @@
 .bluecar {
   text-align: center;
 }
+.cardsAr {
+  padding-top: 4%;
+}
 .bluecar img {
+
   width: 250px;
   height: auto;
   filter: drop-shadow(5px 5px 15px #e3b23c);
