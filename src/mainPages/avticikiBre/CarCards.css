@@ -1,9 +1,17 @@
 .buttonMore {
-    position: absolute;
-    bottom: 18%;
-    right: 15%;
+  position: absolute;
+  bottom: 18%;
+  right: 15%;
+}
+
+.sectionScroll {
+  background-image: url("../../images/avticikiBre-images/road228.png");
+  background-size: cover;
+  background-position: center;
 }
 .divStop {
-    height: 200px;
-    background-color:#423e37;
+  height: 270px;
+  background-image: url("../../images/avticikiBre-images/youtube.jpg");
+  background-position: center;
+  background-size: cover;
 }

@@ -86,6 +86,7 @@ const HomePage = () => {
               width: "100%",
               height: "100%",
               objectFit: "cover",
+              objectPosition: "center top",
               opacity: 0.5,
             }}
           />

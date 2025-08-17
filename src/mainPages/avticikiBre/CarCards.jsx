@@ -8,9 +8,9 @@ import colcar4 from "../../images/colcar4.jpg";
 import colcar5 from "../../images/colcar5.jpg";
 import colcar6 from "../../images/colcar6.jpg";
 import colcar7 from "../../images/colcar7.jpg";
-import colcar8 from "../../images/colcar8.jpg"
+import colcar8 from "../../images/colcar8.jpg";
 import CarButton from "../carButton/CarButton";
-import "./CarCards.css"
+import "./CarCards.css";
 
 export default function PassingImageGrid({
   cards = [
@@ -20,7 +20,7 @@ export default function PassingImageGrid({
     { id: 4, img: colcar4, title: "Card 4" },
     { id: 5, img: colcar5, title: "Card 5" },
     { id: 6, img: colcar6, title: "Card 6" },
-     { id: 7, img: colcar7, title: "Card 7" },
+    { id: 7, img: colcar7, title: "Card 7" },
     { id: 8, img: colcar8, title: "Card 8" },
   ],
 }) {
@@ -66,105 +66,103 @@ export default function PassingImageGrid({
 
   return (
     <>
-    <section
-      ref={ref}
-      style={{
-        height: SECTION_HEIGHT,
-        position: "relative",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        overflow: "hidden",
-        background: "#6e675f",
-        padding: "6vh 0",
-      }}
-    >
-      {/* Moving image through the center */}
-      <motion.img
-        src={blueCar}
-        alt="Passing"
+      <section
+        ref={ref}
         style={{
-          position: "absolute",
-          top: 0,
-          left: "42.1%",
-          transform: "translateX(-50%)",
-          y: imageY,
-          zIndex: 2,
-          width: 220,
-          height: "auto",
-
-          filter: "drop-shadow(5px 5px 15px #e3b23c)",
+          height: SECTION_HEIGHT,
+          position: "relative",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          overflow: "hidden",
+          // background: "#6e675f",
+          padding: "6vh 0",
         }}
-      />
-
-      {/* Cards grid (two columns) */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "2rem",
-          width: GRID_WIDTH,
-          maxWidth: 1100,
-          zIndex: 1,
-        }}
+        className="sectionScroll"
       >
-        {cards.map((card, index) => {
-          const rowIndex = Math.floor(index / 2);
-          const isLeft = index % 2 === 0;
-          const x = calcShift(p, rowIndex, isLeft);
+        {/* Moving image through the center */}
+        <motion.img
+          src={blueCar}
+          alt="Passing"
+          style={{
+            position: "absolute",
+            top: 0,
+            left: "42.1%",
+            transform: "translateX(-50%)",
+            y: imageY,
+            zIndex: 2,
+            width: 220,
+            height: "auto",
 
-          return (
-            <motion.div
-              key={card.id}
-              style={{
-                x, // numeric px is fine
-                background: "#fff",
-                borderRadius: 14,
-                overflow: "hidden",
-                boxShadow: "0 18px 25px #e3b23c",
-              }}
-            >
-              <img
-                src={card.img}
-                alt={card.title ?? `Card ${card.id}`}
+            filter: "drop-shadow(5px 5px 15px #e3b23c)",
+          }}
+        />
+
+        {/* Cards grid (two columns) */}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: "2rem",
+            width: GRID_WIDTH,
+            maxWidth: 1100,
+            zIndex: 1,
+          }}
+        >
+          {cards.map((card, index) => {
+            const rowIndex = Math.floor(index / 2);
+            const isLeft = index % 2 === 0;
+            const x = calcShift(p, rowIndex, isLeft);
+
+            return (
+              <motion.div
+                key={card.id}
                 style={{
-                  width: "100%",
-                  height: 240,
-                  objectFit: "cover",
-                  display: "block",
+                  x, // numeric px is fine
+                  background: "#fff",
+                  borderRadius: 14,
+                  overflow: "hidden",
+                  boxShadow: "0 18px 25px #e3b23c",
                 }}
-              />
-              {card.title && (
-                <div
+              >
+                <img
+                  src={card.img}
+                  alt={card.title ?? `Card ${card.id}`}
                   style={{
-                    padding: "0.9rem 1rem 1.1rem",
-                    fontWeight: 700,
-                    fontSize: "1rem",
-                    textAlign: "center",
+                    width: "100%",
+                    height: 240,
+                    objectFit: "cover",
+                    display: "block",
                   }}
-                >
-                  {card.title}
-                </div>
-              )}
-            </motion.div>
-          );
-        })}
-      </div>
-      <motion.div className="buttonMore"
-        initial={{ x: -170, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        transition={{ duration: 2,  }}
-        viewport={{ once: false }}
-      >
-        <CarButton width={200} text={"Види галерија"}/>
-      </motion.div>
-      
-     
-    </section>
+                />
+                {card.title && (
+                  <div
+                    style={{
+                      padding: "0.9rem 1rem 1.1rem",
+                      fontWeight: 700,
+                      fontSize: "1rem",
+                      textAlign: "center",
+                    }}
+                  >
+                    {card.title}
+                  </div>
+                )}
+              </motion.div>
+            );
+          })}
+        </div>
+        <motion.div
+          className="buttonMore"
+          initial={{ x: -170, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 2 }}
+          viewport={{ once: false }}
+        >
+          <CarButton width={200} text={"Види галерија"} />
+        </motion.div>
+      </section>
 
-      <div className="divStop">
-       
-      </div>
+      <div className="divStop"></div>
     </>
   );
 }
