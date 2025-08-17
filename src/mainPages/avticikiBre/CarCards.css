@@ -5,9 +5,10 @@
 }
 
 .sectionScroll {
-  background-image: url("../../images/avticikiBre-images/road228.png");
-  background-size: cover;
+  background-image: url("../../images/avticikiBre-images/road11.png");
+  /* background-size: cover; */
   background-position: center;
+  background-repeat: no-repeat;
 }
 .divStop {
   height: 270px;

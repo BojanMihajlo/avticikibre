@@ -1,0 +1,12 @@
+.divStopTwo {
+  height: 270px;
+  background-image: url("../../images/avticikiBre-images/wallcar1.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.buttonMore {
+  position: absolute;
+  bottom: 15%;
+  right: 15%;
+}

@@ -6,6 +6,8 @@ import "./avticikiBre.css";
 import video from "../../images/video/video2.mp4";
 import OurCollect from "./OurCollect";
 import Advert from "../homePage/Advert"
+import NewsCars from "./NewsCars";
+import WorldNews from "./WorldNews";
 
 export default function AvticikiBre() {
   const [showSecond, setShowSecond] = useState(false);
@@ -80,6 +82,9 @@ export default function AvticikiBre() {
       </div>
       <div class="fancy-div">
         <OurCollect />
+      </div>
+      <div>
+        <WorldNews/>
       </div>
       <div>
         <Advert/>

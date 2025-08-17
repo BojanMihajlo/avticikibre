@@ -3,7 +3,6 @@ import "./OurCollect.css";
 import { useOutletContext } from "react-router-dom";
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
-// import blueCar from "../../images/avticikiBre-images/blueCar.png";
 import CarCards from "./CarCards";
 
 export default function OurCollect() {
