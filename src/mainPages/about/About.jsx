@@ -19,7 +19,7 @@ function About() {
   const [subtitle] = useOutletContext();
   return (
     <>
-      <NavBar />
+      <NavBar bgColor={"#423e37"} />
       <main className="container">
         <section className="introduction-section">
           <div className="introduction-poster-wrapper">

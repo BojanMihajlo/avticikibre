@@ -6,12 +6,12 @@ import React, { useState } from "react";
 import { motion } from "motion/react";
 import { useOutletContext } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ bgColor }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [subtitle, setSubtitle] = useOutletContext();
 
   return (
-    <div className="navHero">
+    <div className="navHero" style={{ backgroundColor: bgColor }}>
       <div className="subtitleButtons">
         <CarButton text="EN" onClick={() => setSubtitle(false)} />
         <CarButton text="MK" onClick={() => setSubtitle(true)} />
