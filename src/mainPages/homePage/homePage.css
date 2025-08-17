@@ -1,6 +1,29 @@
 #sectionOne {
   height: 100vh;
+  position: relative;
+  z-index: 5;
+
   background-color: #423e37;
+}
+
+.curtain-top {
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 90%,
+    95% 100%,
+    85% 100%,
+    80% 90%,
+    70% 90%,
+    65% 100%,
+    35% 100%,
+    30% 90%,
+    20% 90%,
+    15% 100%,
+    5% 100%,
+    0% 90%
+  );
+  transform-origin: top;
 }
 
 .logodiv {

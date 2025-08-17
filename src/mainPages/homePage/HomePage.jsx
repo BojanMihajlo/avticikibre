@@ -1,21 +1,110 @@
 import CarButton from "../carButton/CarButton";
 import "./homePage.css";
-// import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useOutletContext } from "react-router-dom";
 import CollectorCars from "./CollectorCars";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import Logo from "../../images/logo1.png";
 import MotionBackground from "./MotionBackground";
 import Navbar from "./Navbar";
 import Events from "./Events";
 import Advert from "./Advert";
+// import herohome from "../../images/herohome.png";
+import video from "../../images/video/video23.mp4";
 
 const HomePage = () => {
   const [subtitle] = useOutletContext();
 
+  const videoCtrl = useAnimation();
+  const logoCtrl = useAnimation();
+  const [pointerOff, setPointerOff] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      // fade out video
+      videoCtrl
+        .start({
+          opacity: 0,
+          transition: { duration: 1.5, ease: "easeInOut" },
+        })
+        .then(() => setPointerOff(true));
+
+      // start logo animation
+      logoCtrl.start({
+        y: 0,
+        scale: 1,
+        opacity: 1,
+        rotate: 0,
+        transition: {
+          type: "spring",
+          stiffness: 180,
+          damping: 15,
+          mass: 1,
+          duration: 3.8,
+          bounce: 0.5,
+        },
+      });
+    }, 4500);
+
+    return () => clearTimeout(timer);
+  }, [videoCtrl, logoCtrl]);
+
   return (
     <>
-      <div id="sectionOne">
+      <div
+        style={{
+          position: "relative",
+          width: "100%",
+          minHeight: "100vh",
+          overflow: "hidden",
+        }}
+      >
+        {/* Video background layer */}
+        <motion.div
+          initial={{ opacity: 1 }}
+          animate={videoCtrl}
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            overflow: "hidden",
+            zIndex: 10,
+            pointerEvents: pointerOff ? "none" : "auto",
+          }}
+        >
+          <video
+            src={video}
+            autoPlay
+            muted
+            loop
+            playsInline
+            disablePictureInPicture
+            controlsList="nodownload nofullscreen noremoteplayback"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              opacity: 0.5,
+            }}
+          />
+        </motion.div>
+
+        {/* Content section */}
+        <div id="sectionOne" style={{ position: "relative", zIndex: 5 }}>
+          <Navbar />
+          <motion.div
+            className="logodiv"
+            initial={{ y: -500, scale: 1.8, opacity: 0, rotate: -30 }}
+            animate={logoCtrl} // controlled by useAnimation
+          >
+            <img src={Logo} alt="Logo" />
+          </motion.div>
+        </div>
+      </div>
+
+      {/* <div id="sectionOne">
         <Navbar />
         <motion.div
           className="logodiv"
@@ -32,7 +121,8 @@ const HomePage = () => {
         >
           <img src={Logo} alt="Logo" />
         </motion.div>
-      </div>
+      </div> */}
+
       <CollectorCars />
       <div id="sectionTwo">
         <div className="bg-cars car1">
