@@ -12,7 +12,7 @@ import tuningSlavia from "../../images/local-images/tuning-slavia.jpg";
 function Local() {
   return (
     <>
-      <NavBar />
+      <NavBar bgColor={"#423e37"} />
       <div className="main-container">
         <div className="cards-wrapper">
           <div className="card">
