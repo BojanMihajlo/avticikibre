@@ -8,10 +8,13 @@
   display: flex;
   flex-wrap: wrap;
   font-size: 4rem;
-  color: #423e37;
+  color: black;
   overflow: hidden;
   justify-content: center;
   filter: drop-shadow(5px 5px 15px #e3b23c);
+   font-family: "Rubik Dirt", system-ui;
+     font-weight: 400;
+  font-style: normal;
 }
 
 @media (max-width: 1024px) {

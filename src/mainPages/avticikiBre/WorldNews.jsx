@@ -22,7 +22,7 @@ export default function WorldNews() {
         <motion.div
           ref={sectionRef}
           className="subtitleCollect"
-          style={{ fontSize: fontSizeBig, overflow: "hidden" }}
+          style={{ fontSize: fontSizeBig, overflow: "hidden",paddingBottom:"4%" }}
         >
           {subtitle ? "СВЕТСКИ НОВИТЕТИ" : "WORLD NEWS"}
         </motion.div>

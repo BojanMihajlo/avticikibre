@@ -10,3 +10,10 @@
   bottom: 15%;
   right: 15%;
 }
+
+.sectionTwoScroll {
+    background-image: url("../../images/avticikiBre-images/road11.png");
+  background-size: 36.2% 70%;
+  background-position:left center;
+  background-repeat: no-repeat;
+}

@@ -58,6 +58,7 @@ const INITIAL_OFFSET = 0.12 * window.innerWidth; // 20% of screen width
           justifyContent: "flex-start",
           backgroundColor:"#a39594",
         }}
+         className="sectionTwoScroll"
       >
         {/* Image on left moving down */}
         <motion.img
@@ -108,7 +109,7 @@ const INITIAL_OFFSET = 0.12 * window.innerWidth; // 20% of screen width
                   background: "#fff",
                   borderRadius: 14,
                   overflow: "hidden",
-                  boxShadow: "0 12px 20px rgba(0,0,0,0.15)",
+                  filter: "drop-shadow(5px 5px 15px #e3b23c)",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "center",

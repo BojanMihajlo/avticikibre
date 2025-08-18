@@ -15,7 +15,7 @@ export default function OurCollect() {
     layoutEffect: false,
   });
 
-  const fontSizeBig = useTransform(scrollYProgress, [0, 1], ["150px", "50px"]);
+  const fontSizeBig = useTransform(scrollYProgress, [0, 1], ["120px", "50px"]);
 
   return (
     <>
