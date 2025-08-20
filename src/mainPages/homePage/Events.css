@@ -17,10 +17,14 @@
   font-style: normal;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 769px) {
+
+  .eventsMain {
+    height: 275vh;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 426px) {
   .eventsMain {
     height: 160vh;
   }

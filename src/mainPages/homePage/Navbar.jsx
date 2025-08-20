@@ -17,6 +17,11 @@ const Navbar = ({ bgColor }) => {
         <CarButton text="MK" onClick={() => setSubtitle(true)} />
       </div>
 
+      <div className="subtitleButtonsMob">
+        <CarButton text="EN" width="90" onClick={() => setSubtitle(false)} />
+        <CarButton text="MK" width="90" onClick={() => setSubtitle(true)} />
+      </div>
+
       {/* Desktop Navigation */}
       <motion.div
         className="navBar"

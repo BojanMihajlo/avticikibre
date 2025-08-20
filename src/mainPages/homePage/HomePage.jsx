@@ -9,7 +9,7 @@ import MotionBackground from "./MotionBackground";
 import Navbar from "./Navbar";
 import Events from "./Events";
 import Advert from "./Advert";
-// import herohome from "../../images/herohome.png";
+
 import video from "../../images/video/video23.mp4";
 
 const HomePage = () => {
@@ -104,25 +104,6 @@ const HomePage = () => {
           </motion.div>
         </div>
       </div>
-
-      {/* <div id="sectionOne">
-        <Navbar />
-        <motion.div
-          className="logodiv"
-          initial={{ y: -600, scale: 1.8, opacity: 0, rotate: -30 }}
-          animate={{ y: 0, scale: 1, opacity: 1, rotate: 0 }}
-          transition={{
-            type: "spring",
-            stiffness: 180,
-            damping: 15,
-            mass: 1,
-            duration: 3.8,
-            bounce: 0.5,
-          }}
-        >
-          <img src={Logo} alt="Logo" />
-        </motion.div>
-      </div> */}
 
       <CollectorCars />
       <div id="sectionTwo">
