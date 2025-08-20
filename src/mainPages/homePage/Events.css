@@ -1,5 +1,5 @@
 .eventsMain {
-  height: 425vh;
+  height: 600vh;
   background-color: #edebd7;
   padding-top: 5%;
 }
@@ -12,21 +12,20 @@
   overflow: hidden;
   justify-content: center;
   filter: drop-shadow(5px 5px 15px #e3b23c);
-   font-family: "Rubik Dirt", system-ui;
-     font-weight: 400;
+  font-family: "Rubik Dirt", system-ui;
+  font-weight: 400;
   font-style: normal;
 }
 
 @media (max-width: 769px) {
-
   .eventsMain {
-    height: 275vh;
+    height: 400vh;
   }
 }
 
 @media (max-width: 426px) {
   .eventsMain {
-    height: 160vh;
+    height: 230vh;
   }
 
   .eventsMain h1 {

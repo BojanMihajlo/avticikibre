@@ -3,7 +3,6 @@
 }
 .footer {
   background-color: #6e675f;
-  
   display: flex;
   flex-direction: column;
   height: 650px;
@@ -29,7 +28,6 @@
 }
 
 .footer-content {
-
   display: flex;
   justify-content: space-between;
   gap: 100px;
@@ -37,13 +35,11 @@
   padding-top: 2%;
 }
 
-
 /* Navbar links */
 .footer-nav {
-
   gap: 32px;
   list-style: none;
- 
+
   padding-right: 5%;
   padding-top: 2%;
 }
@@ -72,8 +68,6 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
-
 }
 
 .footer-social a {
@@ -86,7 +80,6 @@
 .footer-social a:hover {
   color: #e3b23c;
 }
-
 
 .logofooter img {
   width: 480px;
@@ -106,7 +99,6 @@
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
-  
 }
 
 .footer-form input {
@@ -126,9 +118,8 @@
 }
 
 @media (max-width: 1024px) {
-
   .footer {
-   clip-path: polygon(
+    clip-path: polygon(
       0% 5%,
       5% 0%,
       15% 0%,
@@ -148,9 +139,8 @@
 }
 
 @media (max-width: 768px) {
-
   .footer {
-   clip-path: polygon(
+    clip-path: polygon(
       0% 5%,
       5% 0%,
       15% 0%,
@@ -168,51 +158,48 @@
     );
     /* text-align: center; */
     height: 680px;
-    gap:5px;
-    
+    gap: 5px;
   }
 
   .logofooter img {
-  width: 280px;
-  height: auto;
-}
+    width: 280px;
+    height: auto;
+  }
 
-.footer-content {
-  display: block;
-  justify-content: center;
-  gap:5px;
-  /* padding-left: %; */
-}
-.footer-nav {
-  display:flex;
-  gap: 7px;
-  /* padding-right: 8%; */
-  justify-content: center;
+  .footer-content {
+    display: block;
+    justify-content: center;
+    gap: 5px;
+    /* padding-left: %; */
+  }
+  .footer-nav {
+    display: flex;
+    gap: 7px;
+    /* padding-right: 8%; */
+    justify-content: center;
+  }
 
-}
-
-.footer-nav li a {
-  font-size: 9px;
-}
-.footer-social {
-  width: 280px;
-  height: 240px;
-  margin-left: 3%;
-}
-.footer-social a {
-  font-size: 30px;
-}
-.footer-subscribe h2 {
-  margin-left: 1%;
-  font-size: 22px;
-}
-.footer-form {
-  align-items: center;
-  justify-content: center;
+  .footer-nav li a {
+    font-size: 9px;
+  }
+  .footer-social {
+    width: 280px;
+    height: 240px;
+    margin-left: 3%;
+  }
+  .footer-social a {
+    font-size: 30px;
+  }
+  .footer-subscribe h2 {
+    margin-left: 1%;
+    font-size: 22px;
+  }
+  .footer-form {
+    align-items: center;
+    justify-content: center;
     margin-right: 6%;
-}
-.footer-bottom {
-  padding-top: 8%;
-}
-
+  }
+  .footer-bottom {
+    padding-top: 8%;
+  }
 }
