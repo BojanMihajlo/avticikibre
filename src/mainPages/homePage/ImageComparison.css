@@ -11,13 +11,11 @@
   overflow: hidden; /* ✅ prevent children from overflowing and causing scrollbars */
 }
 
-
 /* h1,
 h2 {
   font-weight: 400;
   max-width: none;
 } */
-
 
 .comparisonImage {
   width: 100%;
@@ -43,10 +41,9 @@ h2 {
   align-items: center;
   justify-content: center;
   min-height: 70vh;
-  background-color: #A39594;
+  background-color: #a39594;
 }
 .panel p {
-    font-family: "Rubik Dirt", system-ui;
-    font-size: 30px; 
+  font-family: "Rubik Dirt", system-ui;
+  font-size: 30px;
 }
-
