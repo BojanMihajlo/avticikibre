@@ -11,6 +11,7 @@ import Events from "./Events";
 import Advert from "./Advert";
 
 import video from "../../images/video/video23.mp4";
+import ImageComparison from "./ImageComparison";
 
 const HomePage = () => {
   const [subtitle] = useOutletContext();
@@ -57,6 +58,7 @@ const HomePage = () => {
           width: "100%",
           minHeight: "100vh",
           overflow: "hidden",
+         
         }}
       >
         {/* Video background layer */}
@@ -228,7 +230,8 @@ const HomePage = () => {
         </div>
       </div>
       <Events />
-      <MotionBackground />
+      {/* <MotionBackground /> */}
+      <ImageComparison/>
 
       <Advert />
     </>

@@ -1,0 +1,52 @@
+.main {
+  height: 375vh;
+  overflow-x: hidden; /* ✅ hide accidental horizontal scroll */
+  position: relative;
+}
+
+.comparisonSection {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* ✅ force fixed height instead of responsive aspect ratio */
+  overflow: hidden; /* ✅ prevent children from overflowing and causing scrollbars */
+}
+
+
+/* h1,
+h2 {
+  font-weight: 400;
+  max-width: none;
+} */
+
+
+.comparisonImage {
+  width: 100%;
+  height: 100%;
+}
+.afterImage {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  transform: translate(100%, 0px);
+}
+.afterImage img {
+  transform: translate(-100%, 0px);
+}
+.comparisonImage img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  background-color: #A39594;
+}
+.panel p {
+    font-family: "Rubik Dirt", system-ui;
+    font-size: 30px; 
+}
+

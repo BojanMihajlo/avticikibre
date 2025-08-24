@@ -140,7 +140,7 @@ export default function BackgroundLogo() {
             animate={controls}
             whileHover={{
               rotate: 30,
-              transition: { duration: 0.3, ease: "easeInOut" },
+              transition: { duration: 0.5, ease: "easeInOut" },
             }}
             className="motionImg"
           />
