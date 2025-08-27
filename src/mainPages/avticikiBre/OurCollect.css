@@ -22,3 +22,19 @@
   height: auto;
   filter: drop-shadow(5px 5px 15px #e3b23c);
 }
+
+.textOur {
+
+   text-align: center;
+ 
+  padding-top: 5%;
+  margin-bottom: -8%; 
+
+}
+.textOur h3 {
+    color: black;
+  filter: drop-shadow(5px 5px 15px #e3b23c);
+    font-family: "Rubik Dirt", system-ui;
+    text-transform: uppercase;
+    font-weight: 400;
+}

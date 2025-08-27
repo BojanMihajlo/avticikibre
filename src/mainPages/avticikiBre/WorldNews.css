@@ -1,3 +1,20 @@
 .world {
     background-color: #a39594;
 }
+
+.textOurTwo {
+
+   text-align: center;
+ 
+  padding-top: 5%;
+  padding-left: 4%;
+   background-color: #a39594;
+
+}
+.textOurTwo h3 {
+    color: black;
+  filter: drop-shadow(5px 5px 15px #e3b23c);
+    font-family: "Rubik Dirt", system-ui;
+    text-transform: uppercase;
+    font-weight: 400;
+}

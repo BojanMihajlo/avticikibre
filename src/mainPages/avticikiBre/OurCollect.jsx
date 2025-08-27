@@ -16,6 +16,7 @@ export default function OurCollect() {
   });
 
   const fontSizeBig = useTransform(scrollYProgress, [0, 1], ["120px", "50px"]);
+  const fontSizeP = useTransform(scrollYProgress, [0, 1], ["22px", "18px"])
 
   return (
     <>
@@ -28,14 +29,21 @@ export default function OurCollect() {
           {subtitle ? "НАША КОЛЕКЦИЈА" : "OUR COLLECTION"}
         </motion.div>
       </div>
+      <div className="textOur">
+        <motion.div
+         ref={sectionRef}
+         
+          style={{ fontSize: fontSizeP, overflow: "hidden" }}
+        >
+        <h3>{subtitle ? "'Влезете во нашиот свет на автичики и изберете го најдобриот модел за вас'" : "'Enter our world of cars and choose the best model fosr you.'"}</h3>
+        </motion.div>
+      </div>
 
       <div className="cardsAr">
         <CarCards />
       </div>
 
-      {/* <motion.div className="bluecar">
-        <img src={blueCar} alt="car" />
-      </motion.div> */}
+    
     </>
   );
 }

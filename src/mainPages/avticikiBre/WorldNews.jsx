@@ -15,6 +15,7 @@ export default function WorldNews() {
   });
 
   const fontSizeBig = useTransform(scrollYProgress, [0, 1], ["120px", "50px"]);
+  const fontSizeP = useTransform(scrollYProgress, [0, 1], ["22px", "18px"])
 
   return (
     <>
@@ -27,6 +28,16 @@ export default function WorldNews() {
           {subtitle ? "СВЕТСКИ НОВИТЕТИ" : "WORLD NEWS"}
         </motion.div>
       </div>
+
+       <div className="textOurTwo">
+              <motion.div
+               ref={sectionRef}
+               
+                style={{ fontSize: fontSizeP, overflow: "hidden" }}
+              >
+              <h3>{subtitle ? "'Ги апдејтуваме сите нови модели во светот на автичики'" : "'We update all the new models in the world of cars'"}</h3>
+              </motion.div>
+            </div>
 
       <div >
         <NewsCars />
