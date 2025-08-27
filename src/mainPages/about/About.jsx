@@ -9,6 +9,7 @@ import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import dieCastCars from "../../images/about-images/cars-die-cast.jpg";
 import firstEventPoster from "../../images/about-images/die-cast-first-event.jpg";
 import secontEventFlaer from "../../images/about-images/avticiki-bre-second-event.jpg";
+import thirdEventFlaer from "../../images/about-images/avticiki-bre-third-event.jpg";
 import sakuraFestival from "../../images/about-images/sakura-festival.jpg";
 import skopjeKup from "../../images/about-images/skopje-kup.JPG";
 import oldtimerVitezi from "../../images/about-images/oldtimer-vitezi.jpg";
@@ -73,13 +74,14 @@ function About() {
           <div className="events-section-title-wrapper">
             <h1>Организирани Настани (Дружби)</h1>
           </div>
+          {/* Third Event */}
           <div className="event-container">
             <div className="event-title-and-description-wrapper">
               <div className="event-title-wrapper">
-                <h1>Прво Die-cast Шоу Куманово 2022</h1>
+                <h1>Трето Die-Cast шоу во Куманово 2025</h1>
               </div>
               <div className="event-description-wrapper">
-                <p>Смотра на "Чуварите на времето"</p>
+                <p>"И јас собирам Автичики Бре"</p>
                 <p>
                   Заљубениците и колекционерите на модели на автомобили конечно
                   ја добија долго очекуваната изложба во организација на
@@ -89,7 +91,7 @@ function About() {
             </div>
             <div className="event-poster-wrapper">
               <img
-                src={firstEventPoster}
+                src={thirdEventFlaer}
                 alt="event-poster"
                 className="event-poster"
               />
@@ -102,6 +104,7 @@ function About() {
               />
             </div>
           </div>
+
           {/* Second Event */}
           <div className="event-container">
             <div className="event-title-and-description-wrapper">
@@ -120,6 +123,36 @@ function About() {
             <div className="event-poster-wrapper">
               <img
                 src={secontEventFlaer}
+                alt="event-poster"
+                className="event-poster"
+              />
+            </div>
+            <div className="button-wrapper">
+              <CarButton
+                text={subtitle ? "Повеќе" : "Learn more"}
+                textColor="#6e675f"
+                width="160"
+              />
+            </div>
+          </div>
+          {/* First Event */}
+          <div className="event-container">
+            <div className="event-title-and-description-wrapper">
+              <div className="event-title-wrapper">
+                <h1>Прво Die-cast Шоу Куманово 2022</h1>
+              </div>
+              <div className="event-description-wrapper">
+                <p>Смотра на "Чуварите на времето"</p>
+                <p>
+                  Заљубениците и колекционерите на модели на автомобили конечно
+                  ја добија долго очекуваната изложба во организација на
+                  DIE-CAST CLUB KUMANOVO
+                </p>
+              </div>
+            </div>
+            <div className="event-poster-wrapper">
+              <img
+                src={firstEventPoster}
                 alt="event-poster"
                 className="event-poster"
               />
