@@ -6,7 +6,7 @@
 
 .comparisonSection {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 100vh; /* ✅ force fixed height instead of responsive aspect ratio */
   overflow: hidden; /* ✅ prevent children from overflowing and causing scrollbars */
 }
@@ -14,24 +14,41 @@
 
 
 .comparisonImage {
-  width: 100%;
+  width: 100vw;
   height: 100%;
-}
-.afterImage {
-  position: absolute;
-  overflow: hidden;
+   position: absolute;
   top: 0;
-  transform: translate(100%, 0px);
+  left: 0;
 }
+
+.beforeImage {
+  z-index: 1;
+}
+
+
+
+.afterImage {
+  z-index: 2;
+  overflow: hidden;
+  transform: translateX(100%);
+  will-change: transform; /* Improves performance */
+}
+
 .afterImage img {
-  transform: translate(-100%, 0px);
+  transform: translateX(-100%);
+  will-change: transform;
 }
+
+
 .comparisonImage img {
   width: 100%;
   height: 100%;
+  /* object-fit: cover; */
   position: absolute;
   top: 0;
+  left: 0;
 }
+
 .panel {
   display: flex;
   align-items: center;
@@ -57,10 +74,24 @@
   }
 
   .main {
-    height: 225vh;
+    height: 170vh;
+    background-color:  #edebd7;
+    
   }
-  /* .comparisonSection {
-  height: 40vh; 
+  .comparisonSection {
+    height: 72vh;
+  }
+  /* .comparisonImage {
+    height: 70%;
   } */
+  .comparisonSection img {
+ height: 72%;
+  }
+  .afterImage {
+      transform: translate(70%, 0px);
+  }
+  .afterImage img {
+  transform: translate(-70%, 0px);
+}
 
 }

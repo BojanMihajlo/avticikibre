@@ -6,7 +6,7 @@ import "./avticikiBre.css";
 import video from "../../images/video/video2.mp4";
 import OurCollect from "./OurCollect";
 import Advert from "../homePage/Advert"
-import NewsCars from "./NewsCars";
+// import NewsCars from "./NewsCars";
 import WorldNews from "./WorldNews";
 
 export default function AvticikiBre() {
@@ -26,6 +26,7 @@ export default function AvticikiBre() {
           height: "112vh",
           overflow: "hidden",
         }}
+        className="firstLayer"
       >
         {/* First background */}
         <motion.div
@@ -33,10 +34,10 @@ export default function AvticikiBre() {
             // backgroundImage: `url(${bg1})`,
             // backgroundSize: "cover",
             // backgroundPosition: "center",
-            backgroundColor: "#6e675f",
-            position: "absolute",
-            width: "100%",
-            height: "100%",
+            // backgroundColor: "#6e675f",
+            // position: "absolute",
+            // width: "100%",
+            // height: "100%",
           }}
           className="motionBack"
         />
