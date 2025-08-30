@@ -75,7 +75,6 @@ export default function PassingImageGrid({
           alignItems: "center",
           justifyContent: "center",
           overflow: "hidden",
-          // background: "#6e675f",
           padding: "6vh 0",
         }}
         className="sectionScroll"
@@ -84,17 +83,17 @@ export default function PassingImageGrid({
         <motion.img
           src={blueCar}
           alt="Passing"
+          className="bluecarimage"
           style={{
-            position: "absolute",
-            top: 0,
-            left: "42.1%",
+            // position: "absolute",
+            // top: 0,
+            // left: "42.1%",
             transform: "translateX(-50%)",
             y: imageY,
             zIndex: 2,
-            width: 220,
-            height: "auto",
-
-            filter: "drop-shadow(5px 5px 15px #e3b23c)",
+            // width: 220,
+            // height: "auto",
+            // filter: "drop-shadow(5px 5px 15px #e3b23c)",
           }}
         />
 

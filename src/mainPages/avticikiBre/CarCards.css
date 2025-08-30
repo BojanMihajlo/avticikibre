@@ -16,3 +16,18 @@
   background-position: center;
   background-size: cover;
 }
+.bluecarimage {
+  width: 220px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 42.1%;
+  filter: drop-shadow(5px 5px 15px #e3b23c);
+}
+
+@media (max-width: 768px) {
+  .bluecarimage {
+    width: 170px;
+    left: 25%;
+  }
+}
