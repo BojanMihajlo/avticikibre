@@ -1,11 +1,10 @@
 .subtitleCollect {
   text-align: center;
-  font-weight: bold;
-  /* height: 150vh; */
   color: black;
   filter: drop-shadow(5px 5px 15px #e3b23c);
-    font-family: "Rubik Dirt", system-ui;
+  font-family: "Rubik Dirt", system-ui;
   font-weight: 400;
+  font-size: 95px;
   font-style: normal;
   padding-top: 6%;
 }
@@ -17,24 +16,34 @@
   padding-top: 4%;
 }
 .bluecar img {
-
   width: 250px;
   height: auto;
   filter: drop-shadow(5px 5px 15px #e3b23c);
 }
 
 .textOur {
+  text-align: center;
 
-   text-align: center;
- 
   padding-top: 5%;
-  margin-bottom: -8%; 
-
+  margin-bottom: -8%;
 }
 .textOur h3 {
-    color: black;
+  color: black;
   filter: drop-shadow(5px 5px 15px #e3b23c);
-    font-family: "Rubik Dirt", system-ui;
-    text-transform: uppercase;
-    font-weight: 400;
+  font-family: "Rubik Dirt", system-ui;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .subtitleCollect {
+    font-size: 25px;
+    margin-top: -0.5%;
+  }
+
+  .textOur h3 {
+    font-size: 14px;
+    padding: 2%;
+  }
 }

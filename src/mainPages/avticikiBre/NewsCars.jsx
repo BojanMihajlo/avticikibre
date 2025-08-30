@@ -8,7 +8,7 @@ import colcar3 from "../../images/colcar3.jpg";
 import colcar4 from "../../images/colcar4.jpg";
 import colcar5 from "../../images/colcar5.jpg";
 import colcar6 from "../../images/colcar6.jpg";
-import "./NewsCars.css"
+import "./NewsCars.css";
 
 export default function NewsCars({
   cards = [
@@ -20,9 +20,7 @@ export default function NewsCars({
     { id: 6, img: colcar6, title: "Card 6" },
   ],
 }) {
-  
-
-    const ref = useRef(null);
+  const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start center", "end center"],
@@ -40,13 +38,12 @@ export default function NewsCars({
   const MAX_PUSH = 320;
   const CARD_HEIGHT = 200;
 
-const INITIAL_OFFSET = 0.12 * window.innerWidth; // 20% of screen width
+  const INITIAL_OFFSET = 0.12 * window.innerWidth; // 20% of screen width
   return (
     <>
       {/* This is the section BEFORE the scroll image appears */}
       {/* <div style={{ height: "50vh", background: "#f0f0f0" }}></div> */}
 
-      
       <section
         ref={ref}
         style={{
@@ -56,9 +53,9 @@ const INITIAL_OFFSET = 0.12 * window.innerWidth; // 20% of screen width
           display: "flex",
           alignItems: "center",
           justifyContent: "flex-start",
-          backgroundColor:"#a39594",
+          backgroundColor: "#a39594",
         }}
-         className="sectionTwoScroll"
+        className="sectionTwoScroll"
       >
         {/* Image on left moving down */}
         <motion.img
@@ -90,19 +87,17 @@ const INITIAL_OFFSET = 0.12 * window.innerWidth; // 20% of screen width
           }}
         >
           {cards.map((card, index) => {
-           const start = 0.1 + index * 0.08;
-           let xOffset = INITIAL_OFFSET;
+            const start = 0.1 + index * 0.08;
+            let xOffset = INITIAL_OFFSET;
 
-  if (progress >= start) {
-    const t = Math.min((progress - start) / 0.2, 1); // Smooth step
-   xOffset = INITIAL_OFFSET + MAX_PUSH * t;
-  }
-
+            if (progress >= start) {
+              const t = Math.min((progress - start) / 0.2, 1); // Smooth step
+              xOffset = INITIAL_OFFSET + MAX_PUSH * t;
+            }
 
             return (
               <motion.div
                 key={card.id}
-                
                 style={{
                   x: xOffset,
                   height: CARD_HEIGHT,
@@ -138,7 +133,7 @@ const INITIAL_OFFSET = 0.12 * window.innerWidth; // 20% of screen width
             );
           })}
         </div>
-       <motion.div
+        <motion.div
           className="buttonMore"
           initial={{ x: -170, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
@@ -147,7 +142,6 @@ const INITIAL_OFFSET = 0.12 * window.innerWidth; // 20% of screen width
         >
           <CarButton width={200} text={"Види галерија"} />
         </motion.div>
-        
       </section>
 
       <div className="divStopTwo"></div>

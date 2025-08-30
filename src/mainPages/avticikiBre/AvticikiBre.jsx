@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import "./avticikiBre.css";
 import video from "../../images/video/video2.mp4";
 import OurCollect from "./OurCollect";
-import Advert from "../homePage/Advert"
+import Advert from "../homePage/Advert";
 // import NewsCars from "./NewsCars";
 import WorldNews from "./WorldNews";
 
@@ -19,26 +19,20 @@ export default function AvticikiBre() {
 
   return (
     <>
-      <div
-        style={{
-          position: "relative",
-          width: "100%",
-          height: "112vh",
-          overflow: "hidden",
-        }}
-        className="firstLayer"
-      >
+      <div className="firstLayer">
         {/* First background */}
         <motion.div
-          style={{
-            // backgroundImage: `url(${bg1})`,
-            // backgroundSize: "cover",
-            // backgroundPosition: "center",
-            // backgroundColor: "#6e675f",
-            // position: "absolute",
-            // width: "100%",
-            // height: "100%",
-          }}
+          style={
+            {
+              // backgroundImage: `url(${bg1})`,
+              // backgroundSize: "cover",
+              // backgroundPosition: "center",
+              // backgroundColor: "#6e675f",
+              // position: "absolute",
+              // width: "100%",
+              // height: "100%",
+            }
+          }
           className="motionBack"
         />
 
@@ -85,10 +79,10 @@ export default function AvticikiBre() {
         <OurCollect />
       </div>
       <div>
-        <WorldNews/>
+        <WorldNews />
       </div>
       <div>
-        <Advert/>
+        <Advert />
       </div>
     </>
   );
