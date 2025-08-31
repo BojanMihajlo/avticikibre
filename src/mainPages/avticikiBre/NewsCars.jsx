@@ -26,7 +26,16 @@ export default function NewsCars({
     offset: ["start center", "end center"],
   });
 
-  const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "900%"]);
+  const isMobile = window.innerWidth < 768;
+  const SECTION_HEIGHT = isMobile ? "300vh" : "330vh";
+  const MAX_PUSH = isMobile ? 70 : 320; // smaller push on phones
+  const CARD_HEIGHT = isMobile ? 150 : 200;
+  const INITIAL_OFFSET = isMobile
+    ? 0.18 * window.innerWidth // ~8% of screen width
+    : 0.12 * window.innerWidth;
+  const IMAGE_RANGE = isMobile ? ["0%", "800%"] : ["0%", "900%"];
+
+  const imageY = useTransform(scrollYProgress, [0, 1], IMAGE_RANGE);
 
   const [progress, setProgress] = useState(0);
   useEffect(() => {
@@ -34,11 +43,7 @@ export default function NewsCars({
     return () => unsubscribe && unsubscribe();
   }, [scrollYProgress]);
 
-  const SECTION_HEIGHT = "330vh";
-  const MAX_PUSH = 320;
-  const CARD_HEIGHT = 200;
-
-  const INITIAL_OFFSET = 0.12 * window.innerWidth; // 20% of screen width
+  // const INITIAL_OFFSET = 0.12 * window.innerWidth; // 20% of screen width
   return (
     <>
       {/* This is the section BEFORE the scroll image appears */}
@@ -143,6 +148,10 @@ export default function NewsCars({
         >
           <CarButton width={200} text={"Види галерија"} />
         </motion.div>
+
+        <div className="buttonMoreMob">
+          <CarButton width={120} text={"Види галерија"} />
+        </div>
       </section>
 
       <div className="divStopTwo"></div>

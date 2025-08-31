@@ -38,10 +38,10 @@
     display: none;
   }
   .divStop {
-    background-position: top center;
-    background-size: 170%;
+    background-position: center center;
+    background-size: 160%;
     background-repeat: no-repeat;
-    height: 108px;
+    height: 100px;
   }
   .buttonMoreMob {
     display: block;

@@ -27,7 +27,14 @@
 
 @media (max-width: 768px) {
   .yellowCarImage {
-    width: 170px;
-    left: 1%;
+    width: 165px;
+    left: -4%;
+  }
+
+  .divStopTwo {
+    background-position: center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 184px;
   }
 }
