@@ -11,9 +11,23 @@
   right: 15%;
 }
 
-.sectionTwoScroll {
+.yellowCarImage {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 220px;
+  height: auto;
+}
+/* .sectionTwoScroll {
     background-image: url("../../images/avticikiBre-images/road11.png");
   background-size: 36.2% 70%;
   background-position:left center;
   background-repeat: no-repeat;
+} */
+
+@media (max-width: 768px) {
+  .yellowCarImage {
+    width: 170px;
+    left: 1%;
+  }
 }

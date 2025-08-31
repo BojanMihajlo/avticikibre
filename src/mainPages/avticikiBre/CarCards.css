@@ -4,12 +4,16 @@
   right: 15%;
 }
 
-.sectionScroll {
-  background-image: url("../../images/avticikiBre-images/road11.png");
-  /* background-size: cover; */
-  background-position: center;
-  background-repeat: no-repeat;
+.buttonMoreMob {
+  display: none;
 }
+
+/* .sectionScroll {
+  /* background-image: url("../../images/avticikiBre-images/road11.png");
+  /* background-size: cover; */
+/* background-position: center;
+  background-repeat: no-repeat;  */
+
 .divStop {
   height: 270px;
   background-image: url("../../images/avticikiBre-images/youtube.jpg");
@@ -27,7 +31,22 @@
 
 @media (max-width: 768px) {
   .bluecarimage {
-    width: 170px;
-    left: 25%;
+    width: 180px;
+    left: 23.6%;
+  }
+  .buttonMore {
+    display: none;
+  }
+  .divStop {
+    background-position: top center;
+    background-size: 170%;
+    background-repeat: no-repeat;
+    height: 108px;
+  }
+  .buttonMoreMob {
+    display: block;
+    position: absolute;
+    bottom: 2.5%;
+    right: 32%;
   }
 }

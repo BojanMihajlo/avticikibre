@@ -62,16 +62,17 @@ export default function NewsCars({
           src={yellowCar}
           alt="Passing Car"
           style={{
-            position: "absolute",
-            top: 0,
-            left: "10%",
+            // position: "absolute",
+            // top: 0,
+            // left: "10%",
             transform: "translateX(-50%)",
             y: imageY,
-            width: 220,
-            height: "auto",
+            // width: 220,
+            // height: "auto",
             zIndex: 1,
             filter: "drop-shadow(5px 5px 15px black)",
           }}
+          className="yellowCarImage"
         />
 
         {/* Cards stacked over image initially, moving right as image scrolls past */}

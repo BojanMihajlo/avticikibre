@@ -26,13 +26,40 @@ export default function PassingImageGrid({
 }) {
   const ref = useRef(null);
 
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const onResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
+  const tunables = isMobile
+    ? {
+        SECTION_HEIGHT: "370vh",
+        GRID_WIDTH: "95%",
+        AMPLITUDE: 100,
+        ROW_WINDOW: 0.45,
+        ROW_STAGGER: 0.15,
+        imageRange: ["0%", "915%"], // smaller travel for mobile
+      }
+    : {
+        SECTION_HEIGHT: "340vh",
+        GRID_WIDTH: "80%",
+        AMPLITUDE: 182,
+        ROW_WINDOW: 0.4,
+        ROW_STAGGER: 0.11,
+        imageRange: ["0%", "907%"], // full travel for desktop
+      };
+
   // Scroll progress tied to this section
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start center", "end center"],
+    offset: isMobile
+      ? ["start start", "end end"] // mobile
+      : ["start center", "end center"], // desktop
   });
-
-  const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "907%"]);
+  const imageY = useTransform(scrollYProgress, [0, 1], tunables.imageRange);
 
   // Mirror progress into a plain number for per-card math (no extra hooks)
   const [p, setP] = useState(0);
@@ -41,17 +68,10 @@ export default function PassingImageGrid({
     return () => unsub && unsub();
   }, [scrollYProgress]);
 
-  // Tunables
-  const SECTION_HEIGHT = "340vh"; // scroll room
-  const GRID_WIDTH = "80%";
-  const AMPLITUDE = 182; // px each card slides outward at peak
-  const ROW_WINDOW = 0.4; // how long each row is "active"
-  const ROW_STAGGER = 0.11; // delay between rows
-
   // Compute per-card horizontal shift from numeric progress
   const calcShift = (progress, rowIndex, isLeft) => {
-    const start = 0.1 + rowIndex * ROW_STAGGER;
-    const end = start + ROW_WINDOW;
+    const start = 0.1 + rowIndex * tunables.ROW_STAGGER;
+    const end = start + tunables.ROW_WINDOW;
     if (progress <= start || progress >= end) return 0;
 
     const mid = (start + end) / 2;
@@ -61,7 +81,7 @@ export default function PassingImageGrid({
         : (end - progress) / (end - mid); // 1 → 0
 
     const dir = isLeft ? -1 : 1;
-    return dir * AMPLITUDE * t;
+    return dir * tunables.AMPLITUDE * t;
   };
 
   return (
@@ -69,7 +89,7 @@ export default function PassingImageGrid({
       <section
         ref={ref}
         style={{
-          height: SECTION_HEIGHT,
+          height: tunables.SECTION_HEIGHT,
           position: "relative",
           display: "flex",
           alignItems: "center",
@@ -85,15 +105,9 @@ export default function PassingImageGrid({
           alt="Passing"
           className="bluecarimage"
           style={{
-            // position: "absolute",
-            // top: 0,
-            // left: "42.1%",
             transform: "translateX(-50%)",
             y: imageY,
             zIndex: 2,
-            // width: 220,
-            // height: "auto",
-            // filter: "drop-shadow(5px 5px 15px #e3b23c)",
           }}
         />
 
@@ -103,7 +117,7 @@ export default function PassingImageGrid({
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
             gap: "2rem",
-            width: GRID_WIDTH,
+            width: tunables.GRID_WIDTH,
             maxWidth: 1100,
             zIndex: 1,
           }}
@@ -159,6 +173,10 @@ export default function PassingImageGrid({
         >
           <CarButton width={200} text={"Види галерија"} />
         </motion.div>
+
+        <div className="buttonMoreMob">
+          <CarButton width={120} text={"Види галерија"} />
+        </div>
       </section>
 
       <div className="divStop"></div>
