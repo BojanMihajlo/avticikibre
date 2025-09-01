@@ -5,7 +5,7 @@ import { useOutletContext } from "react-router-dom";
 import CollectorCars from "./CollectorCars";
 import { motion, useAnimation } from "framer-motion";
 import Logo from "../../images/logo1.png";
-import MotionBackground from "./MotionBackground";
+// import MotionBackground from "./MotionBackground";
 import Navbar from "./Navbar";
 import Events from "./Events";
 import Advert from "./Advert";
@@ -58,7 +58,6 @@ const HomePage = () => {
           width: "100%",
           minHeight: "100vh",
           overflow: "hidden",
-         
         }}
       >
         {/* Video background layer */}
@@ -231,7 +230,7 @@ const HomePage = () => {
       </div>
       <Events />
       {/* <MotionBackground /> */}
-      <ImageComparison/>
+      <ImageComparison />
 
       <Advert />
     </>
