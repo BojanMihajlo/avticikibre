@@ -1,6 +1,7 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Navbar from "../../homePage/Navbar";
+
 import "./GalleryCars.css";
 import car1 from "../../../images/avticikiBre-images/car1.JPG";
 import car2 from "../../../images/avticikiBre-images/car2.JPG";
@@ -10,212 +11,77 @@ import car5 from "../../../images/avticikiBre-images/car5.JPG";
 import car6 from "../../../images/avticikiBre-images/car6.JPG";
 import car7 from "../../../images/avticikiBre-images/car7.JPG";
 
-gsap.registerPlugin(ScrollTrigger);
+import { ScrollSmoother } from "gsap/ScrollSmoother";
 
-const cardsData = [
-  {
-    id: 1,
-    img: car1,
-    title: "1968 Dodge Charger",
-  },
-  {
-    id: 2,
-    img: car2,
-    title: "Card 2",
-  },
-  {
-    id: 3,
-    img: car3,
-    title: "Card 3",
-  },
-  {
-    id: 4,
-    img: car4,
-    title: "Card 4",
-  },
-  {
-    id: 5,
-    img: car5,
-    title: "Card 5",
-  },
-  {
-    id: 6,
-    img: car6,
-    title: "Card 6",
-  },
-  {
-    id: 7,
-    img: car7,
-    title: "Card 7",
-  },
-];
+gsap.registerPlugin(ScrollSmoother);
 
-export default function GalleryCars() {
-  const galleryRef = useRef(null);
-
+export default function ScrollyCards() {
   useEffect(() => {
-    const cards = gsap.utils.toArray(".cards li");
+    let skewSetter = gsap.quickTo(".card", "skewY"),
+      clamp = gsap.utils.clamp(-20, 20);
 
-    let iteration = 0;
-
-    gsap.set(cards, { xPercent: 400, opacity: 0, scale: 0 });
-
-    const spacing = 0.1;
-    const snapTime = gsap.utils.snap(spacing);
-
-    const animateFunc = (element) => {
-      const tl = gsap.timeline();
-      tl.fromTo(
-        element,
-        { scale: 0, opacity: 0 },
-        {
-          scale: 1,
-          opacity: 1,
-          zIndex: 100,
-          duration: 0.5,
-          yoyo: true,
-          repeat: 1,
-          ease: "power1.in",
-          immediateRender: false,
-        }
-      ).fromTo(
-        element,
-        { xPercent: 400 },
-        { xPercent: -400, duration: 1, ease: "none", immediateRender: false },
-        0
-      );
-      return tl;
-    };
-
-    const seamlessLoop = buildSeamlessLoop(cards, spacing, animateFunc);
-    const wrapTime = gsap.utils.wrap(0, seamlessLoop.duration());
-    const playhead = { offset: 0 };
-
-    const scrub = gsap.to(playhead, {
-      offset: 0,
-      onUpdate() {
-        seamlessLoop.time(wrapTime(playhead.offset));
-      },
-      duration: 0.5,
-      ease: "power3",
-      paused: true,
+    ScrollSmoother.create({
+      wrapper: "#wrapper",
+      content: "#content",
+      smooth: 2,
+      speed: 3,
+      effects: true,
+      onUpdate: (self) => skewSetter(clamp(self.getVelocity() / -50)),
+      onStop: () => skewSetter(0),
     });
-
-    const trigger = ScrollTrigger.create({
-      start: 0,
-      onUpdate(self) {
-        let scroll = self.scroll();
-        if (scroll > self.end - 1) {
-          wrap(1, 2);
-        } else if (scroll < 1 && self.direction < 0) {
-          wrap(-1, self.end - 2);
-        } else {
-          scrub.vars.offset =
-            (iteration + self.progress) * seamlessLoop.duration();
-          scrub.invalidate().restart();
-        }
-      },
-      end: "+=3000",
-      pin: galleryRef.current,
-      markers: false, // set to true for debugging
-    });
-
-    const progressToScroll = (progress) =>
-      gsap.utils.clamp(
-        1,
-        trigger.end - 1,
-        gsap.utils.wrap(0, 1, progress) * trigger.end
-      );
-
-    function wrap(iterationDelta, scrollTo) {
-      iteration += iterationDelta;
-      trigger.scroll(scrollTo);
-      trigger.update();
-    }
-
-    function scrollToOffset(offset) {
-      let snappedTime = snapTime(offset);
-      let progress =
-        (snappedTime - seamlessLoop.duration() * iteration) /
-        seamlessLoop.duration();
-      let scroll = progressToScroll(progress);
-      if (progress >= 1 || progress < 0) {
-        return wrap(Math.floor(progress), scroll);
-      }
-      trigger.scroll(scroll);
-    }
-
-    document
-      .querySelector(".next")
-      .addEventListener("click", () =>
-        scrollToOffset(scrub.vars.offset + spacing)
-      );
-    document
-      .querySelector(".prev")
-      .addEventListener("click", () =>
-        scrollToOffset(scrub.vars.offset - spacing)
-      );
-
-    return () => {
-      trigger.kill();
-      scrub.kill();
-      seamlessLoop.kill();
-    };
   }, []);
 
+  const cards = [
+    { img: car1, subtitle: "Card One", speed: 0.8 },
+    { img: car2, subtitle: "Card Two", speed: 0.9 },
+    { img: car3, subtitle: "Card Three", speed: 1 },
+    { img: car4, subtitle: "Card Four", speed: 1.1 },
+    { img: car5, subtitle: "Card Five", speed: 0.9 },
+    { img: car6, subtitle: "Card Six", speed: 1.2 },
+    { img: car7, subtitle: "Card Seven", speed: 0.8 },
+  ];
+
   return (
-    <div className="mainDiv">
-      <div className="gallery" ref={galleryRef}>
-        <ul className="cards">
-          {cardsData.map((card) => (
-            <li key={card.id}>
-              <div className="card-content">
-                <img src={card.img} alt={card.title} />
-                <h3>{card.title}</h3>
-              </div>
-            </li>
-          ))}
-        </ul>
-        <div className="actions">
-          <button className="prev">Prev</button>
-          <button className="next">Next</button>
+    <>
+      <div>
+        <div id="wrapper">
+          <Navbar />
+          <section id="content">
+            <h1 className="text">Gallery Avticiki</h1>
+            <h1 aria-hidden="true" className="text outline-text">
+              Gallery Avticiki
+            </h1>
+            <h1 aria-hidden="true" className="text filter-text">
+              Gallery Avticiki
+            </h1>
+
+            <section className="cards">
+              {cards.map((card, index) => (
+                <div
+                  key={index}
+                  className="card"
+                  data-speed={card.speed}
+                  style={{ gridArea: gridAreas[index] }} // assign grid dynamically
+                >
+                  <img src={card.img} alt={card.subtitle} />
+                  <h3>{card.subtitle}</h3>
+                </div>
+              ))}
+            </section>
+          </section>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
-// buildSeamlessLoop helper
-function buildSeamlessLoop(items, spacing, animateFunc) {
-  let rawSequence = gsap.timeline({ paused: true });
-  let seamlessLoop = gsap.timeline({
-    paused: true,
-    repeat: -1,
-    onRepeat() {
-      this._time === this._dur && (this._tTime += this._dur - 0.01);
-    },
-    onReverseComplete() {
-      this.totalTime(this.rawTime() + this.duration() * 100);
-    },
-  });
-
-  let cycleDuration = spacing * items.length;
-  let dur;
-
-  items
-    .concat(items)
-    .concat(items)
-    .forEach((item, i) => {
-      let anim = animateFunc(items[i % items.length]);
-      rawSequence.add(anim, i * spacing);
-      dur || (dur = anim.duration());
-    });
-
-  seamlessLoop.fromTo(
-    rawSequence,
-    { time: cycleDuration + dur / 2 },
-    { time: "+=" + cycleDuration, duration: cycleDuration, ease: "none" }
-  );
-
-  return seamlessLoop;
-}
+const gridAreas = [
+  "1/1/6/8",
+  "3/12/8/20",
+  "9/5/13/15",
+  "14/1/18/8",
+  "16/12/20/19",
+  "20/2/25/9",
+  "22/11/24/20",
+  "26/5/30/15",
+];
