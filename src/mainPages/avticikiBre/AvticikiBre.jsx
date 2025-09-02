@@ -1,7 +1,6 @@
 import NavBar from "../homePage/Navbar";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-// import bg1 from "../../images/wallcar1.jpg";
 import "./avticikiBre.css";
 import video from "../../images/video/video2.mp4";
 import OurCollect from "./OurCollect";

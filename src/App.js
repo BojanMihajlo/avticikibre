@@ -23,12 +23,11 @@ const router = createBrowserRouter([
       {
         path: "/avticikiBre",
         element: <AvticikiBre />,
-        children:[
-          {
-            path:"/galleryCars",
-            element:<GalleryCars/>
-          }
-        ]
+       
+      },
+      {
+        path:"/avticikiBre/galleryCars",
+        element:<GalleryCars/>
       },
 
       {

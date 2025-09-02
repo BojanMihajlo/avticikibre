@@ -15,37 +15,37 @@ gsap.registerPlugin(ScrollTrigger);
 const cardsData = [
   {
     id: 1,
-    img: { car1 },
+    img: car1,
     title: "1968 Dodge Charger",
   },
   {
     id: 2,
-    img: { car2 },
+    img: car2,
     title: "Card 2",
   },
   {
     id: 3,
-    img: { car3 },
+    img: car3,
     title: "Card 3",
   },
   {
     id: 4,
-    img: { car4 },
+    img: car4,
     title: "Card 4",
   },
   {
     id: 5,
-    img: { car5 },
+    img: car5,
     title: "Card 5",
   },
   {
     id: 6,
-    img: { car6 },
+    img: car6,
     title: "Card 6",
   },
   {
     id: 7,
-    img: { car7 },
+    img: car7,
     title: "Card 7",
   },
 ];
@@ -164,20 +164,22 @@ export default function GalleryCars() {
   }, []);
 
   return (
-    <div className="gallery" ref={galleryRef}>
-      <ul className="cards">
-        {cardsData.map((card) => (
-          <li key={card.id}>
-            <div className="card-content">
-              <img src={card.img} alt={card.title} />
-              <h3>{card.title}</h3>
-            </div>
-          </li>
-        ))}
-      </ul>
-      <div className="actions">
-        <button className="prev">Prev</button>
-        <button className="next">Next</button>
+    <div className="mainDiv">
+      <div className="gallery" ref={galleryRef}>
+        <ul className="cards">
+          {cardsData.map((card) => (
+            <li key={card.id}>
+              <div className="card-content">
+                <img src={card.img} alt={card.title} />
+                <h3>{card.title}</h3>
+              </div>
+            </li>
+          ))}
+        </ul>
+        <div className="actions">
+          <button className="prev">Prev</button>
+          <button className="next">Next</button>
+        </div>
       </div>
     </div>
   );
