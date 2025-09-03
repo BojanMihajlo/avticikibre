@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import blueCar from "../../images/avticikiBre-images/blueCar.png";
 import colcar1 from "../../images/colcar1.jpg";
 import colcar2 from "../../images/colcar2.jpg";
@@ -24,6 +25,9 @@ export default function PassingImageGrid({
     { id: 8, img: colcar8, title: "Card 8" },
   ],
 }) {
+  const navigate = useNavigate();
+
+  // const navigateGallery = navigate("/avticikiBre/galleryCars");
   const ref = useRef(null);
 
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -171,11 +175,19 @@ export default function PassingImageGrid({
           transition={{ duration: 2 }}
           viewport={{ once: false }}
         >
-          <CarButton width={200} text={"Види галерија"} />
+          <CarButton
+            width={200}
+            text={"Види галерија"}
+            onClick={() => navigate("galleryCars")}
+          />
         </motion.div>
 
         <div className="buttonMoreMob">
-          <CarButton width={120} text={"Види галерија"} />
+          <CarButton
+            width={120}
+            text={"Види галерија"}
+            onClick={() => navigate("galleryCars")}
+          />
         </div>
       </section>
 

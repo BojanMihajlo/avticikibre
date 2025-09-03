@@ -68,7 +68,7 @@
 
 .card {
   background: #292538;
-  color: #fff;
+  color: #edebd7;
   border-radius: 15px;
   text-align: center;
   box-shadow: 0 8px 25px #e3b23c;
@@ -84,6 +84,50 @@
 }
 
 .card h3 {
-  margin: 10px 0;
-  font-size: 1.2rem;
+  margin: 8px 0;
+  font-size: 1.1rem;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #edebd7;
+  color: #333;
+  padding: 2rem;
+  border-radius: 15px;
+  max-width: 800px;
+  width: 90%;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.gallery-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
 }
