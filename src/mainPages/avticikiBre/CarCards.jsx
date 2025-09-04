@@ -2,32 +2,13 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import blueCar from "../../images/avticikiBre-images/blueCar.png";
-import colcar1 from "../../images/colcar1.jpg";
-import colcar2 from "../../images/colcar2.jpg";
-import colcar3 from "../../images/colcar3.jpg";
-import colcar4 from "../../images/colcar4.jpg";
-import colcar5 from "../../images/colcar5.jpg";
-import colcar6 from "../../images/colcar6.jpg";
-import colcar7 from "../../images/colcar7.jpg";
-import colcar8 from "../../images/colcar8.jpg";
 import CarButton from "../carButton/CarButton";
+import { cardsData } from "./cardsData/cardsData";
 import "./CarCards.css";
 
-export default function PassingImageGrid({
-  cards = [
-    { id: 1, img: colcar1, title: "Card 1" },
-    { id: 2, img: colcar2, title: "Card 2" },
-    { id: 3, img: colcar3, title: "Card 3" },
-    { id: 4, img: colcar4, title: "Card 4" },
-    { id: 5, img: colcar5, title: "Card 5" },
-    { id: 6, img: colcar6, title: "Card 6" },
-    { id: 7, img: colcar7, title: "Card 7" },
-    { id: 8, img: colcar8, title: "Card 8" },
-  ],
-}) {
+export default function PassingImageGrid() {
   const navigate = useNavigate();
 
-  // const navigateGallery = navigate("/avticikiBre/galleryCars");
   const ref = useRef(null);
 
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -126,7 +107,7 @@ export default function PassingImageGrid({
             zIndex: 1,
           }}
         >
-          {cards.map((card, index) => {
+          {cardsData.map((card, index) => {
             const rowIndex = Math.floor(index / 2);
             const isLeft = index % 2 === 0;
             const x = calcShift(p, rowIndex, isLeft);
@@ -136,7 +117,7 @@ export default function PassingImageGrid({
                 key={card.id}
                 style={{
                   x, // numeric px is fine
-                  background: "#fff",
+                  background: "#edebd7",
                   borderRadius: 14,
                   overflow: "hidden",
                   boxShadow: "0 18px 25px #e3b23c",
@@ -152,7 +133,7 @@ export default function PassingImageGrid({
                     display: "block",
                   }}
                 />
-                {card.title && (
+                {card.subtitle && (
                   <div
                     style={{
                       padding: "0.9rem 1rem 1.1rem",
@@ -161,7 +142,7 @@ export default function PassingImageGrid({
                       textAlign: "center",
                     }}
                   >
-                    {card.title}
+                    {card.subtitle}
                   </div>
                 )}
               </motion.div>
