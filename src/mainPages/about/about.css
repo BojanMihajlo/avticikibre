@@ -77,9 +77,6 @@ color5: #a39594
   margin-top: 96px;
 }
 
-.events-section-title-wrapper {
-}
-
 .events-section-title-wrapper h1 {
   text-transform: uppercase;
   color: #423e37;
@@ -137,9 +134,6 @@ color5: #a39594
 
 .our-visits {
   margin-top: 96px;
-}
-
-.section-title {
 }
 
 .section-title h1 {
@@ -206,14 +200,20 @@ color5: #a39594
     flex-direction: column;
     align-items: center;
   }
+
   .introduction-poster-wrapper {
     width: 90%;
   }
+
   .introduction-text-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 90%;
+  }
+
+  .introduction-text-wrapper h2 {
+    margin-top: 48px;
   }
 
   .events-section-title-wrapper h1 {
@@ -226,9 +226,61 @@ color5: #a39594
   }
 }
 
-@media screen and (max-width: 425px) {
-  .guest-appearance {
+@media screen and (max-width: 768px) {
+  .events-section-title-wrapper h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+  .event-title-and-description-wrapper {
+    flex-direction: column;
+  }
+
+  .event-title-wrapper {
     width: 100%;
-    justify-content: center;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+
+  .event-title-wrapper h1 {
+    color: #423e37;
+  }
+
+  .event-description-wrapper {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .introduction-poster {
+    border-radius: 20px;
+  }
+  .event-poster {
+    border-radius: 20px;
+  }
+  .appearance-poster {
+    border-radius: 20px;
+  }
+  .events-section {
+    margin-top: 48px;
+  }
+
+  .events-section-title-wrapper h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+  .event-container {
+    margin-top: 48px;
+    width: 90%;
+  }
+  .event-title-wrapper h1 {
+    font-size: 24px;
+  }
+
+  .event-description-wrapper {
+    margin-top: 24px;
+  }
+
+  .section-title h1 {
+    font-size: 24px;
   }
 }
