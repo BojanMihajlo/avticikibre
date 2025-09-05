@@ -44,9 +44,6 @@ const Footer = ({ subtitle }) => {
               <a href="#contact"> RogueBrush</a>
             </li>
             <li>
-              <a href="#contact"> {subtitle ? "Локално" : "Local"}</a>
-            </li>
-            <li>
               <a href="#contact"> {subtitle ? "За нас" : "About"}</a>
             </li>
           </ul>

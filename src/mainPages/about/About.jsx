@@ -16,6 +16,15 @@ import oldtimerVitezi from "../../images/about-images/oldtimer-vitezi.jpg";
 import sumaSumarum from "../../images/about-images/suma-sumarum.JPG";
 import recordFair from "../../images/about-images/record-fair.jpg";
 
+import asdsSenegal from "../../images/local-images/asds-senegal.jpg";
+import balbus from "../../images/local-images/balbus.jpg";
+import beseda from "../../images/local-images/beseda.jpg";
+import formaKumanovo from "../../images/local-images/forma-kumanovo.jpg";
+import pucaCerep from "../../images/local-images/puca-cerep.jpg";
+import qrec from "../../images/local-images/qrec.jpg";
+import tuningSlavia from "../../images/local-images/tuning-slavia.jpg";
+import { DiVim } from "react-icons/di";
+
 function About() {
   const [subtitle] = useOutletContext();
   return (
@@ -32,34 +41,47 @@ function About() {
           </div>
           <div className="introduction-text-wrapper">
             <h2>збор два за нас</h2>
-            <p>Колекциите што ја движат страста за прецизност!</p>
+            <h4>Колекциите што ја движат страста за прецизност!</h4>
             <p>
-              Die-Cast Club Куманово е повеќе од само клуб, тоа е заедница на
+              Основан од страна на Аце Дејановски (АКА Хамато Јоши), Die-Cast
+              Club Автичики БРЕ е повеќе од само клуб, тоа е заедница на
               ентузијасти обединети од нивната заедничка љубов кон сложениот
-              свет на дијагоналните модели. Основан од страна на Аце Дејановски
-              (читај Хамато Јоши), животен колекционер, клубот има за цел да ги
-              обедини колегите љубители на модели за да споделуваат знаења,
-              искуства и нивните ценети предмети.
+              свет на дијагоналните модели. Клубот има за цел да ги обедини
+              колегите љубители на модели за да споделуваат знаења, искуства и
+              нивните ценети предмети.
             </p>
-            <p>Нашата Мисија:</p>
+            <h4>Нашата Мисија:</h4>
             <p>
               Градење на Заедница: Да се создаде пријатно место за собирање на
               колекционери од сите нивоа за да се поврзат, научат и растат
-              заедно. Промовирање на Хобито: Да се подигне свеста за
-              дијагоналното собирање како фасцинантно и наградувачко хоби.
-              Покажување на Извонредност: Да се слави уметноста и занаетчиството
-              зад овие минијатурни ремек-дела. Што Нудиме:
+              заедно.
             </p>
+            <p>
+              Промовирање на Хобито: Да се подигне свеста за дијагоналното
+              собирање како фасцинантно и наградувачко хоби.
+            </p>
+            <p>
+              Покажување на Извонредност: Да се слави уметноста и занаетчиството
+              зад овие минијатурни ремек-дела.
+            </p>
+            <h4> Што Нудиме:</h4>
             <p>
               Редовни Состаноци: Можности за собирање со слични луѓе,
               дискутирање за најновите изданија и споделување на знаења.
+            </p>
+            <p>
               Покажување на Модели: Настани за прикажување и восхитување на
               колекциите на другите, инспирирање на креативност и почитување.
-              Образовни Работилници: Сесии за учење за грижа за модели,
-              реставрација и техники на фотографирање. Ексклузивен Пристап:
-              Понуди само за членови за ретки модели и колекционерски предмети.
-              Придружете се на Клубот:
             </p>
+            <p>
+              Образовни Работилници: Сесии за учење за грижа за модели,
+              реставрација и техники на фотографирање.
+            </p>
+            <p>
+              Ексклузивен Пристап: Понуди само за членови за ретки модели и
+              колекционерски предмети.
+            </p>
+            <h4> Придружете се на Клубот:</h4>
             <p>
               Без разлика дали сте искусен колекционер или само го започнувате
               вашето патување, Die-Cast Club Куманово ве поканува да бидете дел
@@ -81,7 +103,7 @@ function About() {
                 <h1>Трето Die-Cast шоу во Куманово 2025</h1>
               </div>
               <div className="event-description-wrapper">
-                <p>"И јас собирам Автичики Бре"</p>
+                <p>"И ја собирам Автичики Бре"</p>
                 <p>
                   Заљубениците и колекционерите на модели на автомобили конечно
                   ја добија долго очекуваната изложба во организација на
@@ -258,6 +280,52 @@ function About() {
                   <FaInstagram />
                 </a>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* LOCAL SECTION */}
+
+        <section className="local-section-container">
+          <div className="local-title-wrapper">
+            <h2>Локални поддржувачи</h2>
+          </div>
+          <div className="cards-wrapper">
+            <div className="card">
+              <img className="logo" src={asdsSenegal} alt="asds-senegal-logo" />
+              <p className="item-title">asds Senegal</p>
+            </div>
+            <div className="card">
+              <img className="logo" src={balbus} alt="balbus-logo" />
+              <p className="item-title">Balbus</p>
+            </div>
+            <div className="card">
+              <img className="logo" src={beseda} alt="beseda-logo" />
+              <p className="item-title">Beseda</p>
+            </div>
+            <div className="card">
+              <img
+                className="logo"
+                src={formaKumanovo}
+                alt="forma-kumanovo-logo"
+              />
+              <p className="item-title">Forma Kumanovo</p>
+            </div>
+            <div className="card">
+              <img className="logo" src={pucaCerep} alt="puca=cerep-logo" />
+              <p className="item-title">Puca Cerep</p>
+            </div>
+            <div className="card">
+              <img className="logo" src={qrec} alt="qrec-logo" />
+              <p className="item-title">Qrec</p>
+            </div>
+            <div className="card">
+              <img
+                className="logo"
+                src={tuningSlavia}
+                alt="tuning-slavia-logo"
+              />
+              <p className="item-title">Tuning Slavia</p>
             </div>
           </div>
         </section>
