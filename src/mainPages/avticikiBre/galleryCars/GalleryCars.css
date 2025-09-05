@@ -27,8 +27,7 @@
   position: fixed;
   top: 30vh;
   font-weight: 900;
-
-  font-size: 8vw;
+  font-size: 7vw;
   text-align: center;
   width: 100%;
   transform: translateY(-100%);
@@ -53,7 +52,8 @@
 
 /* Grid for cards */
 .cards {
-  padding-top: 38vh;
+  padding-top: 33vh;
+  padding-bottom: 5%;
   display: grid;
   grid-template-columns: repeat(20, 2%);
   grid-template-rows: repeat(30, 3%);
