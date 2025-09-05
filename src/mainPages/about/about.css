@@ -344,4 +344,8 @@ color5: #a39594
   .section-title h1 {
     font-size: 24px;
   }
+
+  .local-title-wrapper h2 {
+    font-size: 24px;
+  }
 }
