@@ -59,6 +59,12 @@ color5: #a39594
   color: #423e37;
 }
 
+.introduction-text-wrapper h4 {
+  color: #423e37;
+  line-height: 1.2;
+  padding-bottom: 10px;
+}
+
 .introduction-text-wrapper p {
   padding-bottom: 10px;
   color: #6e675f;
@@ -70,6 +76,7 @@ color5: #a39594
 /* ------------------------ */
 /* OUR EVENTS HANGOUTS SECTION */
 /* ------------------------ */
+
 .events-section {
   display: flex;
   flex-direction: column;
@@ -128,6 +135,7 @@ color5: #a39594
   margin-top: 20px;
   text-align: center;
 }
+
 /* ------------------------ */
 /* OUR VISITS SECTION */
 /* ------------------------ */
@@ -195,9 +203,19 @@ color5: #a39594
   color: #e3b23c;
 }
 
-.local-section-containermain-container {
-  background-color: #edebd7;
-  padding-top: 48px;
+/* LOCAL SECTION */
+
+.local-section-container {
+  padding: 72px 0;
+}
+.local-title-wrapper {
+  margin-bottom: 56px;
+}
+.local-title-wrapper h2 {
+  font-size: 44px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #423e37;
 }
 
 .cards-wrapper {

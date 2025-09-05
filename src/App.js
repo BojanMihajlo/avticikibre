@@ -5,7 +5,6 @@ import AvticikiBre from "./mainPages/avticikiBre/AvticikiBre";
 import Avtomobilizam from "./mainPages/avtomobilizam/Avtomobilizam";
 import RogueBrush from "./mainPages/rogueBrush/RogueBrush";
 import About from "./mainPages/about/About";
-import Local from "./mainPages/local/Local";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import GalleryCars from "./mainPages/avticikiBre/galleryCars/GalleryCars";
@@ -23,11 +22,10 @@ const router = createBrowserRouter([
       {
         path: "/avticikiBre",
         element: <AvticikiBre />,
-       
       },
       {
-        path:"/avticikiBre/galleryCars",
-        element:<GalleryCars/>
+        path: "/avticikiBre/galleryCars",
+        element: <GalleryCars />,
       },
 
       {
@@ -38,11 +36,6 @@ const router = createBrowserRouter([
       {
         path: "/roguebrush",
         element: <RogueBrush />,
-      },
-
-      {
-        path: "/local",
-        element: <Local />,
       },
 
       {

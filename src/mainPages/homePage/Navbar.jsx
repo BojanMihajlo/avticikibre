@@ -74,14 +74,6 @@ const Navbar = ({ bgColor }) => {
           </li>
           <li>
             <NavLink
-              to="/local"
-              className={({ isActive }) => (isActive ? "active" : "")}
-            >
-              {subtitle ? "Локално" : "Local"}
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
               to="/about"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
@@ -120,11 +112,6 @@ const Navbar = ({ bgColor }) => {
           <li>
             <NavLink to="/roguebrush" onClick={() => setMenuOpen(false)}>
               RogueBrush
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/local" onClick={() => setMenuOpen(false)}>
-              {subtitle ? "Локално" : "Local"}
             </NavLink>
           </li>
           <li>
