@@ -75,6 +75,9 @@
   overflow: hidden;
   width: 350px;
 }
+.cards :hover {
+  cursor: pointer;
+}
 
 .card img {
   width: 100%;
