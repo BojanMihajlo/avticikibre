@@ -29,10 +29,10 @@ export default function ImageComparison() {
       <section className="panel">
         <motion.div
           className="reveal-text"
-          initial={{ opacity: 0, y: 100 }} // појавување одоздола
-          whileInView={{ opacity: 1, y: 0 }} // кога ќе влезе во viewport
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.3 }} // еднаш се појавува, amount=колку дел од елементот треба да влезе
+          viewport={{ once: false, amount: 0.3 }}
         >
           <p>Some text about logo and beginning of the AvticikiBre</p>
         </motion.div>
