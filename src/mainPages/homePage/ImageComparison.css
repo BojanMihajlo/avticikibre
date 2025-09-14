@@ -19,12 +19,12 @@
   will-change: opacity, transform;
 }
 
-.panel {
+.panel23 {
   height: 300px;
   background-color: #a39594;
   text-align: center;
 }
-.panel p {
+.panel23 p {
   font-family: "Rubik Dirt", system-ui;
   font-weight: 400;
   padding-top: 5%;

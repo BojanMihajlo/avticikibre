@@ -26,7 +26,7 @@ export default function ImageComparison() {
 
   return (
     <>
-      <section className="panel">
+      <section className="panel23">
         <motion.div
           className="reveal-text"
           initial={{ opacity: 0, y: 100 }}
