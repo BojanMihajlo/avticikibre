@@ -1,80 +1,57 @@
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { useRef } from "react";
 import "./ImageComparison.css";
-import img1 from "../../images/img22.png";
-import img2 from "../../images/img11.png";
-import { motion, useInView } from 'framer-motion';
+import back1 from "../../images/img22.png";
+import back2 from "../../images/img11.png";
 
-gsap.registerPlugin(ScrollTrigger);
-
-const ImageComparison = () => {
-  const sectionRef = useRef(null);
+export default function ImageComparison() {
   const ref = useRef(null);
-  const isInView = useInView(ref, {  margin: '-100px' }); // trigger when in view
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end end"],
+  });
 
-  useEffect(() => {
-    const section = sectionRef.current;
+  const rawOpacity1 = useTransform(scrollYProgress, [0, 0.7, 1], [1, 1, 0]);
+  const rawScale1 = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: section,
-        start: "center center",
-        end: () => "+=" + section.offsetWidth,
-        scrub: true,
-        pin: true,
-        anticipatePin: 1,
-      },
-      defaults: { ease: "none" },
-    });
+  const opacity1 = useSpring(rawOpacity1, { stiffness: 80, damping: 20 });
+  const scale1 = useSpring(rawScale1, { stiffness: 80, damping: 20 });
 
-    const afterImage = section.querySelector(".afterImage");
-    const afterImg = afterImage.querySelector("img");
+  // Втората слика
+  const rawOpacity2 = useTransform(scrollYProgress, [0, 0.5, 1], [0, 0, 1]);
+  const rawScale2 = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
 
-    tl.fromTo(afterImage, { xPercent: 100, x: 0 }, { xPercent: 0 }).fromTo(
-      afterImg,
-      { xPercent: -100, x: 0 },
-      { xPercent: 0 },
-      0
-    );
-
-    // Cleanup on unmount
-    return () => {
-      tl.scrollTrigger?.kill();
-      tl.kill();
-    };
-  }, []);
+  const opacity2 = useSpring(rawOpacity2, { stiffness: 80, damping: 20 });
+  const scale2 = useSpring(rawScale2, { stiffness: 80, damping: 20 });
 
   return (
     <>
-      <section className="main">
-
-       <section className="panel">
-         <motion.div
-      ref={ref}
-      className="reveal-text"
-      initial={{ opacity: 0, y: 50 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 1.8,  }}
-    >
-          
-          <p>Some text about logo and begining of the AvticikiBre</p>
-        
-    </motion.div>
-    </section>
-    
-
-        <section className="comparisonSection" ref={sectionRef}>
-          <div className="comparisonImage beforeImage">
-            <img src={img1} alt="Before" />
-          </div>
-          <div className="comparisonImage afterImage">
-            <img src={img2} alt="After" />
-          </div>
-        </section>
+      <section className="panel">
+        <motion.div
+          className="reveal-text"
+          initial={{ opacity: 0, y: 100 }} // појавување одоздола
+          whileInView={{ opacity: 1, y: 0 }} // кога ќе влезе во viewport
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }} // еднаш се појавува, amount=колку дел од елементот треба да влезе
+        >
+          <p>Some text about logo and beginning of the AvticikiBre</p>
+        </motion.div>
       </section>
+
+      <div ref={ref} className="container">
+        <motion.img
+          src={back1}
+          alt="background"
+          className="bg-image"
+          style={{ opacity: opacity1, scale: scale1 }}
+        />
+        <motion.img
+          src={back2}
+          alt="foreground"
+          className="fg-image"
+          style={{ opacity: opacity2, scale: scale2 }}
+        />
+      </div>
     </>
   );
-};
-
-export default ImageComparison;
+}

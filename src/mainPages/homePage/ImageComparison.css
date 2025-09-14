@@ -1,98 +1,26 @@
-.main {
-  height: 375vh;
-  overflow-x: hidden; /* ✅ hide accidental horizontal scroll */
+.container {
   position: relative;
-}
-
-.comparisonSection {
-  position: relative;
-  width: 100vw;
-  height: 100vh; /* ✅ force fixed height instead of responsive aspect ratio */
-  overflow: hidden; /* ✅ prevent children from overflowing and causing scrollbars */
-}
-
-
-
-.comparisonImage {
-  width: 100vw;
-  height: 100%;
-   position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.beforeImage {
-  z-index: 1;
-}
-
-
-
-.afterImage {
-  z-index: 2;
-  overflow: hidden;
-  transform: translateX(100%);
-  will-change: transform; /* Improves performance */
-}
-
-.afterImage img {
-  transform: translateX(-100%);
-  will-change: transform;
-}
-
-
-.comparisonImage img {
   width: 100%;
-  height: 100%;
-  /* object-fit: cover; */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.bg-image,
+.fg-image {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+  will-change: opacity, transform;
 }
 
 .panel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 70vh;
+  height: 200px;
   background-color: #a39594;
-
-}
-.panel p {
-  font-family: "Rubik Dirt", system-ui;
-  font-size: 30px;
-}
-
-@media (max-width: 1024px) {}
-@media (max-width: 768px) {
-
-
-  .panel {
-    text-align: center;
-  }
-  .panel p {
-    font-size: 20px;
-    padding: 6%;
-  }
-
-  .main {
-    height: 170vh;
-    background-color:  #edebd7;
-    
-  }
-  .comparisonSection {
-    height: 72vh;
-  }
-  /* .comparisonImage {
-    height: 70%;
-  } */
-  .comparisonSection img {
- height: 72%;
-  }
-  .afterImage {
-      transform: translate(70%, 0px);
-  }
-  .afterImage img {
-  transform: translate(-70%, 0px);
-}
-
+  text-align: center;
 }

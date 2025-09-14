@@ -10,7 +10,7 @@ import { ScrollSmoother } from "gsap/ScrollSmoother";
 
 gsap.registerPlugin(ScrollSmoother);
 
-export default function ScrollyCards() {
+export default function GalleryCars() {
   const [selectedCard, setSelectedCard] = useState(null);
   const [subtitle] = useOutletContext();
 

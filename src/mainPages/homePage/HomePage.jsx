@@ -231,7 +231,6 @@ const HomePage = () => {
       <Events />
       {/* <MotionBackground /> */}
       <ImageComparison />
-
       <Advert />
     </>
   );
