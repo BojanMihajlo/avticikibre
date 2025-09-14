@@ -38,17 +38,17 @@ export default function ImageComparison() {
         </motion.div>
       </section>
 
-      <div ref={ref} className="container">
+      <div ref={ref} className="container23">
         <motion.img
           src={back1}
           alt="background"
-          className="bg-image"
+          className="bg-image23"
           style={{ opacity: opacity1, scale: scale1 }}
         />
         <motion.img
           src={back2}
           alt="foreground"
-          className="fg-image"
+          className="fg-image23"
           style={{ opacity: opacity2, scale: scale2 }}
         />
       </div>
