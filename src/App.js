@@ -9,6 +9,7 @@ import About from "./mainPages/about/About";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import GalleryCars from "./mainPages/avticikiBre/galleryCars/GalleryCars";
 
+
 const router = createBrowserRouter([
   {
     path: "/",
