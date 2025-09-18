@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navbar from "../../homePage/Navbar";
@@ -10,11 +10,11 @@ import { useOutletContext } from "react-router-dom";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function GalleryCars() {
-  const [selectedCard, setSelectedCard] = useState(null);
+  // const [selectedCard, setSelectedCard] = useState(null);
   const [subtitle] = useOutletContext();
+  // const navigate = useNavigate();
 
   useEffect(() => {
-    // Skew ефект при scroll
     let skewSetter = gsap.quickTo(".cardAvto", "skewY"),
       clamp = gsap.utils.clamp(-20, 20);
 
@@ -71,7 +71,9 @@ export default function GalleryCars() {
                 className="cardAvto"
                 data-speed={card.speed}
                 style={{ gridArea: gridAreas[index] }}
-                onClick={() => setSelectedCard(card)}
+                onClick={() =>
+                  window.open(`/avticikiBre/galleryCars/${card.id}`, "_blank")
+                }
               >
                 <img src={card.img} alt={card.subtitle} />
                 <h3>{card.subtitle}</h3>
@@ -80,24 +82,6 @@ export default function GalleryCars() {
           </section>
         </section>
       </div>
-
-      {/* Modal */}
-      {selectedCard && (
-        <div className="modal-overlay" onClick={() => setSelectedCard(null)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="close-btn" onClick={() => setSelectedCard(null)}>
-              ✕
-            </button>
-            <h2>{selectedCard.subtitle}</h2>
-            <p>{selectedCard.description}</p>
-            <div className="gallery-grid">
-              {selectedCard.gallery.map((img, i) => (
-                <img key={i} src={img} alt={`${selectedCard.subtitle}-${i}`} />
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
     </>
   );
 }

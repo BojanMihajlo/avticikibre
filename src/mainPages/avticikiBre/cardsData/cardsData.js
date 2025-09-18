@@ -16,6 +16,7 @@ import car7 from "../../../images/avticikiBre-images/car7.JPG";
 
 export const cardsData = [
   {
+    id:1,
     img: car1,
     subtitle: "Johnny Lightning Ad Rods 2002 MOC",
     description:
@@ -24,6 +25,7 @@ export const cardsData = [
     speed: 0.8,
   },
   {
+    id:2,
     img: car2,
     subtitle: "Custom Acura Integra Sedan GSR Right",
     description:
@@ -32,6 +34,7 @@ export const cardsData = [
     speed: 0.9,
   },
   {
+    id:3,
     img: car3,
     subtitle: "Card Three",
     description: "This is the description for Card Three.",
@@ -39,6 +42,7 @@ export const cardsData = [
     speed: 1,
   },
   {
+    id:4,
     img: car4,
     subtitle: "Card Four",
     description: "This is the description for Card Four.",
@@ -46,6 +50,7 @@ export const cardsData = [
     speed: 1.1,
   },
   {
+    id:5,
     img: car5,
     subtitle: "Card Five",
     description: "This is the description for Card Five.",
@@ -53,6 +58,7 @@ export const cardsData = [
     speed: 0.9,
   },
   {
+    id:6,
     img: car6,
     subtitle: "Card Six",
     description: "This is the description for Card Six.",
@@ -60,6 +66,7 @@ export const cardsData = [
     speed: 1.2,
   },
   {
+    id:7,
     img: car7,
     subtitle: "Card Seven",
     description: "This is the description for Card Seven.",
@@ -67,6 +74,7 @@ export const cardsData = [
     speed: 0.8,
   },
     {
+    id:8,
     img: car2,
     subtitle: "Custom Acura Integra Sedan GSR Right",
     description:

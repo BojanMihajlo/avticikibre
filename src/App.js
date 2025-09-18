@@ -8,6 +8,7 @@ import About from "./mainPages/about/About";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import GalleryCars from "./mainPages/avticikiBre/galleryCars/GalleryCars";
+import CarDetails from "./mainPages/avticikiBre/CarDetails";
 
 
 const router = createBrowserRouter([
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/avticikiBre/galleryCars",
         element: <GalleryCars />,
+      },
+      {
+        path:"/avticikiBre/galleryCars/:id",
+        element:<CarDetails/>
       },
 
       {

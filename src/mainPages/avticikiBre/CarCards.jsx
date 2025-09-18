@@ -122,6 +122,9 @@ export default function PassingImageGrid() {
                   overflow: "hidden",
                   boxShadow: "0 18px 25px #e3b23c",
                 }}
+                onClick={() =>
+                  window.open(`/avticikiBre/galleryCars/${card.id}`, "_blank")
+                }
               >
                 <img
                   src={card.img}
