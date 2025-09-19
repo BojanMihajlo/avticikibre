@@ -26,7 +26,6 @@ export default function GalleryCars() {
       onScrubComplete: () => skewSetter(0),
     });
 
-    // Parallax ефект според data-speed
     gsap.utils.toArray(".card").forEach((card) => {
       let speed = card.dataset.speed || 1;
       gsap.to(card, {
@@ -42,7 +41,6 @@ export default function GalleryCars() {
     });
   }, []);
 
-  // Филтрирани картички според searchTerm
   const filteredCards = cardsData.filter((card) =>
     card.subtitle.toLowerCase().includes(searchTerm.toLowerCase())
   );
