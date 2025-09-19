@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navbar from "../../homePage/Navbar";
@@ -10,9 +10,8 @@ import { useOutletContext } from "react-router-dom";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function GalleryCars() {
-  // const [selectedCard, setSelectedCard] = useState(null);
   const [subtitle] = useOutletContext();
-  // const navigate = useNavigate();
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     let skewSetter = gsap.quickTo(".cardAvto", "skewY"),
@@ -31,7 +30,7 @@ export default function GalleryCars() {
     gsap.utils.toArray(".card").forEach((card) => {
       let speed = card.dataset.speed || 1;
       gsap.to(card, {
-        y: () => -(window.innerHeight * speed * 0.1), // колку повеќе speed, толку повеќе се движи
+        y: () => -(window.innerHeight * speed * 0.1),
         ease: "none",
         scrollTrigger: {
           trigger: card,
@@ -42,6 +41,11 @@ export default function GalleryCars() {
       });
     });
   }, []);
+
+  // Филтрирани картички според searchTerm
+  const filteredCards = cardsData.filter((card) =>
+    card.subtitle.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <>
@@ -64,8 +68,18 @@ export default function GalleryCars() {
             {subtitle ? "Автичики" : "Avticiki"}
           </h1>
 
+          {/* Search Input */}
+          <div className="search-box">
+            <input
+              type="text"
+              placeholder={subtitle ? "Барај по име..." : "Search by name..."}
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          </div>
+
           <section className="cardsAvticiki">
-            {cardsData.map((card, index) => (
+            {filteredCards.map((card, index) => (
               <div
                 key={index}
                 className="cardAvto"
@@ -79,6 +93,12 @@ export default function GalleryCars() {
                 <h3>{card.subtitle}</h3>
               </div>
             ))}
+
+            {filteredCards.length === 0 && (
+              <p className="no-results">
+                {subtitle ? "Нема резултати" : "No results"}
+              </p>
+            )}
           </section>
         </section>
       </div>
