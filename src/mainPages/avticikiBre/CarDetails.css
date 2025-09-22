@@ -46,11 +46,11 @@
   right: 75px;
 }
 
-/* Галерија thumbnails */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 15px;
+  padding: 2%;
 }
 
 .gallery-grid img {
@@ -78,6 +78,8 @@
 }
 .car-details p {
   text-align: center;
-
   padding: 2.5% 10%;
+}
+.car-details h2 {
+  padding-left: 2%;
 }
