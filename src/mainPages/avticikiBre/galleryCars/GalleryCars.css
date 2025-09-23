@@ -109,3 +109,15 @@
   width: 250px;
   background-color: #edebd7;
 }
+
+@media (max-width: 768px) {
+  .cardAvto {
+    width: 220px;
+  }
+  .cardAvto img {
+    height: 100px;
+  }
+  .cardAvto h3 {
+    font-size: 0.8rem;
+  }
+}
