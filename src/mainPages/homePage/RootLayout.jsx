@@ -18,10 +18,8 @@ const RootLayout = () => {
 
   const location = useLocation();
 
-  const pathname = location.pathname.replace(/\/$/, "");
-
-  const shouldShowFooter = !pathname.endsWith("galleryCars");
-
+  const pathname = location.pathname;
+  const shouldShowFooter = !pathname.includes("/gallery");
   return (
     <>
       <ScrollToTop />

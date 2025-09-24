@@ -120,4 +120,7 @@
   .cardAvto h3 {
     font-size: 0.8rem;
   }
+  .search-box {
+    position: static;
+  }
 }
