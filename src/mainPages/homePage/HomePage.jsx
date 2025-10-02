@@ -1,7 +1,7 @@
 import CarButton from "../carButton/CarButton";
 import "./homePage.css";
 import React, { useEffect, useState } from "react";
-import { useOutletContext } from "react-router-dom";
+import { useOutletContext, useNavigate } from "react-router-dom";
 import CollectorCars from "./CollectorCars";
 import { motion, useAnimation } from "framer-motion";
 import Logo from "../../images/logo1.png";
@@ -14,6 +14,7 @@ import video from "../../images/video/video23.mp4";
 import ImageComparison from "./ImageComparison";
 
 const HomePage = () => {
+  const navigate = useNavigate();
   const [subtitle] = useOutletContext();
 
   const videoCtrl = useAnimation();
@@ -136,6 +137,7 @@ const HomePage = () => {
               <CarButton
                 text={subtitle ? "Повеќе" : "Learn more"}
                 width="150"
+                onClick={() => navigate("avticikibre/galleryCars")}
               />
             </div>
 
@@ -143,6 +145,7 @@ const HomePage = () => {
               <CarButton
                 text={subtitle ? "Повеќе" : "Learn more"}
                 width="100"
+                onClick={() => navigate("avticikibre/galleryCars")}
               />
             </div>
           </div>
@@ -179,6 +182,7 @@ const HomePage = () => {
               <CarButton
                 text={subtitle ? "Повеќе" : "Learn more"}
                 width="150"
+                onClick={() => navigate("avticikibre/galleryCars")}
               />
             </div>
 
@@ -186,6 +190,7 @@ const HomePage = () => {
               <CarButton
                 text={subtitle ? "Повеќе" : "Learn more"}
                 width="100"
+                onClick={() => navigate("avticikibre/galleryCars")}
               />
             </div>
           </div>
@@ -216,6 +221,7 @@ const HomePage = () => {
               <CarButton
                 text={subtitle ? "Повеќе" : "Learn more"}
                 width="150"
+                onClick={() => navigate("avticikibre/galleryCars")}
               />
             </div>
 
@@ -223,6 +229,7 @@ const HomePage = () => {
               <CarButton
                 text={subtitle ? "Повеќе" : "Learn more"}
                 width="100"
+                onClick={() => navigate("avticikibre/galleryCars")}
               />
             </div>
           </div>
