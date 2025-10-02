@@ -1,0 +1,11 @@
+.videoSection {
+  height: 100vh;
+  background-color: #a39594;
+}
+
+.videoDiv {
+  height: 70vh;
+  width: 50%;
+  border-radius: 20px;
+  margin: 5%;
+}
