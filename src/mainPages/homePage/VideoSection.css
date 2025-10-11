@@ -1,11 +1,40 @@
 .videoSection {
   height: 100vh;
   background-color: #a39594;
+  padding: 4%;
+  overflow: hidden;
 }
 
 .videoDiv {
-  height: 70vh;
-  width: 50%;
+  position: relative;
+  height: 60vh;
+  width: 60%;
   border-radius: 20px;
-  margin: 5%;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.videoDiv video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlayText {
+  position: absolute;
+  /* bottom: 1vh; */
+  /* left: 50%;  */
+  transform: translateX(-50%);
+  font-size: 10vw;
+  color: black;
+  letter-spacing: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  pointer-events: none;
+  z-index: 2;
+  overflow: hidden;
 }

@@ -12,7 +12,7 @@ import Advert from "./Advert";
 
 import video from "../../images/video/video23.mp4";
 import ImageComparison from "./ImageComparison";
-// import VideoSection from "./VideoSection";
+import VideoSection from "./VideoSection";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -239,7 +239,7 @@ const HomePage = () => {
       <Events />
       {/* <MotionBackground /> */}
       <ImageComparison />
-      {/* <VideoSection /> */}
+      <VideoSection />
       <Advert />
     </>
   );
