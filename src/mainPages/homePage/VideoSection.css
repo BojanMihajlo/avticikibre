@@ -11,7 +11,7 @@
   width: 60%;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 40px #e3b23c;
 }
 
 .videoDiv video {
@@ -23,18 +23,44 @@
   object-fit: cover;
 }
 
+.overlayContainer {
+  position: relative;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.overlayLink {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .overlayText {
-  position: absolute;
-  /* bottom: 1vh; */
-  /* left: 50%;  */
-  transform: translateX(-50%);
-  font-size: 10vw;
+  font-size: 9vw;
   color: black;
   letter-spacing: 4px;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-align: center;
-  pointer-events: none;
+  font-family: "Rubik Dirt", system-ui;
+  font-weight: 400;
   z-index: 2;
   overflow: hidden;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.overlayLink:hover .overlayText {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.overlayImg {
+  width: 400px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.overlayLink:hover .overlayImg {
+  transform: scale(1.05);
 }
