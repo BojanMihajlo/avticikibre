@@ -10,14 +10,7 @@ export default function OurCollect() {
   const ref = useRef(null);
   const isInView = useInView(ref, { margin: "-100px" }); // trigger when in view
 
-  // const sectionRef = useRef(null);
-  // const { scrollYProgress } = useScroll({
-  //   target: sectionRef,
-  //   offset: ["start start", "end end"], // Scroll through the whole section
-  //   layoutEffect: false,
-  // });
-
-  // const fontSizeP = useTransform(scrollYProgress, [0, 1], ["22px", "18px"]);
+  
 
   return (
     <>

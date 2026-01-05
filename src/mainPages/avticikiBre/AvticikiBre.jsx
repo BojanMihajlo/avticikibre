@@ -5,7 +5,6 @@ import "./avticikiBre.css";
 import video from "../../images/video/video2.mp4";
 import OurCollect from "./OurCollect";
 import Advert from "../homePage/Advert";
-// import NewsCars from "./NewsCars";
 import WorldNews from "./WorldNews";
 
 export default function AvticikiBre() {
@@ -18,20 +17,11 @@ export default function AvticikiBre() {
 
   return (
     <>
+     <div style={{backgroundColor: " #6e675f"}}>
       <div className="firstLayer">
         {/* First background */}
         <motion.div
-          style={
-            {
-              // backgroundImage: `url(${bg1})`,
-              // backgroundSize: "cover",
-              // backgroundPosition: "center",
-              // backgroundColor: "#6e675f",
-              // position: "absolute",
-              // width: "100%",
-              // height: "100%",
-            }
-          }
+          
           className="motionBack"
         />
 
@@ -74,7 +64,7 @@ export default function AvticikiBre() {
           </motion.div>
         )}
       </div>
-      <div class="fancy-div">
+      <div className="fancy-div">
         <OurCollect />
       </div>
       <div>
@@ -82,6 +72,7 @@ export default function AvticikiBre() {
       </div>
       <div>
         <Advert />
+      </div>
       </div>
     </>
   );

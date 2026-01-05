@@ -2,8 +2,6 @@ import CarButton from "../carButton/CarButton";
 import { useOutletContext } from "react-router-dom";
 import NavBar from "../homePage/Navbar";
 
-//import dieCastCars1 from "../../images/about-images/cars-die-cast1.JPG";
-//import secondEventPoster from "../../images/about-images/die-cast-second-event.JPG";
 import "../about/about.css";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import dieCastCars from "../../images/about-images/cars-die-cast.jpg";
@@ -23,13 +21,16 @@ import formaKumanovo from "../../images/local-images/forma-kumanovo.jpg";
 import pucaCerep from "../../images/local-images/puca-cerep.jpg";
 import qrec from "../../images/local-images/qrec.jpg";
 import tuningSlavia from "../../images/local-images/tuning-slavia.jpg";
-import { DiVim } from "react-icons/di";
+
 
 function About() {
   const [subtitle] = useOutletContext();
+
+  
   return (
     <>
-      <NavBar bgColor={"#423e37"} />
+      <NavBar bgColor={ "#edebd7"}/>
+     
       <main className="container">
         <section className="introduction-section">
           <div className="introduction-poster-wrapper">
@@ -40,74 +41,55 @@ function About() {
             />
           </div>
           <div className="introduction-text-wrapper">
-            <h2>збор два за нас</h2>
-            <h4>Колекциите што ја движат страста за прецизност!</h4>
+            <h2>{subtitle? "збор два за нас" : "A word about us"}</h2>
+            <h4>{subtitle? "Колекциите што ја движат страста за прецизност!" : "The collections that drive the passion for precision!"}</h4>
             <p>
-              Основан од страна на Аце Дејановски (АКА Хамато Јоши), Die-Cast
-              Club Автичики БРЕ е повеќе од само клуб, тоа е заедница на
-              ентузијасти обединети од нивната заедничка љубов кон сложениот
-              свет на дијагоналните модели. Клубот има за цел да ги обедини
-              колегите љубители на модели за да споделуваат знаења, искуства и
-              нивните ценети предмети.
+              {subtitle?"Основан од страна на Аце Дејановски (АКА Хамато Јоши), Die-Cast Club Автичики БРЕ е повеќе од само клуб, тоа е заедница на ентузијасти обединети од нивната заедничка љубов кон сложениот свет на дијагоналните модели. Клубот има за цел да ги обедини колегите љубители на модели за да споделуваат знаења, искуства и нивните ценети предмети." : "Founded by Ace Dejanovski (AKA Hamato Yoshi), Die-Cas Club Avtichiki BRE is more than just a club, it is a community of enthusiasts united by their shared love for the intricate world of die-cast models. The club aims to bring together fellow model enthusiasts to share knowledge, experiences and their prized possessions."}
             </p>
-            <h4>Нашата Мисија:</h4>
+            <h4>{subtitle? "Нашата Мисија:" : "Our mission:"}</h4>
             <p>
-              Градење на Заедница: Да се создаде пријатно место за собирање на
-              колекционери од сите нивоа за да се поврзат, научат и растат
-              заедно.
+              {subtitle? "Градење на Заедница: Да се создаде пријатно место за собирање на колекционери од сите нивоа за да се поврзат, научат и растат заедно." : "Building a Community: To create a welcoming place for collectors of all levels to connect, learn, and grow together."}
             </p>
             <p>
-              Промовирање на Хобито: Да се подигне свеста за дијагоналното
-              собирање како фасцинантно и наградувачко хоби.
+             {subtitle? "Промовирање на Хобито: Да се подигне свеста за дијагоналното собирање како фасцинантно и наградувачко хоби." : "Promoting the Hobby: To raise awareness of diagonal collecting as a fascinating and rewarding hobby."}
             </p>
             <p>
-              Покажување на Извонредност: Да се слави уметноста и занаетчиството
-              зад овие минијатурни ремек-дела.
+              {subtitle?"Покажување на Извонредност: Да се слави уметноста и занаетчиството зад овие минијатурни ремек-дела.":"Showcasing Excellence: Celebrating the art and craftsmanship behind these miniature masterpieces."}
             </p>
-            <h4> Што Нудиме:</h4>
+            <h4> {subtitle? "Што Нудиме:":"What We Offer:"}</h4>
             <p>
-              Редовни Состаноци: Можности за собирање со слични луѓе,
-              дискутирање за најновите изданија и споделување на знаења.
+              {subtitle?"Редовни Состаноци: Можности за собирање со слични луѓе,дискутирање за најновите изданија и споделување на знаења." : "Regular Meetings: Opportunities to gather with like-minded people, discuss the latest releases, and share knowledge."}
             </p>
             <p>
-              Покажување на Модели: Настани за прикажување и восхитување на
-              колекциите на другите, инспирирање на креативност и почитување.
+              {subtitle? "Покажување на Модели: Настани за прикажување и восхитување на колекциите на другите, инспирирање на креативност и почитување.":"Model Shows: Events to showcase and admire the collections of others, inspiring creativity and respect."}
             </p>
             <p>
-              Образовни Работилници: Сесии за учење за грижа за модели,
-              реставрација и техники на фотографирање.
+              {subtitle? "Образовни Работилници: Сесии за учење за грижа за модели,реставрација и техники на фотографирање.":"Educational Workshops: Learning sessions on model care, restoration, and photography techniques."}
             </p>
             <p>
-              Ексклузивен Пристап: Понуди само за членови за ретки модели и
-              колекционерски предмети.
+              {subtitle? "Ексклузивен Пристап: Понуди само за членови за ретки модели и колекционерски предмети.":"Exclusive Access: Members-only offers on rare models and collectibles."}
             </p>
-            <h4> Придружете се на Клубот:</h4>
+            <h4> {subtitle?"Придружете се на Клубот:":"Join the Club:"}</h4>
             <p>
-              Без разлика дали сте искусен колекционер или само го започнувате
-              вашето патување, Die-Cast Club Куманово ве поканува да бидете дел
-              од нашата жива заедница. Заедно ќе го истражуваме безграничниот
-              свет на дијагоналните модели и ќе ја славиме страста што нè движи
-              сите.
+              {subtitle?"Без разлика дали сте искусен колекционер или само го започнувате вашето патување, Die-Cast Club Куманово ве поканува да бидете дел од нашата жива заедница. Заедно ќе го истражуваме безграничниот свет на дијагоналните модели и ќе ја славиме страста што нè движи сите.":"Whether you are an experienced collector or just starting your journey, Die-Cast Club Kumanovo invites you to be part of our vibrant community. Together we will explore the limitless world of diecast models and celebrate the passion that drives us all."}
             </p>
           </div>
         </section>
 
         <section className="events-section">
           <div className="events-section-title-wrapper">
-            <h1>Организирани Настани (Дружби)</h1>
+            <h1>{subtitle? "Организирани Настани (Дружби)":"Organized Events (Social Events)"}</h1>
           </div>
           {/* Third Event */}
           <div className="event-container">
             <div className="event-title-and-description-wrapper">
               <div className="event-title-wrapper">
-                <h1>Трето Die-Cast шоу во Куманово 2025</h1>
+                <h1>{subtitle? "Трето Die-Cast шоу во Куманово 2025":"Third Die-Cast Show in Kumanovo 2025"}</h1>
               </div>
               <div className="event-description-wrapper">
-                <p>"И ја собирам Автичики Бре"</p>
+                <p>{subtitle?"И ја собирам Автичики Бре":"And I collect Avtichikki Bre"}</p>
                 <p>
-                  Заљубениците и колекционерите на модели на автомобили конечно
-                  ја добија долго очекуваната изложба во организација на
-                  DIE-CAST CLUB KUMANOVO
+                  {subtitle ? "Заљубениците и колекционерите на модели на автомобили конечно ја добија долго очекуваната изложба во организација на DIE-CAST CLUB KUMANOVO" :"Model car enthusiasts and collectors finally got the long-awaited exhibition organized by DIE-CAST CLUB KUMANOVO"}
                 </p>
               </div>
             </div>
@@ -131,14 +113,12 @@ function About() {
           <div className="event-container">
             <div className="event-title-and-description-wrapper">
               <div className="event-title-wrapper">
-                <h1>Второ Die-Cast шоу во Куманово 2023</h1>
+                <h1>{subtitle? "Второ Die-Cast шоу во Куманово 2023":"Second Die-Cast Show in Kumanovo 2023"}</h1>
               </div>
               <div className="event-description-wrapper">
-                <p>"Враќањето на колекционерите во Куманово"</p>
+                <p>{subtitle ? "Враќањето на колекционерите во Куманово":"The return of collectors to Kumanovo"}</p>
                 <p>
-                  Заљубениците и колекционерите на модели на автомобили конечно
-                  ја добија долго очекуваната изложба во организација на
-                  DIE-CAST CLUB KUMANOVO
+                  {subtitle ? "Заљубениците и колекционерите на модели на автомобили конечно ја добија долго очекуваната изложба во организација на DIE-CAST CLUB KUMANOVO" :"Model car enthusiasts and collectors finally got the long-awaited exhibition organized by DIE-CAST CLUB KUMANOVO"}
                 </p>
               </div>
             </div>
@@ -161,14 +141,12 @@ function About() {
           <div className="event-container">
             <div className="event-title-and-description-wrapper">
               <div className="event-title-wrapper">
-                <h1>Прво Die-cast Шоу Куманово 2022</h1>
+                <h1>{subtitle? "Прво Die-cast Шоу Куманово 2022":"First Die-Cast Show in Kumanovo 2022"}</h1>
               </div>
               <div className="event-description-wrapper">
-                <p>Смотра на "Чуварите на времето"</p>
+                <p>{subtitle?"Смотра на Чуварите на времето":"Review of The Guardians of Time"}</p>
                 <p>
-                  Заљубениците и колекционерите на модели на автомобили конечно
-                  ја добија долго очекуваната изложба во организација на
-                  DIE-CAST CLUB KUMANOVO
+                  {subtitle ? "Заљубениците и колекционерите на модели на автомобили конечно ја добија долго очекуваната изложба во организација на DIE-CAST CLUB KUMANOVO" :"Model car enthusiasts and collectors finally got the long-awaited exhibition organized by DIE-CAST CLUB KUMANOVO"}
                 </p>
               </div>
             </div>
@@ -191,7 +169,7 @@ function About() {
 
         <section className="our-visits">
           <div className="section-title">
-            <h1>наши гостувања</h1>
+            <h1>{subtitle?"наши гостувања" :"our visits"}</h1>
           </div>
           <div className="guest-visits">
             <div className="guest-appearance sakura-festival">
@@ -200,13 +178,19 @@ function About() {
                 alt="poster-sakura-festival"
                 className="appearance-poster"
               />
-              <p className="guest-event-title">сакура фестивал</p>
-              <p>Фестивал на јапонска култура</p>
+              <p className="guest-event-title">{subtitle?"сакура фестивал":"sakura festival"}</p>
+              <p>{subtitle? "Фестивал на јапонска култура":"Japanese Culture Festival"}</p>
               <div className="social-media-icons">
-                <a href="#">
+                <a href="https://www.facebook.com/groups/1067216153780659"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <FaFacebookF />
                 </a>
-                <a href="#">
+                <a href="https://www.instagram.com/diecastclubavticikibre/"
+                 target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <FaInstagram />
                 </a>
               </div>
@@ -217,13 +201,19 @@ function About() {
                 alt="poster-skopje-kup"
                 className="appearance-poster"
               />
-              <p className="guest-event-title">Скопје куп 2024</p>
-              <p>7ма годишна изложба на макети, минијатури и диорами</p>
+              <p className="guest-event-title">{subtitle?"Скопје куп 2024":"Skopje cup 2024"}</p>
+              <p>{subtitle?"7ма годишна изложба на макети, минијатури и диорами":"7th Annual Exhibition of Models, Miniatures and Dioramas"}</p>
               <div className="social-media-icons">
-                <a href="#">
+                <a href="https://www.facebook.com/groups/1067216153780659"
+                target="_blank"
+                rel="noopener noreferrer"
+                >
                   <FaFacebookF />
                 </a>
-                <a href="#">
+                <a href="https://www.instagram.com/diecastclubavticikibre/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <FaInstagram />
                 </a>
               </div>
@@ -234,15 +224,21 @@ function About() {
                 alt="poster-oldtimer-vitezi"
                 className="appearance-poster"
               />
-              <p className="guest-event-title">олдтајмер витези</p>
+              <p className="guest-event-title">{subtitle?"олдтајмер витези":"old timer knights"}</p>
               <p>
-                изложба на олдтајмери возила и колекционерски минијатурни модели
+                {subtitle?"изложба на олдтајмери возила и колекционерски минијатурни модели":"exhibition of old-timer vehicles and collectible miniature models"}
               </p>
               <div className="social-media-icons">
-                <a href="#">
+                <a href="https://www.facebook.com/groups/1067216153780659"
+                target="_blank"
+                rel="noopener noreferrer"
+                >
                   <FaFacebookF />
                 </a>
-                <a href="#">
+                <a href="https://www.instagram.com/diecastclubavticikibre/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >
                   <FaInstagram />
                 </a>
               </div>
@@ -253,13 +249,19 @@ function About() {
                 alt="poster-suma-sumarum"
                 className="appearance-poster"
               />
-              <p className="guest-event-title">сумасумарум Vol.2</p>
-              <p>дружба од едукативен настан</p>
+              <p className="guest-event-title">{subtitle?"сумасумарум Vol.2":"sumasumarum Vol.2"}</p>
+              <p>{subtitle?"дружба од едукативен настан":"friendship from an educational event"}</p>
               <div className="social-media-icons">
-                <a href="#">
+                <a href="https://www.facebook.com/groups/1067216153780659"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                >
                   <FaFacebookF />
                 </a>
-                <a href="#">
+                <a href="https://www.instagram.com/diecastclubavticikibre/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                >
                   <FaInstagram />
                 </a>
               </div>
@@ -271,12 +273,18 @@ function About() {
                 className="appearance-poster"
               />
               <p className="guest-event-title">record fair kumanovo</p>
-              <p>изложба на винил плочи</p>
+              <p>{subtitle?"изложба на винил плочи":"vinyl record exhibition"}</p>
               <div className="social-media-icons">
-                <a href="#">
+                <a href="https://www.facebook.com/groups/1067216153780659"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                >
                   <FaFacebookF />
                 </a>
-                <a href="#">
+                <a href="https://www.instagram.com/diecastclubavticikibre/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                >
                   <FaInstagram />
                 </a>
               </div>
@@ -288,7 +296,7 @@ function About() {
 
         <section className="local-section-container">
           <div className="local-title-wrapper">
-            <h2>Локални поддржувачи</h2>
+            <h2>{subtitle?"Локални поддржувачи":"Local supporters"}</h2>
           </div>
           <div className="cards-wrapper">
             <div className="card">

@@ -3,12 +3,14 @@ import RootLayout from "./mainPages/homePage/RootLayout";
 import HomePage from "./mainPages/homePage/HomePage";
 import AvticikiBre from "./mainPages/avticikiBre/AvticikiBre";
 import Avtomobilizam from "./mainPages/avtomobilizam/Avtomobilizam";
-import RogueBrush from "./mainPages/rogueBrush/RogueBrush";
+import VirtualCarShow from "./mainPages/virtualCarShow/VirtualCarShow";
 import About from "./mainPages/about/About";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import GalleryCars from "./mainPages/avticikiBre/galleryCars/GalleryCars";
 import CarDetails from "./mainPages/avticikiBre/CarDetails";
+import RealCarGallery from "./mainPages/avtomobilizam/RealCarGallery"
+import RealCarDetails from "./mainPages/avtomobilizam/RealCarDetails";
 
 
 const router = createBrowserRouter([
@@ -38,10 +40,18 @@ const router = createBrowserRouter([
         path: "/automobiles",
         element: <Avtomobilizam />,
       },
+      {
+        path: "/automobiles/realCarGallery",
+        element: <RealCarGallery />,
+      },
+      {
+        path:"/automobiles/realCarGallery/:id",
+        element:<RealCarDetails/>
+      },
 
       {
-        path: "/roguebrush",
-        element: <RogueBrush />,
+        path: "/virtualcarshow",
+        element: <VirtualCarShow />,
       },
 
       {

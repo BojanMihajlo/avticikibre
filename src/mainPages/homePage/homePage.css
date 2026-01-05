@@ -1,5 +1,5 @@
 #sectionOne {
-  height: 100vh;
+  height: 112vh;
   position: relative;
   z-index: 5;
 
@@ -35,52 +35,10 @@
   width: 65%;
   height: auto;
   filter: drop-shadow(5px 5px 15px #edebd7);
-  margin-top: 4%;
+  margin-top: 5dvh;
 }
 
-.bg-cars {
-  height: 100vh;
-  width: 100%;
-  background-attachment: fixed;
-  background-size: cover;
-  position: relative;
-  background-position: center;
-}
 
-.inner-box {
-  background-color: rgba(39, 40, 51, 0.85);
-  position: absolute;
-  height: 100vh;
-  width: 35%;
-  padding: 80px 40px 0px 60px;
-  color: #edebd7;
-  line-height: 1.7;
-}
-
-.inner-box.state-right {
-  right: 0;
-  border-left: 5px solid #e3b23c;
-}
-
-.inner-box.state-left {
-  left: 0;
-  border-right: 5px solid #e3b23c;
-}
-
-.inner-box h2 {
-  max-width: 80%;
-}
-.car1 {
-  background-image: url("/src/images/IMG_4566.JPG");
-}
-
-.car2 {
-  background-image: url("/src/images/IMG_4593.JPG");
-}
-
-.car3 {
-  background-image: url("/src/images/IMG_4637.JPG");
-}
 
 .carButton {
   margin-top: 4%;
@@ -90,17 +48,28 @@
 }
 
 @media (max-width: 1024px) {
-  .inner-box {
-    width: 45%;
-    padding: 60px 20px 0px 40px;
-    height: 100vh;
-  }
-  .inner-box h2 {
-    font-size: 18px;
-  }
-  .inner-box p {
-    font-size: 15px;
-  }
+   .curtain-top {
+    clip-path: polygon(
+  0% 95%,
+  5% 100%,
+  15% 100%,
+  20% 95%,
+  30% 95%,
+  35% 100%,
+  65% 100%,
+  70% 95%,
+  80% 95%,
+  85% 100%,
+  95% 100%,
+  100% 95%,
+  100% 0%,
+  0% 0%
+);
+
+    /* height: 90vh; */
+  
+   }
+
   .carButton {
     display: none;
   }
@@ -110,20 +79,32 @@
 }
 
 @media (max-width: 768px) {
-  .inner-box {
-    width: 45%;
-    padding: 60px 20px 0px 40px;
-    height: 100vh;
-  }
-  .inner-box h2 {
-    font-size: 12px;
-    padding-bottom: 6%;
-  }
 
-  .inner-box p {
-    font-size: 9px;
-    padding-bottom: 4%;
-  }
+   .logodiv img {
+   padding-top: 35%;
+   }
+
+     .curtain-top {
+    clip-path: polygon(
+  0% 95%,
+  5% 100%,
+  15% 100%,
+  20% 95%,
+  30% 95%,
+  35% 100%,
+  65% 100%,
+  70% 95%,
+  80% 95%,
+  85% 100%,
+  95% 100%,
+  100% 95%,
+  100% 0%,
+  0% 0%
+);
+
+   
+   }
+
 
   .carButton {
     display: none;
@@ -132,4 +113,5 @@
     display: block;
     padding-top: 7%;
   }
+
 }

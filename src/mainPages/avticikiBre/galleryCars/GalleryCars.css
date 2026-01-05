@@ -1,10 +1,4 @@
-/* body {
-  margin: 0;
-  background-color: #423e37;
-  color: #edebd7;
-  overscroll-behavior: none;
-  overflow-x: hidden;
-} */
+
 
 #wrapper {
   overflow: hidden;
@@ -17,12 +11,12 @@
   color: #edebd7;
   /* overscroll-behavior: none; */
   overflow-x: hidden;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 #content {
   width: 100%;
-  min-height: 300vh;
+  min-height: 600vh;
 }
 
 .text {
@@ -57,14 +51,14 @@
   padding-top: 28vh;
   padding-bottom: 5%;
   display: grid;
-  grid-template-columns: repeat(20, 2%);
-  grid-template-rows: repeat(40, 3%);
+  grid-template-columns: repeat(22, 2%);
+  grid-template-rows: repeat(55, 3%);
   justify-content: center;
   justify-items: center;
   align-items: center;
   max-width: 1800px;
   margin: 0 auto;
-  min-height: 200vh;
+  /* min-height: 350vh;  */
 }
 
 .cardAvto {
@@ -111,6 +105,9 @@
 }
 
 @media (max-width: 768px) {
+  .cardsAvticiki {
+    padding-left: 30%;
+  }
   .cardAvto {
     width: 220px;
   }
@@ -122,5 +119,6 @@
   }
   .search-box {
     position: static;
+    margin: 20% 0;
   }
 }

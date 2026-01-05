@@ -1,10 +1,14 @@
 import NavBar from "../homePage/Navbar";
 import raceVideo from "../../images/avtomobilizam-images/racing-drifting-car.mp4";
 import "./avtomobilizam.css";
+import CarCarousel from "./CarCarousel";
+import ScrollCover from "./ScrollCover";
+import TextSection from "./TextSection";
 
 export default function Avtomobilizam() {
   return (
     <>
+     <div style={{backgroundColor:"#423e37"}}>
       <div className="avtomobilizam-hero">
         <video autoPlay muted loop playsInline>
           <source src={raceVideo} type="video/mp4" />
@@ -14,6 +18,10 @@ export default function Avtomobilizam() {
         <div className="navbar-container">
           <NavBar />
         </div>
+      </div>
+      <CarCarousel/>
+      <ScrollCover/>
+      <TextSection/>
       </div>
     </>
   );

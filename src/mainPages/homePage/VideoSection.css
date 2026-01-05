@@ -1,7 +1,7 @@
 .videoSection {
-  height: 100vh;
-  background-color: #a39594;
-  padding: 4%;
+  height: 110vh;
+  background-color: #edebd7;
+  padding: 6%;
   overflow: hidden;
 }
 
@@ -26,8 +26,7 @@
 .overlayContainer {
   position: relative;
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
+  
 }
 
 .overlayLink {
@@ -41,6 +40,7 @@
 .overlayText {
   font-size: 9vw;
   color: black;
+  padding-top: 5%;
   letter-spacing: 4px;
   font-family: "Rubik Dirt", system-ui;
   font-weight: 400;
@@ -63,4 +63,43 @@
 
 .overlayLink:hover .overlayImg {
   transform: scale(1.05);
+}
+
+
+@media (max-width: 769px) {
+   .videoSection {
+  height: 80vh;
+  padding: 6%;
+
+}
+.videoDiv {
+ margin-top: 12%;
+  height: 50vh;
+  width: 100%;
+}
+
+.overlayLink {
+  gap: 10px;
+  margin-top: 12%;
+}
+
+.overlayImg {
+  width: 100px; }
+
+}
+
+@media (max-width: 426px) {
+     .videoSection {
+  height: 80vh;
+ 
+  padding: 6%;
+
+     }
+
+     .videoDiv {
+ margin-top: 12%;
+  height: 50vh;
+  width: 100%;
+}
+
 }

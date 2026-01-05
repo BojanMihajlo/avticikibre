@@ -17,7 +17,6 @@ export default function ImageComparison() {
   const opacity1 = useSpring(rawOpacity1, { stiffness: 80, damping: 20 });
   const scale1 = useSpring(rawScale1, { stiffness: 80, damping: 20 });
 
-  // Втората слика
   const rawOpacity2 = useTransform(scrollYProgress, [0, 0.5, 1], [0, 0, 1]);
   const rawScale2 = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
 
@@ -26,17 +25,7 @@ export default function ImageComparison() {
 
   return (
     <>
-      <section className="panel23">
-        <motion.div
-          className="reveal-text"
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.3 }}
-        >
-          <p>Some text about logo and beginning of the AvticikiBre</p>
-        </motion.div>
-      </section>
+    
 
       <div ref={ref} className="container23">
         <motion.img

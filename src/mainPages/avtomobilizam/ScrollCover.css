@@ -1,0 +1,67 @@
+.scroll-section-car {
+  position: relative;
+  height: 300vh;
+ 
+}
+
+.image-container-car {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container-car img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  transition: width 0.05s linear, height 0.05s linear;
+  border-radius: 15px;
+}
+
+
+.text-top,
+.text-bottom {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  color: #000;
+}
+
+.text-top {
+  top: 24px;
+  font-size: 4rem;
+  font-weight: bold;
+   font-family: "Rubik Dirt", system-ui;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+
+
+@media (max-width: 768px) {
+    .scroll-section-car {
+        height: 250vh;
+    }
+    .image-container-car img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .image-container-car {
+        overflow-x: hidden;
+        top: 1%;
+        height: 100vh;
+    }
+    .text-top {
+        font-size: 2rem;
+        top: 20%;
+    }
+    .text-bottom {
+        font-size: 1rem;
+        bottom: 20%;
+    }
+}

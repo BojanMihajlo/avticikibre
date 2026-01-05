@@ -1,39 +1,36 @@
 import { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import CarButton from "../carButton/CarButton";
-import yellowCar from "../../images/avticikiBre-images/yellowCar.png"; // Adjust the path
-import colcar1 from "../../images/colcar1.jpg";
-import colcar2 from "../../images/colcar2.jpg";
-import colcar3 from "../../images/colcar3.jpg";
-import colcar4 from "../../images/colcar4.jpg";
-import colcar5 from "../../images/colcar5.jpg";
-import colcar6 from "../../images/colcar6.jpg";
+import yellowCar from "../../images/avticikiBre-images/yellowCar.png"; 
+import { useNavigate } from "react-router-dom";
+import { useOutletContext } from "react-router-dom";
 import "./NewsCars.css";
+import { useCars } from "./cardsData/cardsData";
+import Loader from "../homePage/Loader";
 
-export default function NewsCars({
-  cards = [
-    { id: 1, img: colcar1, title: "Card 1" },
-    { id: 2, img: colcar2, title: "Card 2" },
-    { id: 3, img: colcar3, title: "Card 3" },
-    { id: 4, img: colcar4, title: "Card 4" },
-    { id: 5, img: colcar5, title: "Card 5" },
-    { id: 6, img: colcar6, title: "Card 6" },
-  ],
-}) {
+export default function NewsCars(){
+   
+  const cards = useCars()
+
+  const showLoader = cards.length === 0;
+   const navigate = useNavigate();
+    const [subtitle] = useOutletContext();
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start center", "end center"],
   });
+   
+ const API = process.env.REACT_APP_API_URL;
 
   const isMobile = window.innerWidth < 768;
-  const SECTION_HEIGHT = isMobile ? "300vh" : "330vh";
-  const MAX_PUSH = isMobile ? 70 : 320; // smaller push on phones
-  const CARD_HEIGHT = isMobile ? 150 : 200;
+  const SECTION_HEIGHT = isMobile ? "300vh" : "410vh";
+  const MAX_PUSH = isMobile ? 70 : 320; 
+  const CARD_HEIGHT = isMobile ? 150 : 300;
   const INITIAL_OFFSET = isMobile
     ? 0.18 * window.innerWidth // ~8% of screen width
-    : 0.12 * window.innerWidth;
-  const IMAGE_RANGE = isMobile ? ["0%", "800%"] : ["0%", "900%"];
+    : 0.15 * window.innerWidth;
+  const IMAGE_RANGE = isMobile ? ["0%", "800%"] : ["0%", "990%"];
 
   const imageY = useTransform(scrollYProgress, [0, 1], IMAGE_RANGE);
 
@@ -43,12 +40,21 @@ export default function NewsCars({
     return () => unsubscribe && unsubscribe();
   }, [scrollYProgress]);
 
-  // const INITIAL_OFFSET = 0.12 * window.innerWidth; // 20% of screen width
+   const getImageURL = (img) => {
+  if (!img) return "/placeholder.jpg";
+
+  if (img.startsWith("http")) return img;
+
+  
+  return img.startsWith("/")
+    ? `${API}${img}`
+    : `${API}/${img}`;
+}
+
+  
   return (
     <>
-      {/* This is the section BEFORE the scroll image appears */}
-      {/* <div style={{ height: "50vh", background: "#f0f0f0" }}></div> */}
-
+     
       <section
         ref={ref}
         style={{
@@ -58,7 +64,7 @@ export default function NewsCars({
           display: "flex",
           alignItems: "center",
           justifyContent: "flex-start",
-          backgroundColor: "#a39594",
+          
         }}
         className="sectionTwoScroll"
       >
@@ -67,13 +73,10 @@ export default function NewsCars({
           src={yellowCar}
           alt="Passing Car"
           style={{
-            // position: "absolute",
-            // top: 0,
-            // left: "10%",
+           
             transform: "translateX(-50%)",
             y: imageY,
-            // width: 220,
-            // height: "auto",
+           
             zIndex: 1,
             filter: "drop-shadow(5px 5px 15px black)",
           }}
@@ -84,7 +87,7 @@ export default function NewsCars({
         <div
           style={{
             position: "relative",
-            width: "50%",
+            width: "45%",
             display: "flex",
             flexDirection: "column",
             gap: "2rem",
@@ -92,7 +95,15 @@ export default function NewsCars({
             zIndex: 2,
           }}
         >
-          {cards.map((card, index) => {
+
+           {showLoader && (
+    <div className="loader-wrapper">
+      <Loader />
+    </div>
+  )}
+
+  {!showLoader &&
+          cards.slice(8, 15).map((card, index) => {
             const start = 0.1 + index * 0.08;
             let xOffset = INITIAL_OFFSET;
 
@@ -103,11 +114,11 @@ export default function NewsCars({
 
             return (
               <motion.div
-                key={card.id}
+                key={card._id}
                 style={{
                   x: xOffset,
                   height: CARD_HEIGHT,
-                  background: "#fff",
+                  background: "#edebd7",
                   borderRadius: 14,
                   overflow: "hidden",
                   filter: "drop-shadow(5px 5px 15px #e3b23c)",
@@ -116,41 +127,41 @@ export default function NewsCars({
                   justifyContent: "center",
                   width: "100%",
                 }}
+                 onClick={() =>
+                  window.open(`/avticikiBre/galleryCars/${card._id}`, "_blank")
+                }
               >
                 <img
-                  src={card.img}
-                  alt={card.title}
+                  src={getImageURL(card.images?.[0])}
+                  alt={card.model}
                   style={{
                     width: "100%",
-                    height: "70%",
+                    height: "89%",
                     objectFit: "cover",
                   }}
                 />
                 <div
-                  style={{
-                    padding: "0.5rem 1rem",
-                    textAlign: "center",
-                    fontWeight: 600,
-                  }}
+                className="text-card-model"
+                 
                 >
-                  {card.title}
+                  {card.model}
                 </div>
               </motion.div>
             );
           })}
         </div>
         <motion.div
-          className="buttonMore"
+          className="buttonMoreTwo"
           initial={{ x: -170, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 2 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
         >
-          <CarButton width={200} text={"Види галерија"} />
+          <CarButton width={200}  text={subtitle?"Види галерија":"See gallery"}   onClick={() => navigate("galleryCars")}/>
         </motion.div>
 
-        <div className="buttonMoreMob">
-          <CarButton width={120} text={"Види галерија"} />
+        <div className="buttonMoreTwoMob">
+          <CarButton width={120}  text={subtitle?"Види галерија":"See gallery"}   onClick={() => navigate("galleryCars")} />
         </div>
       </section>
 

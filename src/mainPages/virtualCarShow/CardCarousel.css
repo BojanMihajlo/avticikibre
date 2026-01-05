@@ -1,0 +1,150 @@
+.carousel-virtual {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+.carousel-track {
+  position: relative;
+  height: 100%;
+}
+
+.card-virtual {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 380px;
+  height: 280px;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+  opacity: 0;
+}
+
+.card-virtual-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.card-virtual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.card-virtual-info {
+  position: absolute;
+  bottom: 12px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+}
+
+
+.card-reflection {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleY(-1);
+  opacity: 0.3;
+  filter: blur(4px);
+}
+
+.card-reflection img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* fade reflection */
+.card-reflection::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), transparent);
+}
+
+
+.card-virtual.active {
+  transform: translate(-50%, -50%) scale(1) rotateY(0deg);
+  opacity: 1;
+  z-index: 3;
+}
+
+.card-virtual.left {
+  transform: translate(-500px, -50%) scale(0.7) rotateY(35deg);
+  opacity: 0.5;
+  z-index: 2;
+}
+
+.card-virtual.right {
+  transform: translate(120px, -50%) scale(0.7) rotateY(-35deg);
+  opacity: 0.5;
+  z-index: 2;
+}
+
+.card-virtual.hidden {
+  opacity: 0;
+  z-index: 1;
+}
+
+/* NAV */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 60px;
+  color: #e3b23c;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.prev { left: 2%; }
+.next { right: 2%; }
+
+.diecast-show, .realcar-show {
+  text-align: center;
+  padding: 5%;
+  background-color: #423e37;
+  margin-bottom: 7%;
+  border-radius: 6%;
+  filter: drop-shadow(5px 5px 15px black);
+}
+
+.diecast-show h2, .realcar-show h2{
+  font-family: "Rubik Dirt";
+  font-weight: 400;
+  font-size: 40px;
+}
+
+@media (max-width: 768px) {
+
+
+  .card-virtual {
+    width: 280px;
+    top:45%;
+  }
+
+  .diecast-show {
+    margin-top: 14%;
+
+  }
+  .realcar-show {
+    margin-top: 18%;
+  }
+
+  .diecast-show h2, .realcar-show h2{
+  
+  font-size: 35px;
+}
+}

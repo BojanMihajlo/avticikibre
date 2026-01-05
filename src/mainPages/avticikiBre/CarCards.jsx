@@ -3,13 +3,21 @@ import { useRef, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import blueCar from "../../images/avticikiBre-images/blueCar.png";
 import CarButton from "../carButton/CarButton";
-import { cardsData } from "./cardsData/cardsData";
+import { useCars } from "./cardsData/cardsData";
+import { useOutletContext } from "react-router-dom";
 import "./CarCards.css";
+import Loader from "../homePage/Loader"
 
 export default function PassingImageGrid() {
   const navigate = useNavigate();
+  
+  const cars = useCars()
 
+  const showLoader = cars.length === 0;
   const ref = useRef(null);
+   const [subtitle] = useOutletContext();
+  
+  const API = process.env.REACT_APP_API_URL;
 
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
@@ -21,12 +29,13 @@ export default function PassingImageGrid() {
 
   const tunables = isMobile
     ? {
-        SECTION_HEIGHT: "370vh",
+        SECTION_HEIGHT: "355vh",
         GRID_WIDTH: "95%",
         AMPLITUDE: 100,
         ROW_WINDOW: 0.45,
         ROW_STAGGER: 0.15,
         imageRange: ["0%", "915%"], // smaller travel for mobile
+        cardHeight : 150
       }
     : {
         SECTION_HEIGHT: "340vh",
@@ -35,6 +44,7 @@ export default function PassingImageGrid() {
         ROW_WINDOW: 0.4,
         ROW_STAGGER: 0.11,
         imageRange: ["0%", "907%"], // full travel for desktop
+        cardHeight: 240
       };
 
   // Scroll progress tied to this section
@@ -68,6 +78,18 @@ export default function PassingImageGrid() {
     const dir = isLeft ? -1 : 1;
     return dir * tunables.AMPLITUDE * t;
   };
+
+
+    const getImageURL = (img) => {
+  if (!img) return "/placeholder.jpg";
+
+  if (img.startsWith("http")) return img;
+
+  
+  return img.startsWith("/")
+    ? `${API}${img}`
+    : `${API}/${img}`;
+}
 
   return (
     <>
@@ -107,14 +129,21 @@ export default function PassingImageGrid() {
             zIndex: 1,
           }}
         >
-          {cardsData.map((card, index) => {
+           {showLoader && (
+    <div className="loader-wrapper">
+      <Loader />
+    </div>
+  )}     
+      {!showLoader &&
+          cars.slice(0, 8).map((card, index) => {
+        
             const rowIndex = Math.floor(index / 2);
             const isLeft = index % 2 === 0;
             const x = calcShift(p, rowIndex, isLeft);
 
             return (
               <motion.div
-                key={card.id}
+                key={card._id}
                 style={{
                   x, // numeric px is fine
                   background: "#edebd7",
@@ -123,20 +152,20 @@ export default function PassingImageGrid() {
                   boxShadow: "0 18px 25px #e3b23c",
                 }}
                 onClick={() =>
-                  window.open(`/avticikiBre/galleryCars/${card.id}`, "_blank")
+                  window.open(`/avticikiBre/galleryCars/${card._id}`, "_blank")
                 }
               >
                 <img
-                  src={card.img}
-                  alt={card.title ?? `Card ${card.id}`}
+                  src={getImageURL(card.images?.[0])}
+                  alt={card.model ?? `Card ${card.id}`}
                   style={{
                     width: "100%",
-                    height: 240,
+                    height: tunables.cardHeight,
                     objectFit: "cover",
                     display: "block",
                   }}
                 />
-                {card.subtitle && (
+                {card.model && (
                   <div
                     style={{
                       padding: "0.9rem 1rem 1.1rem",
@@ -145,23 +174,25 @@ export default function PassingImageGrid() {
                       textAlign: "center",
                     }}
                   >
-                    {card.subtitle}
+                    {card.model}
                   </div>
                 )}
               </motion.div>
             );
           })}
+
         </div>
+
         <motion.div
           className="buttonMore"
           initial={{ x: -170, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 2 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
         >
           <CarButton
             width={200}
-            text={"Види галерија"}
+            text={subtitle?"Види галерија":"See gallery"}
             onClick={() => navigate("galleryCars")}
           />
         </motion.div>
@@ -169,7 +200,7 @@ export default function PassingImageGrid() {
         <div className="buttonMoreMob">
           <CarButton
             width={120}
-            text={"Види галерија"}
+            text={subtitle?"Види галерија":"See gallery"}
             onClick={() => navigate("galleryCars")}
           />
         </div>

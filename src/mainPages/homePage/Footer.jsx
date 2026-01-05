@@ -1,6 +1,6 @@
 import { useState } from "react";
-// import CarSilhouette from "../../images/avtoce1.png"; // path to your SVG
-import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaInstagram,  FaYoutube } from "react-icons/fa";
+import { FaSquareThreads } from "react-icons/fa6";
 import Logo from "../../images/logo1.png";
 
 import "./footer.css";
@@ -17,49 +17,58 @@ const Footer = ({ subtitle }) => {
   return (
     <div className="wrapFooter">
       <footer className="footer">
-        {/* <div className="footer-silhouette">
-        <img src={CarSilhouette} alt="Car Silhouette" width="100%" />
-      </div> */}
+      
         <div className="logofooter">
           <img src={Logo} alt="Logo" />
         </div>
         <div className="footer-content">
-          {/* <div className="logofooter">
-            <img src={Logo} alt="Logo" />
-          </div> */}
-          {/* Navbar links */}
+        
           <ul className="footer-nav">
             <li>
-              <a href="#home"> {subtitle ? "Почетна" : "Home"}</a>
+              <a href="/"> {subtitle ? "Почетна" : "Home"}</a>
             </li>
             <li>
-              <a href="#about"> {subtitle ? "АвтичикиБре" : "AvticikiBre"}</a>
+              <a href="/avticikibre"> {subtitle ? "АвтичикиБре" : "AvticikiBre"}</a>
             </li>
             <li>
-              <a href="#services">
+              <a href="/automobiles">
                 {subtitle ? "Автомобилизам" : "Automobiles"}
               </a>
             </li>
             <li>
-              <a href="#contact"> RogueBrush</a>
+              <a href="/virtualcarshow"> VirtualCarShow</a>
             </li>
             <li>
-              <a href="#contact"> {subtitle ? "За нас" : "About"}</a>
+              <a href="/about"> {subtitle ? "За нас" : "About"}</a>
             </li>
           </ul>
 
           {/* Social icons */}
           <div className="footer-social">
-            <a href="#">
+            <a href="https://www.facebook.com/groups/1067216153780659"
+            target="_blank"
+             rel="noopener noreferrer"
+            >
               <FaFacebookF />
             </a>
-            <a href="#">
+            <a href="https://www.instagram.com/diecastclubavticikibre/"
+             target="_blank"
+             rel="noopener noreferrer"
+            >
               <FaInstagram />
             </a>
-            <a href="#">
-              <FaTwitter />
+
+             <a href="https://www.threads.com/@diecastclubavticikibre"
+             target="_blank"
+             rel="noopener noreferrer"
+            >
+              <FaSquareThreads />
             </a>
-            <a href="#">
+           
+            <a href="https://www.youtube.com/@diecastclubkumanovo"
+            target="_blank"
+             rel="noopener noreferrer"
+            >
               <FaYoutube />
             </a>
           </div>
@@ -78,13 +87,11 @@ const Footer = ({ subtitle }) => {
               <CarButton text="Subscribe" width="130" />
             </form>
           </div>
-          {/* <div className="footer-bottom">
-            <p>© 2025 All rights reserved.</p>
-          </div> */}
+         
         </div>
 
         <div className="footer-bottom">
-          <p>© 2025 All rights reserved.</p>
+          <p>© {new Date().getFullYear()} All rights reserved.</p>
         </div>
       </footer>
     </div>

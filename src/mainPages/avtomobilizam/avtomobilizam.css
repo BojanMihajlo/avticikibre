@@ -2,7 +2,24 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  height: 100vh;
+  height: 112vh;
+  
+   clip-path: polygon(
+    0% 0%,
+    /* top-left corner */ 100% 0%,
+    /* top-right corner */ 100% 90%,
+    /* right side down before step */ 95% 100%,
+    /* step up */ 85% 100%,
+    /* flat */ 80% 90%,
+    /* step down */ 70% 90%,
+    65% 100%,
+    /* step up */ 35% 100%,
+    30% 90%,
+    /* step down */ 20% 90%,
+    15% 100%,
+    /* step up */ 5% 100%,
+    /* flat */ 0% 90% /* step down before closing */
+  );
 }
 video {
   position: absolute;
@@ -14,7 +31,32 @@ video {
   z-index: 0;
 }
 
+
+
 .navbar-container {
   position: relative;
   z-index: 1;
+}
+
+@media (max-width: 768px) {
+  
+  .avtomobilizam-hero {
+     clip-path: polygon(
+  0% 95%,
+  5% 100%,
+  15% 100%,
+  20% 95%,
+  30% 95%,
+  35% 100%,
+  65% 100%,
+  70% 95%,
+  80% 95%,
+  85% 100%,
+  95% 100%,
+  100% 95%,
+  100% 0%,
+  0% 0%
+);
+  }
+
 }

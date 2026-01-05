@@ -23,7 +23,7 @@ export default function Events() {
               <motion.span
                 key={index}
                 initial={{
-                  x: (Math.random() - 0.5) * 800, // More scattered
+                  x: (Math.random() - 0.5) * 800, 
                   y: (Math.random() - 0.5) * 600,
                   opacity: 0,
                   rotate: (Math.random() - 0.5) * 90,

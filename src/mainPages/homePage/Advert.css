@@ -1,5 +1,5 @@
 .advert {
-  height: 750px;
+  height: 250px;
   background-color: #edebd7;
 }
 
@@ -55,4 +55,11 @@
   100% {
     transform: translateX(-50%);
   }
+}
+
+@media (max-width: 769px) {
+    .advert {
+  height: 100px;
+ 
+}
 }

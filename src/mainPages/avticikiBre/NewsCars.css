@@ -1,14 +1,16 @@
 .divStopTwo {
   height: 270px;
-  background-image: url("../../images/avticikiBre-images/wallcar1.jpg");
-  background-position: center;
-  background-size: cover;
+  background: linear-gradient(to bottom, #6e675f, #edebd7);
 }
 
-.buttonMore {
+.buttonMoreTwo {
   position: absolute;
-  bottom: 15%;
-  right: 15%;
+  bottom: 7%;
+  right: 17%;
+}
+
+.buttonMoreTwoMob {
+  display: none;
 }
 
 .yellowCarImage {
@@ -18,12 +20,18 @@
   width: 220px;
   height: auto;
 }
-/* .sectionTwoScroll {
+.sectionTwoScroll {
     background-image: url("../../images/avticikiBre-images/road11.png");
   background-size: 36.2% 70%;
   background-position:left center;
   background-repeat: no-repeat;
-} */
+}
+.text-card-model {
+  padding: 1rem  1rem;
+  text-align: center;
+  font-weight: bolder;
+  
+}
 
 @media (max-width: 768px) {
   .yellowCarImage {
@@ -36,5 +44,23 @@
     background-size: 100%;
     background-repeat: no-repeat;
     height: 184px;
+  }
+
+  .buttonMoreTwo {
+    display: none
+  }
+
+  .buttonMoreTwoMob {
+    display: block;
+   position: absolute;
+    bottom: 12.5%;
+   right: 11%;
+   
+  }
+  .text-card-model {
+  
+    font-size: 12px;
+   padding: 0.4rem 1rem;
+   margin-bottom: 4%;
   }
 }

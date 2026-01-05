@@ -10,16 +10,21 @@ const Navbar = ({ bgColor }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [subtitle, setSubtitle] = useOutletContext();
 
+   const changeLanguage = (lang) => {
+  const isMk = lang === "mk";
+  setSubtitle(isMk);
+  localStorage.setItem("lang", lang);
+};
   return (
     <div className="navHero" style={{ backgroundColor: bgColor }}>
       <div className="subtitleButtons">
-        <CarButton text="EN" onClick={() => setSubtitle(false)} />
-        <CarButton text="MK" onClick={() => setSubtitle(true)} />
+        <CarButton text="EN" onClick={() => changeLanguage("en")} />
+        <CarButton text="MK" onClick={() => changeLanguage("mk")} />
       </div>
 
       <div className="subtitleButtonsMob">
-        <CarButton text="EN" width="90" onClick={() => setSubtitle(false)} />
-        <CarButton text="MK" width="90" onClick={() => setSubtitle(true)} />
+        <CarButton text="EN" width="90" onClick={() => changeLanguage("en")} />
+        <CarButton text="MK" width="90" onClick={() => changeLanguage("mk")} />
       </div>
 
       {/* Desktop Navigation */}
@@ -66,10 +71,10 @@ const Navbar = ({ bgColor }) => {
           </li>
           <li>
             <NavLink
-              to="/roguebrush"
+              to="/virtualcarshow"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
-              RogueBrush
+              VirtualCarShow
             </NavLink>
           </li>
           <li>
@@ -110,8 +115,8 @@ const Navbar = ({ bgColor }) => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/roguebrush" onClick={() => setMenuOpen(false)}>
-              RogueBrush
+            <NavLink to="/virtualcarshow" onClick={() => setMenuOpen(false)}>
+              VirtualCarShow
             </NavLink>
           </li>
           <li>

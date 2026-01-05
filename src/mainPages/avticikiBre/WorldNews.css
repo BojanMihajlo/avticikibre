@@ -1,5 +1,5 @@
 .world {
-  background-color: #a39594;
+  
   text-align: center;
   color: black;
   /* filter: drop-shadow(5px 5px 15px #e3b23c); */
@@ -8,14 +8,15 @@
   font-size: 95px;
   font-style: normal;
   padding-top: 6%;
+   
 }
+
 
 .textOurTwo {
   text-align: center;
-
   padding-top: 5%;
   padding-left: 4%;
-  background-color: #a39594;
+  
 }
 .textOurTwo h3 {
   color: black;
@@ -23,7 +24,7 @@
   font-family: "Rubik Dirt", system-ui;
   text-transform: uppercase;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 @media (max-width: 768px) {

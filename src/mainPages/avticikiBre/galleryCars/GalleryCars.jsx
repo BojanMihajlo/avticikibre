@@ -4,14 +4,23 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navbar from "../../homePage/Navbar";
 import "./GalleryCars.css";
 import { FaCar } from "react-icons/fa";
-import { cardsData } from "../cardsData/cardsData";
+import { useCars } from "../cardsData/cardsData";
 import { useOutletContext } from "react-router-dom";
+import Loader from "../../homePage/Loader";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function GalleryCars() {
   const [subtitle] = useOutletContext();
   const [searchTerm, setSearchTerm] = useState("");
+
+  const cars = useCars();
+  const showLoader = cars.length === 0;
+  const API = process.env.REACT_APP_API_URL;
+
+  const filteredCards = cars.filter((card) =>
+    card.model.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   useEffect(() => {
     let skewSetter = gsap.quickTo(".cardAvto", "skewY"),
@@ -26,10 +35,11 @@ export default function GalleryCars() {
       onScrubComplete: () => skewSetter(0),
     });
 
-    gsap.utils.toArray(".card").forEach((card) => {
-      let speed = card.dataset.speed || 1;
+    gsap.utils.toArray(".cardAvto").forEach((card) => {
+      const speed = parseFloat(card.dataset.speed) || 1;
+
       gsap.to(card, {
-        y: () => -(window.innerHeight * speed * 0.1),
+        y: () => -(window.innerHeight * speed * 0.15),
         ease: "none",
         scrollTrigger: {
           trigger: card,
@@ -39,11 +49,26 @@ export default function GalleryCars() {
         },
       });
     });
-  }, []);
 
-  const filteredCards = cardsData.filter((card) =>
-    card.subtitle.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+    ScrollTrigger.refresh();
+  }, [filteredCards.length]);
+
+
+  const getFirstImage = (card) => {
+    if (card.images && card.images.length > 0) {
+      return card.images[0];
+    }
+    if (card.image) {
+      return card.image;
+    }
+    return "/placeholder.jpg";
+  };
+
+  const getImageURL = (img) => {
+    if (!img) return "/placeholder.jpg";
+    if (img.startsWith("http")) return img;
+    return img.startsWith("/") ? `${API}${img}` : `${API}/${img}`;
+  };
 
   return (
     <>
@@ -77,18 +102,26 @@ export default function GalleryCars() {
           </div>
 
           <section className="cardsAvticiki">
-            {filteredCards.map((card, index) => (
+
+            {showLoader && (
+        <div className="loader-wrapper">
+         <Loader />
+         </div>
+          )}
+             
+             {!showLoader &&
+            filteredCards.map((card, index) => (
               <div
                 key={index}
                 className="cardAvto"
-                data-speed={card.speed}
+                data-speed={card.speed ?? (Math.random() * 1.5 + 0.5)}
                 style={{ gridArea: gridAreas[index] }}
                 onClick={() =>
-                  window.open(`/avticikiBre/galleryCars/${card.id}`, "_blank")
+                  window.open(`/avticikiBre/galleryCars/${card._id}`, "_blank")
                 }
               >
-                <img src={card.img} alt={card.subtitle} />
-                <h3>{card.subtitle}</h3>
+                <img src={getImageURL(getFirstImage(card))} alt={card.model} />
+                <h3>{card.model}</h3>
               </div>
             ))}
 
@@ -105,12 +138,24 @@ export default function GalleryCars() {
 }
 
 const gridAreas = [
-  "1/1/6/8",
-  "3/12/8/20",
-  "9/5/13/15",
-  "14/1/18/8",
-  "16/12/20/19",
-  "20/2/25/9",
-  "22/11/24/20",
-  "26/5/30/15",
+  "1/4/6/8",
+  "3/12/8/22",
+  "7/4/8/15",
+  "14/4/8/8",
+  "16/12/12/19",
+  "20/4/14/9",
+  "22/11/15/22",
+  "26/5/17/12",
+  "30/13/19/20",
+  "34/3/21/11",
+  "36/10/24/22",
+  "40/6/27/24",
+  "42/4/30/10",
+  "45/15/32/18",
+  "46/2/38/16",
+  "48/4/45/8",
+  "51/10/46/16",
+  "53/18/48/22",
+  "54/2/50/16",
+  "55/16/56/20",
 ];

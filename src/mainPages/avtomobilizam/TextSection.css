@@ -1,0 +1,30 @@
+
+
+.textAvto-section {
+  
+  margin: auto;
+  text-align: center;
+  padding: 5% 10%;
+  overflow-x: hidden;
+  height: 110vh;
+   background-color: #edebd7;
+}
+
+
+.textAvto-section h2 {
+  font-family: "Rubik Dirt", system-ui;
+  font-size: 60px; 
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+
+    .textAvto-section {
+        height: 98vh;
+    }
+    .textAvto-section h2 {
+        font-size: 30px;
+        margin-top: 15%;
+    }
+}
