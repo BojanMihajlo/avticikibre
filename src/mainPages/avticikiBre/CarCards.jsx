@@ -29,16 +29,16 @@ export default function PassingImageGrid() {
 
   const tunables = isMobile
     ? {
-        SECTION_HEIGHT: "355vh",
+        SECTION_HEIGHT: "330dvh",
         GRID_WIDTH: "95%",
         AMPLITUDE: 100,
         ROW_WINDOW: 0.45,
         ROW_STAGGER: 0.15,
-        imageRange: ["0%", "915%"], // smaller travel for mobile
+        imageRange: ["0%", "900%"], // smaller travel for mobile
         cardHeight : 150
       }
     : {
-        SECTION_HEIGHT: "340vh",
+        SECTION_HEIGHT: "340dvh",
         GRID_WIDTH: "80%",
         AMPLITUDE: 182,
         ROW_WINDOW: 0.4,
@@ -102,7 +102,7 @@ export default function PassingImageGrid() {
           alignItems: "center",
           justifyContent: "center",
           overflow: "hidden",
-          padding: "6vh 0",
+          padding: "6dvh 0",
         }}
         className="sectionScroll"
       >

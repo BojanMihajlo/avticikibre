@@ -2,53 +2,63 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 300px;
+  gap: 180px;
   padding-top: 150px;
 }
 
+/* 🔑 ова е клучното */
+.scroll-spacer {
+  height: 45vh;
+  width: 100%;
+}
+
+/* ===== POSTER ===== */
+
 .poster-container {
-  /* perspective: 500px; */
-  height: 1100px;
   width: 80vw;
-  overflow: none;
+  min-height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
   border-left: 5px solid #e3b23c;
   border-right: 5px solid #e3b23c;
+  overflow: visible;
 }
 
 .poster-image {
   width: 70%;
-  /* height: auto; */
   border-radius: 20px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  transform-origin: top center;
 }
+
+/* ================= MOBILE ================= */
 
 @media (max-width: 769px) {
   .unroll-wrapper {
-    gap: 70px;
-    padding: 15px;
+    gap: 100px;
   }
 
-  .poster-image {
-    width: 82%;
-  }
   .poster-container {
-    height: 750px;
+    min-height: 70vh;
+  }
+
+  .scroll-spacer {
+    height: 25vh;
   }
 }
 
 @media (max-width: 426px) {
   .unroll-wrapper {
-    gap: 50px;
-    padding: 50px;
+    gap: 60px;
   }
 
-  .poster-image {
-    width: 82%;
-  }
   .poster-container {
-    height: 400px;
+    min-height: 55vh;
+  }
+
+  .scroll-spacer {
+    height: 15vh;
   }
 }
+

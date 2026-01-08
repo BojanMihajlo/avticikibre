@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { FaFacebookF, FaInstagram,  FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaSquareThreads } from "react-icons/fa6";
 import Logo from "../../images/logo1.png";
-
 import "./footer.css";
 import CarButton from "../carButton/CarButton";
 
@@ -11,69 +10,43 @@ const Footer = ({ subtitle }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Email submitted:", email);
     setEmail("");
   };
+
   return (
     <div className="wrapFooter">
       <footer className="footer">
-      
         <div className="logofooter">
           <img src={Logo} alt="Logo" />
         </div>
+
         <div className="footer-content">
-        
+          {/* NAV */}
           <ul className="footer-nav">
-            <li>
-              <a href="/"> {subtitle ? "Почетна" : "Home"}</a>
-            </li>
-            <li>
-              <a href="/avticikibre"> {subtitle ? "АвтичикиБре" : "AvticikiBre"}</a>
-            </li>
-            <li>
-              <a href="/automobiles">
-                {subtitle ? "Автомобилизам" : "Automobiles"}
-              </a>
-            </li>
-            <li>
-              <a href="/virtualcarshow"> VirtualCarShow</a>
-            </li>
-            <li>
-              <a href="/about"> {subtitle ? "За нас" : "About"}</a>
-            </li>
+            <li><a href="/">{subtitle ? "Почетна" : "Home"}</a></li>
+            <li><a href="/avticikibre">{subtitle ? "АвтичикиБре" : "AvticikiBre"}</a></li>
+            <li><a href="/automobiles">{subtitle ? "Автомобилизам" : "Automobiles"}</a></li>
+            <li><a href="/virtualcarshow">VirtualCarShow</a></li>
+            <li><a href="/about">{subtitle ? "За нас" : "About"}</a></li>
           </ul>
 
-          {/* Social icons */}
+          {/* SOCIAL */}
           <div className="footer-social">
-            <a href="https://www.facebook.com/groups/1067216153780659"
-            target="_blank"
-             rel="noopener noreferrer"
-            >
+            <a href="https://www.facebook.com/groups/1067216153780659" target="_blank" rel="noopener noreferrer">
               <FaFacebookF />
             </a>
-            <a href="https://www.instagram.com/diecastclubavticikibre/"
-             target="_blank"
-             rel="noopener noreferrer"
-            >
+            <a href="https://www.instagram.com/diecastclubavticikibre/" target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </a>
-
-             <a href="https://www.threads.com/@diecastclubavticikibre"
-             target="_blank"
-             rel="noopener noreferrer"
-            >
+            <a href="https://www.threads.com/@diecastclubavticikibre" target="_blank" rel="noopener noreferrer">
               <FaSquareThreads />
             </a>
-           
-            <a href="https://www.youtube.com/@diecastclubkumanovo"
-            target="_blank"
-             rel="noopener noreferrer"
-            >
+            <a href="https://www.youtube.com/@diecastclubkumanovo" target="_blank" rel="noopener noreferrer">
               <FaYoutube />
             </a>
           </div>
 
-          {/* Email subscription */}
+          {/* SUBSCRIBE */}
           <div className="footer-subscribe">
             <h2>Subscribe to our Newsletter</h2>
             <form onSubmit={handleSubmit} className="footer-form">
@@ -87,7 +60,6 @@ const Footer = ({ subtitle }) => {
               <CarButton text="Subscribe" width="130" />
             </form>
           </div>
-         
         </div>
 
         <div className="footer-bottom">

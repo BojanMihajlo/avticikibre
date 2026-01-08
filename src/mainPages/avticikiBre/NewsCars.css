@@ -5,7 +5,7 @@
 
 .buttonMoreTwo {
   position: absolute;
-  bottom: 7%;
+  bottom: 4%;
   right: 17%;
 }
 
@@ -53,7 +53,7 @@
   .buttonMoreTwoMob {
     display: block;
    position: absolute;
-    bottom: 12.5%;
+    bottom: 14%;
    right: 11%;
    
   }

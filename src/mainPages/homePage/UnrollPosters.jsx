@@ -7,8 +7,9 @@ import "./UnrollPosters.css";
 
 const images = [img1, img2, img3];
 
-const Poster = ({ src }) => {
+const Poster = ({ src, isLast }) => {
   const ref = useRef(null);
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "center center"],
@@ -18,9 +19,13 @@ const Poster = ({ src }) => {
   const rotateX = useTransform(scrollYProgress, [0, 1], [90, 0]);
 
   return (
-    <div ref={ref} className="poster-container">
+    <div
+      ref={ref}
+      className={`poster-container ${isLast ? "last-poster" : ""}`}
+    >
       <motion.img
         src={src}
+        alt=""
         className="poster-image"
         style={{
           scaleY,
@@ -34,10 +39,18 @@ const Poster = ({ src }) => {
 
 export default function UnrollPosters() {
   return (
-    <div className="unroll-wrapper">
+    <section className="unroll-wrapper">
       {images.map((img, index) => (
-        <Poster key={index} src={img} />
+        <Poster
+          key={index}
+          src={img}
+          isLast={index === images.length - 1}
+        />
       ))}
-    </div>
+
+      {/* 🔑 SCROLL SPACER */}
+      <div className="scroll-spacer" />
+    </section>
   );
 }
+

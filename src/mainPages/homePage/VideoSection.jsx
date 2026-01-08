@@ -22,18 +22,12 @@ export default function VideoSection() {
           </video>
         </motion.div>
 
-        <motion.div
-          className="overlayContainer"
-          initial={{ y: "100%", opacity: 0 }}
-          whileInView={{ y: "0%", opacity: 1 }}
-          transition={{ duration: 1.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.2 }}
-        >
+       
           <Link to="avticikibre/galleryCars" className="overlayLink">
             <h1 className="overlayText">{subtitle ? "ГАЛЕРИЈА" : "GALLERY"}</h1>
             <img src={breImage} alt="icon" className="overlayImg" />
           </Link>
-        </motion.div>
+        
       </div>
     </>
   );

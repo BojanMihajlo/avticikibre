@@ -24,13 +24,13 @@ export default function NewsCars(){
  const API = process.env.REACT_APP_API_URL;
 
   const isMobile = window.innerWidth < 768;
-  const SECTION_HEIGHT = isMobile ? "300vh" : "410vh";
-  const MAX_PUSH = isMobile ? 70 : 320; 
+  const SECTION_HEIGHT = isMobile ? "280dvh" : "410dvh";
+  const MAX_PUSH = isMobile ? 70 : 330; 
   const CARD_HEIGHT = isMobile ? 150 : 300;
   const INITIAL_OFFSET = isMobile
     ? 0.18 * window.innerWidth // ~8% of screen width
     : 0.15 * window.innerWidth;
-  const IMAGE_RANGE = isMobile ? ["0%", "800%"] : ["0%", "990%"];
+  const IMAGE_RANGE = isMobile ? ["0%", "750%"] : ["0%", "995%"];
 
   const imageY = useTransform(scrollYProgress, [0, 1], IMAGE_RANGE);
 
@@ -93,6 +93,7 @@ export default function NewsCars(){
             gap: "2rem",
             marginLeft: "10%",
             zIndex: 2,
+            marginTop:"5%"
           }}
         >
 

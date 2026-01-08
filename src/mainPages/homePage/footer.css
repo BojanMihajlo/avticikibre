@@ -161,45 +161,88 @@
     gap: 5px;
   }
 
-  .logofooter img {
-    width: 280px;
+  
+  .footer {
     height: auto;
+    padding: 40px 0 30px;
+    gap: 25px;
   }
 
+  /* CONTENT STACK */
   .footer-content {
-    display: block;
-    justify-content: center;
-    gap: 5px;
-    /* padding-left: %; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 0;
+    text-align: center;
   }
+
+  /* NAV — HORIZONTAL */
   .footer-nav {
     display: flex;
-    gap: 7px;
-    /* padding-right: 8%; */
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 12px;
+    padding: 0;
+    order: 1;
   }
 
+
+  .footer-nav {
+    padding-top: 5%;
+  }
   .footer-nav li a {
-    font-size: 9px;
+    font-size: 10px;
+    
   }
+
+  /* SOCIAL */
   .footer-social {
-    width: 280px;
-    height: 240px;
-    margin-left: 3%;
+    width: 260px;
+    height: 200px;
+    margin: 0 auto;
+    order: 2;
   }
+
   .footer-social a {
-    font-size: 30px;
+    font-size: 28px;
   }
+
+  /* SUBSCRIBE */
+  .footer-subscribe {
+    order: 3;
+  }
+
   .footer-subscribe h2 {
-    margin-left: 1%;
-    font-size: 22px;
+    font-size: 18px;
+    margin-bottom: 12px;
   }
+
   .footer-form {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-right: 6%;
+    gap: 10px;
   }
+
+  .footer-form input {
+    min-width: 220px;
+  }
+
+  /* LOGO — НАЈДОЛУ */
+  .logofooter {
+    order: 4;
+  }
+
+  .logofooter img {
+    width: 240px;
+    margin-top: 10px;
+  }
+
   .footer-bottom {
-    padding-top: 8%;
+    order: 5;
+    padding-top: 10px;
   }
 }
