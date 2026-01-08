@@ -69,7 +69,7 @@
     flex-direction: column-reverse;
 
     /* 🔥 клучното */
-    padding-top: 10vh;   /* КОНТРОЛИРАН простор за сликата */
+    /* padding-top: 10vh;  */
 
     background-size: contain;
     background-position: center top;
@@ -80,7 +80,7 @@
   .item_content {
     /* position: relative; */
     width: 100%;
-    height: 56.5dvh;
+    height: 59dvh;
     padding: 1.8rem;
   }
   

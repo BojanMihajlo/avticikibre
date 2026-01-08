@@ -30,7 +30,7 @@ export default function NewsCars(){
   const INITIAL_OFFSET = isMobile
     ? 0.18 * window.innerWidth // ~8% of screen width
     : 0.15 * window.innerWidth;
-  const IMAGE_RANGE = isMobile ? ["0%", "750%"] : ["0%", "995%"];
+  const IMAGE_RANGE = isMobile ? ["0%", "720%"] : ["0%", "995%"];
 
   const imageY = useTransform(scrollYProgress, [0, 1], IMAGE_RANGE);
 
@@ -93,7 +93,7 @@ export default function NewsCars(){
             gap: "2rem",
             marginLeft: "10%",
             zIndex: 2,
-            marginTop:"5%"
+            marginTop:"8%"
           }}
         >
 

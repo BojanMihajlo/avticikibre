@@ -31,4 +31,10 @@
   .world {
     font-size: 25px;
   }
+  .textOurTwo {
+    text-align: center;
+  }
+  .textOurTwo h3 {
+    font-size: 18px;
+  }
 }

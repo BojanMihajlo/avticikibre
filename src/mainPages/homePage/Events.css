@@ -1,5 +1,5 @@
 .eventsMain {
-  height: 630dvh;
+  height: 670dvh;
   background-color: #edebd7;
   padding-top: 5%;
 }
@@ -19,18 +19,17 @@
 
 @media (max-width: 769px) {
   .eventsMain {
-    height: 400vh;
+    height: 390vh;
   }
 }
 
 @media (max-width: 426px) {
   .eventsMain {
-    height: 230vh;
+    height: 210vh;
   }
 
   .eventsMain h1 {
-    font-size: 2.5rem;
-    padding-top: 4%;
-    padding-bottom: 4%;
+    font-size: 2.2rem;
+   
   }
 }

@@ -29,19 +29,19 @@ export default function PassingImageGrid() {
 
   const tunables = isMobile
     ? {
-        SECTION_HEIGHT: "330dvh",
+        SECTION_HEIGHT: "310dvh",
         GRID_WIDTH: "95%",
         AMPLITUDE: 100,
         ROW_WINDOW: 0.45,
         ROW_STAGGER: 0.15,
-        imageRange: ["0%", "900%"], // smaller travel for mobile
+        imageRange: ["0%", "880%"], // smaller travel for mobile
         cardHeight : 150
       }
     : {
         SECTION_HEIGHT: "340dvh",
         GRID_WIDTH: "80%",
-        AMPLITUDE: 182,
-        ROW_WINDOW: 0.4,
+        AMPLITUDE: 185,
+        ROW_WINDOW: 0.35,
         ROW_STAGGER: 0.11,
         imageRange: ["0%", "907%"], // full travel for desktop
         cardHeight: 240
